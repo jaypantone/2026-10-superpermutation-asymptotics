@@ -1,0 +1,65 @@
+{
+  "module": "Quantitative.MainTheorems",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanchecker",
+    "-v",
+    "--fresh",
+    "Quantitative.MainTheorems"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "source_sha256": "10add62ac25e94ddea4b5ebe0b02e7d2d903e587ab1172d50b78d36230d7f129",
+  "olean_sha256": "c4b17dc0450df41b350a91824861b05cd06e2c6412ddeffa886a93268ebb8220",
+  "fresh": true,
+  "scope": "Module and imported declarations",
+  "checker": "Matching Lean kernel replay; not an external verifier",
+  "exit_code": 125,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/Quantitative.MainTheorems-replay-20261026T063233.670717Z.log",
+  "completed_at": "2026-10-26T06:34:33.953076+00:00",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 118,
+      "successful_samples": 118,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 65
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 64
+      },
+      "minimum_reported_free_percent": 64,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 3299648,
+    "seconds": 120.28,
+    "stop_reason": "Check exceeded the 120-second batch deadline",
+    "cleanup": [
+      {
+        "pgid": 94108,
+        "method": "group-sigkill",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      },
+      {
+        "pgid": 94108,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  }
+}

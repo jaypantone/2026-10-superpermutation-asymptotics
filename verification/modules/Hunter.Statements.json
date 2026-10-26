@@ -1,0 +1,79 @@
+{
+  "module": "Hunter.Statements",
+  "started_at": "2026-10-26T04:10:52.663316+00:00",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean/Hunter/.lean-check-omsrke_a/Statements.olean",
+    "Hunter/Statements.lean"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "bb2eaa8b49be3e4d72de8ed7782cb11d0fad5825cb405a1dcbe023ac1c460827",
+  "imports": {
+    "Hunter.Defs": "10bb806c4e702905f56645982029eb05039c3909f1a559a9db1cccba92a19b1e",
+    "Hunter.Appendix": "991316fc0587ee754f1c2b03965730f29aa0acb1a3467873c9790cc18776e66d",
+    "Hunter.ProofsReductions": "94a68cab223187534bc9cc4edb679919a38b23c0163eb90766f7b46c735a2b69",
+    "Hunter.ProofsGB2": "5e99286b2d0a3e85fc7031e480cca0f1a935dfca2b2d4da08ef0d99184a0e8ca",
+    "Hunter.ProofsGreedy": "23ab339db5ae31fa412c075a65d5eb17186e90acd4385f0e53ba67a80cc68303",
+    "Hunter.ProofsGreedy2": "196d90ae9bc2259684596745637787504e5621eaa562df169b518e1349919f4a",
+    "Hunter.ProofsUnwind": "45a027b70a377e7fd82f4bb13fc497cfa84b3ff55c1bc049aeac3f6fafd804b1",
+    "Hunter.ProofsUnwind2": "c2e7f9e762739e4d7fd2f067c301cce2ace7fbe8d3fdaf3cc4f88ac8c48d2637",
+    "Hunter.ProofsSPrime": "1cb9108d44c09c7540ba276c865856e99f4a4c2738da631f8063de8d9cd39436",
+    "Hunter.ProofsDeficit": "ed3e196fafcbc065283a7cc570f164d4d23cb5fe97a3d9df916ee97dad24be73",
+    "Hunter.ProofsWindow": "51c5b538ef58eefdc1576de2fa681a032c70d78fe7f72d505640693ff6204c59",
+    "Hunter.ProofsHrev": "3392c7da56b72683070cf1085d66efefa0b4e01ecd2f03e40730aec3fe443c2f",
+    "Hunter.ProofsPhi": "d702a9cfb958d73ab8dcade3ba06b064f663e2cf129f0a63abb6b5f2ff3e2a28",
+    "Hunter.ProofsLstar": "566dab57b63d5d654474d447778890a523135aa828b48b6f7c963e369b575c38",
+    "Hunter.ProofsLink2": "b3c7e82b3194b193ae47a9763146ff0d0d4cc1be1911bef1c687a90bf99f0212",
+    "Hunter.ProofsHeadline": "66debaed3b4ff3de2e7e90fb843f48535b7df1ca62ba216c4faf7b27d7c3e39c"
+  },
+  "manifest_sha256": "4ef0f46c99f8dd278bc7f26cd368420887baa85920fd77c63cd83afc01fc7937",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/Hunter.Statements-20261026T041539.337560Z.log",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 6,
+      "successful_samples": 6,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 67
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 67
+      },
+      "minimum_reported_free_percent": 66,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 2800096,
+    "seconds": 5.228,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 74427,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "compilation_performed": true,
+  "axiom_output": [],
+  "olean_sha256": "7197ee466e0dde6fb3eabf962b169a2ec190f6dd7989167150a024ab5352d9e1"
+}

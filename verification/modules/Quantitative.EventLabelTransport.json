@@ -1,0 +1,70 @@
+{
+  "module": "Quantitative.EventLabelTransport",
+  "started_at": "2026-10-26T06:15:24.992015+00:00",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean/Quantitative/.lean-check-37vj0mmu/EventLabelTransport.olean",
+    "Quantitative/EventLabelTransport.lean"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "20938c94cff2dda05ef3c2e97d082ca6a862cde3d207668aa60a2c834a9a2c26",
+  "imports": {
+    "Quantitative.CandidateEvents": "fdc945557313bf8b32fa815e912c1304fed4d86aec3b545900972049e0ddc78b",
+    "Quantitative.CompiledEventAvoidance": "8ea37022a32ddeeabb8ed41b97ca744fddcd5cec44612e1920b5b0ce8282d476",
+    "Quantitative.FiniteJointStates": "2202bf4d5ecc52723fb35024c493b30cae4ef74795c7aa5e62f0f1a1aff9fa2e"
+  },
+  "manifest_sha256": "4ef0f46c99f8dd278bc7f26cd368420887baa85920fd77c63cd83afc01fc7937",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/Quantitative.EventLabelTransport-20261026T061525.138394Z.log",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 5,
+      "successful_samples": 5,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 64
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 65
+      },
+      "minimum_reported_free_percent": 64,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 2673184,
+    "seconds": 4.173,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 92393,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "compilation_performed": true,
+  "axiom_output": [
+    "'CoefficientTwoPrecision.EventLabelTransport.finite_avoidance' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+    "'CoefficientTwoPrecision.EventLabelTransport.encodePair_injective' depends on axioms: [propext, Quot.sound]",
+    "'CoefficientTwoPrecision.EventLabelTransport.mapEvents_separated' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]"
+  ],
+  "olean_sha256": "80b899f21f26fdd897ed2dcbf9e2f672264ec284f4fc23a815543e95b82e7fe3"
+}

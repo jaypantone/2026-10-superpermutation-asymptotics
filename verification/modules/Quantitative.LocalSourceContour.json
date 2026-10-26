@@ -1,0 +1,72 @@
+{
+  "module": "Quantitative.LocalSourceContour",
+  "started_at": "2026-10-26T06:09:26.526078+00:00",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean/Quantitative/.lean-check-7_a28mpf/LocalSourceContour.olean",
+    "Quantitative/LocalSourceContour.lean"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "e70014b951d77c9f72373eb556da236ffe82f39ef7d6a73633f68fc16ac25cee",
+  "imports": {
+    "Quantitative.FiniteProgram": "d06d51e7492c57651cc5bcc2cf085cd93e908ae95e4358af47d225f6d8a38d89",
+    "Quantitative.SourceAlphabet": "39ab611b4385539d1eed74137d67f86e2508920ff77fd9d72e6caeca9253e737",
+    "Quantitative.ConnectorGrid": "a4b2dc26913445f1ef73dc66bfa3114ca8d7f6e7e462304029777bebe72f97ea",
+    "Quantitative.OriginTransport": "163c43bb4b658239e3169bd47e77f1145bfa38cd7e00ffc0ca99c2bcb2bd2cd8",
+    "Quantitative.SourceGeometry": "311134628b163086d013aab0c90909cdef2d685ff9dd659e8ac3246c019949bd",
+    "Quantitative.GlobalSimplicity": "1dd9cadbac8c913b4518c30bc45f88fe9bf6003c7d213fa107a046d919808e9a",
+    "Quantitative.RobustReindex": "ea68cfb12bcd1274e03834e3b7c24e419370662ebbe4afc390c232ba0ce9524c"
+  },
+  "manifest_sha256": "4ef0f46c99f8dd278bc7f26cd368420887baa85920fd77c63cd83afc01fc7937",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/Quantitative.LocalSourceContour-20261026T060935.087765Z.log",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 6,
+      "successful_samples": 6,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 64
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 64
+      },
+      "minimum_reported_free_percent": 64,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 3087664,
+    "seconds": 5.215,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 91681,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "compilation_performed": true,
+  "axiom_output": [
+    "'CoefficientTwoPrecision.LocalSourceContour.construct_program' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]"
+  ],
+  "olean_sha256": "4f7dbdc90cf5f3a1678f9cfd42b58429249f31d984f8eb06ff7929397012f01b"
+}

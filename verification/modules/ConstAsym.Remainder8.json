@@ -1,0 +1,73 @@
+{
+  "module": "ConstAsym.Remainder8",
+  "started_at": "2026-10-26T04:40:58.536408+00:00",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean/ConstAsym/.lean-check-eywvb1to/Remainder8.olean",
+    "ConstAsym/Remainder8.lean"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "c41afb85af784f1d3ae2774c6efe140eca27abe7bb4f166e8066d92a03bd36cb",
+  "imports": {
+    "ConstAsym.Main": "d70372f05cc43d403b9f4def4780205ff4adcd6b5a12b27a5add3269e3f66917",
+    "SuperpermutationUpperBound43586371.UniR.RRate8": "abb1f81769ca5080031763a4b0db3ab60b339f6fff2a64371f58d695d651997f",
+    "LowerBounds.TheoremBWords": "74afcec47349ce4223997569781f813c46bf61d5678b93fa002ae816089805ff"
+  },
+  "manifest_sha256": "4ef0f46c99f8dd278bc7f26cd368420887baa85920fd77c63cd83afc01fc7937",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/ConstAsym.Remainder8-20261026T044504.590296Z.log",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 8,
+      "successful_samples": 8,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 67
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 66
+      },
+      "minimum_reported_free_percent": 66,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 3150144,
+    "seconds": 7.304,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 79062,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "compilation_performed": true,
+  "axiom_output": [
+    "'ConstAsym.boundB_sub_F3' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'ConstAsym.lower2_L' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'ConstAsym.remainder_order8' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'ConstAsym.lower2_ratio' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'ConstAsym.remainder_ratio8' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'ConstAsym.remainder_limit8' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "olean_sha256": "ba878ad80cc69647b05c02b0470f40149165baf79c8ed4ddd00a7fb5c1513ce2"
+}

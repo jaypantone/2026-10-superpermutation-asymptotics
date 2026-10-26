@@ -1,0 +1,467 @@
+\section{Combining the local constructions}
+\label{sec-global}
+
+Fix an integer $r\ge6$ divisible by six, and put $k=r-1$ and $d=r-3$.
+We use the labelled frame family of the preceding section, with
+\[
+ \Delta=64r^8,\qquad
+ \eta=\frac{r!}{2d!(\Delta+1)},\qquad
+ \beta=(r-2)\eta.
+\]
+At each sufficiently large background size $M$, select exactly
+$\lfloor\eta M^d\rfloor$ labelled frames whose allowed sets of cyclic
+rows are pairwise disjoint. The selection is fixed before the modifications
+described below. Define
+\begin{equation}\label{eq-global-parameters}
+ A=\left\lceil\frac{r^3}{\beta}\right\rceil,\quad
+ Q_{
+ \mathrm{grid}}=rA,\quad W=r^2A,\quad H=rA^2,\quad
+ G=W-r,\quad \rho=\frac{A\beta}{r},\quad
+ E=10^{12}r^{22}W^4.
+\end{equation}
+The letter $Q_{\mathrm{grid}}$ denotes a grid width. It is unrelated to
+the row charge used in the assembly section.
+
+\subsection{Sets of active letters and fixed background letters}
+
+Take the $W$ control letters to be the pairs $(i,j)$ with
+$0\le i<r$ and $j\in\mathbb Z/Q_{\mathrm{grid}}\mathbb Z$.
+For $0\le a<A$ and $b\in\mathbb Z/Q_{\mathrm{grid}}\mathbb Z$, set
+\[
+ T_{a,b}=\{(i,ai+b):0\le i<r\}.
+\]
+The members of $T_{a,b}$ are the \emph{active letters} of that
+construction. The other $G$ control letters are its \emph{guards}; these
+letters stay in the background circle and are never chosen as mobile
+letters. For example, when $r=3$ and $A=2$, the blocks $T_{0,0}$ and
+$T_{1,0}$ in a grid with six columns share just $(0,0)$.
+
+There are $H$ blocks, each with $r$ letters. Distinct blocks intersect
+in at most one letter. Indeed, two common letters in distinct rows $i,j$
+would imply
+\[
+ Q_{\mathrm{grid}}\mid(a-a')(i-j),\qquad
+ |(a-a')(i-j)|\le(A-1)(r-1)<Q_{\mathrm{grid}}.
+\]
+The product must therefore be zero. Since $i\ne j$, this gives $a=a'$,
+and either common letter then gives $b=b'$. This argument uses integers
+and remains valid when $Q_{\mathrm{grid}}$ is composite. Each letter
+belongs to $A$ blocks. It follows that a block meets exactly
+$I=r(A-1)\le W/r$ other blocks: each of its letters lies in $A-1$ other
+blocks, and no block is counted at two letters.
+
+Fix a cyclic order of $m$ old letters. Insert each guard in a different
+old cut, immediately before the old letter at that cut. A \emph{guard
+background} is the resulting cyclic order of $M=m+G$ letters. There are
+exactly
+\[
+ (m)_G=m(m-1)\cdots(m-G+1)
+\]
+guard backgrounds for each block. Distinct cuts give no ordering
+multiplicity. For $m\ge G$,
+\begin{equation}\label{eq-guard-count}
+ 1-\frac{G(G-1)}{2m}\le\frac{(m)_G}{m^G}\le1.
+\end{equation}
+The lower bound follows by applying
+$\prod_i(1-u_i)\ge1-\sum_i u_i$ to $u_i=i/m$.
+
+A \emph{candidate} consists of an active block, a guard background, and
+one selected labelled frame. Candidates on the same block but different
+backgrounds cannot share a row: deleting their active letters would recover
+the same background from that row. Candidates on the same background are
+already separated by the selected frame family. Thus only candidates on
+different blocks can collide.
+
+\subsection{A finite list of necessary collision equations}
+
+Anchor every cyclic background at the same old letter. A local background
+cut $y\in\{0,\ldots,M-1\}$ projects to an original cut
+$x\in\{0,\ldots,m-1\}$. Counting the guards passed before $y$ gives
+\[
+ y\equiv x+e\pmod m,\qquad 0\le e\le G.
+\]
+This also covers the guard immediately before the anchor. In that case
+the local cut has the form $m+e$ and the original cut is zero.
+
+Every stationary frame satisfies a relation whose coefficient multiset is
+\[
+ (d-1,1,\underbrace{-1,\ldots,-1}_{d\text{ entries}}).
+\]
+The coefficients sum to zero, and their absolute values sum to $2d$.
+Including the binary cut phases and reducing the local relation modulo
+$m$ shows that any foreign row must satisfy
+\begin{equation}\label{eq-foreign-relation}
+ \sum_u c_u x_u\equiv b\pmod m,\qquad
+ |b|\le C_1=(4d+1)G+2d\le4rW.
+\end{equation}
+For completeness, choose the canonical local cuts in $[0,M)$.
+Their weighted sum differs from the binary phase sum by an integer
+multiple of $M$, whose multiplier has absolute value at most $2d+1$.
+Replacing $M$ by $m+G$ and each local cut by $x_u+e_u$ gives the bound
+$(2d+1)G+2dG+2d$ displayed above.
+There are $k(k-1)$ assignments of this coefficient multiset to the
+stationary physical labels, since one chooses the label with coefficient
+$d-1$ and then the label with coefficient $1$.
+
+First delete a candidate if a relation \eqref{eq-foreign-relation} holds
+for a possible foreign stationary set containing none of its active
+letters. Such a relation has a nonzero coefficient on a guard variable.
+There are at most
+\[
+ J_1\le Hr\,k(k-1)(2C_1+1)\le9rW^3
+\]
+relations to consider. A nonzero coefficient has absolute value at most
+$r$. After all other guard variables are fixed, its congruence has at most
+$r$ solutions modulo $m$, because the number of roots of $ax=b$ is at most
+$\gcd(a,m)\le|a|$. Thus each equation excludes at most $rm^{G-1}$
+guard tuples. If $m\ge G^2$, \eqref{eq-guard-count} gives
+$(m)_G\ge m^G/2$. This first deletion removes at most the fraction
+\begin{equation}\label{eq-guard-loss}
+ \frac{18r^2W^3}{m}.
+\end{equation}
+The selected frame count cancels from this calculation.
+
+Suppose two surviving candidates on different blocks share a cyclic row.
+Their blocks must have a common letter $v$, and $v$ must be stationary in
+both rows. If the blocks were disjoint, all foreign stationary letters
+would be guards. If $v$ were mobile in one row, its stationary letters
+would all be guards for the other candidate. Either case contradicts the
+first deletion, applied to the appropriate candidate.
+
+If $v$ occupies stationary slot $j$ during batch $t$, then its local cut
+is $(q_j+t+\epsilon_j)\bmod M$. Here $0\le t<M$ is the canonical
+batch number. The local wrap is zero or one, so its original cut obeys
+\[
+ x_v\equiv q_j+t+e'\pmod m,\qquad -2G\le e'\le1.
+\]
+Substituting in \eqref{eq-foreign-relation} gives the following finite
+list of possible events:
+\begin{equation}\label{eq-event}
+ a(t+q_j)+\sum_u b_ux_u\equiv b_1\pmod m,
+ \qquad |b_1|\le C_2=(6d-1)G+3d-1\le6rW.
+\end{equation}
+An \emph{event} forbids the pair $(v,j)$ for that entire batch.
+The list ranges over every meeting foreign block, every foreign mobile
+letter, every coefficient assignment, every candidate slot $j$, and every
+integer $b_1$ in the stated interval. It therefore includes both the
+original rows and every permitted later modification.
+
+There are at most
+\[
+ J_{\mathrm{event}}\le I k^3(k-1)(2C_2+1)\le13r^4W^2
+\]
+equation types. For a fixed type there are at most $2|a|$ actual roots
+$0\le t<M$, provided $M<2m$. For a fixed shared label, summing $|a|$
+over its coefficient assignments gives $2d(d+1)$. Hence the total number
+of events, with repetitions allowed, is at most
+\begin{equation}\label{eq-event-count}
+ K\le4Ik^2d(d+1)(2C_2+1)\le52r^4W^2.
+\end{equation}
+
+\subsection{Separating events without a distribution assumption}
+
+Put $L=2r+1$ and $S=2L$. Delete a candidate if it has two events for
+different forbidden pairs at circular distance at most $S$ on the
+$M$-batch circle. Eliminating the two event times gives
+\begin{equation}\label{eq-proximity}
+ aa'(q_j-q_l)+\sum_u(a'b_u-ab'_u)x_u
+ \equiv a'b_1-ab'_1+aa'(\delta+\sigma G)\pmod m,
+\end{equation}
+where $|\delta|\le S$ and $\sigma\in\{-1,0,1\}$.
+The term $\sigma G$ accounts for a wrap on the $M$-circle. It must be
+retained even though the congruence is modulo $m$.
+There are at most
+\[
+ J_2\le3(2S+1)J_{\mathrm{event}}^2\le4563r^9W^4
+\]
+such equations.
+
+Every equation \eqref{eq-proximity} has a nonzero variable coefficient.
+Here are all possibilities. If the foreign blocks differ, each has
+$r-2$ guard letters in its stationary set, and the two blocks share at
+most one letter. A private guard then has a nonzero coefficient. If the
+foreign block is the same but its mobile letters differ, a guard present
+in only one stationary set has a nonzero coefficient. If the block and
+mobile agree, either a guard coefficient $a'b_u-ab'_u$ is nonzero or the
+two full coefficient vectors are proportional. In the latter case their
+equal multisets force the ratio to be $1$. Indeed their squared norms
+force the ratio to be $1$ or $-1$, and $-(d-1)$ does not occur in the
+multiset when $d\ge3$. Thus the vectors are equal. The forbidden pairs
+then differ only in their slots, so the remaining form is
+$a^2(q_j-q_l)$ with $j\ne l$. On a fixed position of the sum point,
+the cuts have the distinct coefficient vectors
+$0,e_1,\ldots,e_d,\boldsymbol{1}$. Their difference is nonzero.
+All coefficients have absolute value at most $3r^2$.
+
+We count the guard-variable and guard-free equations separately. If a
+guard coefficient is nonzero, fix the selected labelled frame and all
+other guards. There are at most $3r^2$ roots modulo $m$. Dividing by
+$(m)_G\ge m^G/2$ bounds the deleted fraction by $6r^2/m$ per equation,
+uniformly in the selected frame.
+
+If all guard coefficients vanish, partition the sorted frame parameters
+according to the position of their sum point and the integer
+\[
+ \ell=\left\lfloor\frac{\sum_i z_i}{M}\right\rfloor.
+\]
+There are at most $d(k-1)\le r^2$ choices. Within such a part,
+$q_j=v_j\cdot z-\mathbf{1}_{j=a}\ell M$. The winding term changes only
+the constant in \eqref{eq-proximity}. Fix a coordinate with nonzero
+coefficient. It ranges in an interval shorter than $2m$, so it has at
+most $6r^2$ roots. Deleting that coordinate leaves a strictly increasing
+list of $d-1$ integers, with at most $M^{d-1}/(d-1)!$ possibilities.
+Including all $r!$ initial assignments and dividing by
+$\lfloor\eta M^d\rfloor\ge\eta M^d/2$ bounds the deleted fraction,
+per part and per equation, by
+\[
+ \frac{12r^2r!}{\eta(d-1)!M}
+ =\frac{24r^2d(\Delta+1)}{M}.
+\]
+This counts in the entire parameter set before restricting to the selected
+frames. It requires no uniform distribution property of that selection.
+Since $\Delta+1\le65r^8$ and $M\ge m$, both cases together are bounded by
+\begin{equation}\label{eq-proximity-loss}
+ \frac{7\,118\,280r^{22}W^4}{m}.
+\end{equation}
+
+\subsection{Modifying every surviving candidate}
+
+Around every event take the closed interval of radius $L$ on the batch
+circle, and merge intersecting intervals. Each connected component has
+one forbidden pair, since intervals for different pairs cannot intersect.
+If there are no events, keep the normal construction. Otherwise,
+$M>(2L+1)K$ ensures a gap longer than $2L+1$ between consecutive event
+times. Cut in this gap and regard the remaining components as ordinary
+intervals. The cut changes only where these intervals are written; the
+canonical times in \eqref{eq-event} remain unchanged.
+
+For a component whose first and last events are $f,e$, let $(v,j)$ be
+its forbidden pair. Choose the normal boundary $s\in[f-r+1,f]$ at
+which $v$ is mobile; the normal role action is a cycle on the $r$ roles.
+Set
+\[
+ P=2r\left\lceil\frac{e+1-s}{2r}\right\rceil.
+\]
+Replace the next $P$ normal batches by $P/2$ pairs of a permitted order
+and its reverse, using the order whose first target is different from
+$j$. Follow them by one normal cleanup batch. The local endpoint theorem
+shows that these $P+1$ batches end at exactly the normal literal state.
+Throughout the first $P$ batches, the letter $v$ is either mobile or in
+the first target slot. Thus it never occupies $j$ during any event batch.
+
+The inequalities
+\[
+ f-r+1\le s\le f,\qquad
+ e+1\le s+P\le e+2r,\qquad s+P+1\le e+2r+1
+\]
+put the entire replacement inside its merged interval. Different
+replacements are disjoint. Each restores its normal endpoint, so they can
+all be performed on the same cyclic walk. The joint-state containment
+proved earlier keeps every modified row inside the originally selected
+allowed set. If two modified candidates met, their unique shared letter
+would be stationary in both rows and would produce an event
+\eqref{eq-event}. The modification prevents that occupancy. This excludes
+collisions between two modifications as well as collisions with normal
+rows.
+
+Regard a batch starting at integer time $t$ as the unit interval $[t,t+1]$.
+The inequalities above put every changed batch inside the interval union.
+That union has total length at most $2LK\le5rK$, so at most $5rK$
+batches change. A complete batch has
+at most $k(M+k)$ source rows. Comparing each changed batch with its normal
+version therefore changes the total row count by at most $10r^2KM$ when
+$M\ge r$. The short charge stays exactly $2(r-1)M$. There is also an
+untouched normal batch. Its full rows follow the literal successor $F$,
+which is the additional hypothesis needed in the connector construction.
+
+\subsection{Uniform counts}
+
+Let $B$ be the total number of source rows in the surviving modified
+contours, let $q$ be their total short charge, and let $c_{\mathrm{adv}}$
+be the number of circles in the actual connector lists constructed in the
+assembly section. Put
+$D_{m,W}=\prod_{i=0}^{W-1}(m+i)$ and $c_r=2(r-1)/(r-2)$.
+
+\begin{proposition}\label{prop-global-counts}
+For every multiple $m$ of $r$ with $m\ge4E$, the construction has literal
+closure, pairwise distinct source cyclic classes above the chosen old
+cyclic order, and the safe connector lists of the assembly section. Its counts satisfy
+\[
+ \frac{B}{D_{m,W}}=\frac{\rho W}{m}(1+\theta),\qquad
+ \frac{q+c_{\mathrm{adv}}}{D_{m,W}}
+   =\frac{c_r\rho W}{m^2}(1+\epsilon),\qquad
+ |\theta|,|\epsilon|\le\frac Em,
+\]
+and $c_{\mathrm{adv}}\le(r-1)q/m$.
+\end{proposition}
+
+\begin{proof}
+We first verify the size conditions used in the construction. The ceiling
+defining $A$ gives
+\[
+ \eta^{-1}=\frac{r-2}{\beta}\le\frac{r}{\beta}
+ \le\frac{W}{r^4}\le W.
+\]
+Also $W\ge r^2\ge1$ and $G\le W$. The definition of $E$ implies
+$E\ge W^2$, $E\ge rW$, and $4E\ge38r^4$. Hence
+\[
+ M\ge m\ge38r^4,\qquad
+ m\ge4W^2\ge G^2,\qquad
+ G<m,\qquad M=m+G<2m.
+\]
+Since $d\ge3$ and $M\ge m\ge4W$, we have
+$\eta M^d\ge M/W\ge4$. Moreover,
+$rG/m\le rW/(4E)\le1/4$. Finally, the event bound gives
+\[
+ (4r+3)K\le260r^5W^2<4\cdot10^{12}r^{22}W^4\le m\le M.
+\]
+The strict middle inequality follows from $r,W\ge1$ and
+$260<4\cdot10^{12}$. These prove all the required size conditions.
+Also $r\mid M$, since $r$ divides $m$ and $W$. The local closure and
+distinctness results and the preceding modifications consequently apply.
+Every source class is above the chosen old cyclic order. Deleting all
+controls first removes the guards from the guard background. A full move
+only rotates the remaining old cyclic order. A positive short update
+moves a control past one background letter, so it does not change the
+relative cyclic order of the old letters. This remains true during every
+replacement. Deleting all controls from any resulting row therefore
+recovers the chosen old class, as required by
+Lemma~\ref{lem-assembly-universe}.
+
+Each modified contour has
+\[
+ N=(r-2)M^2+[r(r-1)+1]M+\delta_N,
+ \quad |\delta_N|\le10r^2KM,\quad q_0=2(r-1)M.
+\]
+Let $h=M+r-1$ be the source port modulus and let $g$ be its greatest
+common divisor with the monodromy. The local result gives $1\le g\le r-1$.
+Write $k=r-1$. The untouched normal batch has $k$ short rows and
+$(r-2)M+r(r-1)+1$ rows in total. One of its $k$ consecutive full runs
+therefore has length
+\[
+ R\ge\frac{(k-1)M+k^2+1}{k}.
+\]
+Its bases follow the literal successor $F$, and the local construction
+gives $R\le h$. To check the numerical hypothesis of the connector
+lemma, use $g\lfloor R/g\rfloor\ge R-g$ and $g\le k$. These give
+\[
+ 2g\lfloor R/g\rfloor
+ \ge2R-2g
+ \ge\frac{2(k-1)M+2}{k}
+ \ge M+k=h.
+\]
+For the last inequality, it suffices that $(k-2)M+2\ge k^2$.
+This follows from $M\ge2k$ and $k\ge5$, since
+$2k(k-2)+2\ge k^2$. Thus the connector lemma supplies an actual list
+of at most $2g^2\le2(r-1)^2$ circles for each contour.
+Summing over the contours gives
+$c_{\mathrm{adv}}\le(r-1)q/M\le(r-1)q/m$.
+
+Before deletion the number of candidates is
+$C_0=H(m)_G\lfloor\eta M^d\rfloor$. Define
+\[
+ \phi=\frac{(m)_G}{m^G},\qquad
+ \psi=\frac{\lfloor\eta M^d\rfloor}{\eta M^d},\qquad
+ \mu=\frac{M}{m},\qquad
+ \chi=\frac{D_{m,W}}{m^W}.
+\]
+The exact leading contributions before deletion are
+\begin{align*}
+ C_0(r-2)M^2
+   &=H\beta m^{W-1}\phi\psi\mu^{d+2},\\
+ C_0q_0
+   &=c_rH\beta m^{W-2}\phi\psi\mu^{d+1}.
+\end{align*}
+The exponents follow from $G+d+2=W-1$ and $G+d+1=W-2$.
+Let $t$ be the proportion of candidates that survive both deletions.
+The deletion estimates give
+\[
+ 1-\frac{18r^2W^3+7\,118\,280r^{22}W^4}{m}\le t\le1.
+\]
+In particular $t>0$ under the present size bound. Averaging the relative
+row errors over the surviving contours gives a number $u$ such that
+\[
+ |u|\le\frac{2r+1040r^5W^2}{m}.
+\]
+Their short charges are all exactly $q_0$. Write
+$v=c_{\mathrm{adv}}/q$, so $0\le v\le(r-1)/m$. The two normalized
+counts now have the exact expressions
+\begin{align*}
+ \frac{B}{D_{m,W}}
+   &=\frac{H\beta}{m}
+     \frac{\phi\psi t\mu^{d+2}(1+u)}{\chi},\\
+ \frac{q+c_{\mathrm{adv}}}{D_{m,W}}
+   &=\frac{c_rH\beta}{m^2}
+     \frac{\phi\psi t\mu^{d+1}(1+v)}{\chi}.
+\end{align*}
+The relative-error numerators, each to be divided by $m$, are bounded by
+\[
+\begin{array}{lr}
+\text{rounding the selected frame count}&W\,,\\
+\text{distinct guard positions}&W^2/2\,,\\
+\text{guard-only deletion}&18r^2W^3\,,\\
+\text{nearby incompatible events}&7\,118\,280r^{22}W^4\,,\\
+\text{row count within a contour}&2r+1040r^5W^2\,,\\
+\text{additional connector charge}&r\,,\\
+\text{replacing powers of }M\text{ by powers of }m&2W^2\,,\\
+\text{the product }D_{m,W}/m^W&W^2\,.
+\end{array}
+\]
+The first bound uses $d\ge3$ and $\eta^{-1}\le W/r^4$.
+The next three were proved in \eqref{eq-guard-count},
+\eqref{eq-guard-loss}, and \eqref{eq-proximity-loss}.
+The row bound follows by dividing the displayed estimate for $N$ by
+$(r-2)M^2$. We use the product inequalities
+\[
+ \prod_i(1+u_i)\le\frac1{1-\sum_i u_i},\qquad
+ \prod_i(1-u_i)\ge1-\sum_i u_i
+ \quad(0\le u_i,\ \sum_i u_i<1).
+\]
+For the first inequality, use $1+u_i\le1/(1-u_i)$ and the second
+inequality. For the powers of $\mu$, there are at most $r$ equal factors
+$1+G/m$. Their deviations sum to at most $rG/m\le1/4$, so
+\[
+ 1\le\mu^{d+1}\le\mu^{d+2}
+ \le\frac1{1-rG/m}\le1+\frac{2rG}{m}
+ \le1+\frac{2W^2}{m}.
+\]
+For $\chi$, the deviations $i/m$ sum to at most $W^2/(2m)\le1/8$,
+which gives $1\le\chi\le1+W^2/m$ in the same way.
+
+The sum of the listed numerators is less than $9\cdot10^6r^{22}W^4$.
+Let $s$ be that sum divided by $m$. Then $s<1/1000$. To combine the
+estimates, let $s_0$ be the sum of the deviations allowed for the
+numerator factors in either exact expression, and let $s_1$ be the
+deviation allowed for $\chi$. Thus $s_0+s_1\le s$.
+The product inequalities give a numerator between $1-s_0$ and
+$1/(1-s_0)$, while $1\le\chi\le1+s_1$. The ratio is therefore at
+least
+\[
+ \frac{1-s_0}{1+s_1}\ge1-s_0-s_1\ge1-s
+\]
+and at most $1/(1-s_0)\le1/(1-s)\le1+2s$.
+In particular its deviation from one is at most $4s$.
+Since $36\cdot10^6<10^{12}$, each relative error is at most $E/m$.
+Finally $H\beta=\rho W$, as required.
+\end{proof}
+
+\begin{lemma}\label{lem-polynomial-width}
+The parameters in \eqref{eq-global-parameters} satisfy
+$r^2\le W\le352r^9$ and $r^2\le\rho<r^2+1$.
+\end{lemma}
+\begin{proof}
+Cancellation of factorials gives
+\[
+ \beta=\frac{r(r-1)(r-2)^2}{2(64r^8+1)}.
+\]
+For $r\ge6$, the inequalities $r-1\ge5r/6$ and
+$r-2\ge2r/3$ imply $\beta\ge1/(351r^4)$.
+Also $0<\beta<1$. Thus
+\[
+ r^2\le W=r^2A<\frac{r^5}{\beta}+r^2
+ \le351r^9+r^2\le352r^9.
+\]
+The defining ceiling for $A$ gives
+$r^3\le A\beta<r^3+\beta$. Division by $r$ yields the bounds on
+$\rho$.
+\end{proof}

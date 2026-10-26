@@ -1,0 +1,71 @@
+{
+  "module": "Hunter.ProofsLink2",
+  "started_at": "2026-10-26T04:10:52.663316+00:00",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean/Hunter/.lean-check-bloei_2i/ProofsLink2.olean",
+    "Hunter/ProofsLink2.lean"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "2d15e276b57aa3cbf9e86eef1b3058209b3a3df58be05aaaeb7e64198b178e04",
+  "imports": {
+    "Hunter.ProofsFinale": "563f1fb25c4a479daed7ef407f0b41bf3ad12670f288463e78b72357c342e1bd",
+    "Hunter.ProofsEndgame": "ecba91675a2b0f1c2190881fb364bee3ae0efddff74dc39790da926d0d3e2732",
+    "Hunter.ProofsWindow": "51c5b538ef58eefdc1576de2fa681a032c70d78fe7f72d505640693ff6204c59",
+    "Hunter.ProofsMeta3": "0814759c260597916004be2e0c2dc6049624f629ffb2bb582bf0cf129a2dde12",
+    "Hunter.ProofsMeta6": "77344ff45bdbacc6ad23283a8cbf1451b3a9eda17eb0ceabf96af126ca442f8a",
+    "Hunter.ProofsLedger2": "5d89f48001590ccea3f50c0634b56621291981c90a53f0569f0207e63b82beab",
+    "Hunter.ProofsProfile": "05574effe68d901fa1119ee1887117dca6adeeb2704c5005669500e31fb29f96",
+    "Hunter.ProofsQED": "9faf0d27a62cd6c29936fd4aa64986166acc8ba3eef966ca05f36493cd289fdd"
+  },
+  "manifest_sha256": "4ef0f46c99f8dd278bc7f26cd368420887baa85920fd77c63cd83afc01fc7937",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/Hunter.ProofsLink2-20261026T041528.869287Z.log",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 6,
+      "successful_samples": 6,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 66
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 66
+      },
+      "minimum_reported_free_percent": 66,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 2999520,
+    "seconds": 5.221,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 74377,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "compilation_performed": true,
+  "axiom_output": [],
+  "olean_sha256": "b3c7e82b3194b193ae47a9763146ff0d0d4cc1be1911bef1c687a90bf99f0212"
+}

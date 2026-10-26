@@ -1,0 +1,386 @@
+--- /Users/jaypantone/Dropbox/Research/AI-work/other-things/check-lean-bound/research-plan-2026-10/lane-astra-half/submission-prep/2026-10-24/local-completion/author/completion_guard.py
++++ proof-development/lean/build_guard.py
+@@ -19,18 +19,25 @@
+ import tempfile
+ import time
+ 
+-ROOT = Path('/Users/jaypantone/Dropbox/Research/AI-work/2026-10-superpermutation-upper-palomar')
+-BASE_GUARD_SHA256 = '78994ecd895487a50d1e23b0f0f729908254c684423b4f983c2ae1fd27bc468d'
+-SHARED_SETUP_SHA256 = '41140cceac8b6f4ffb6197c5557ae98489b6a828d6d59e0549fd80123066904b'
+-_setup_path = ROOT / 'tools/shared_setup.py'
+-if hashlib.sha256(_setup_path.read_bytes()).hexdigest() != SHARED_SETUP_SHA256:
+-    raise RuntimeError('Pinned shared-setup helper changed; recovery guard not loaded')
+-_setup_spec = importlib.util.spec_from_file_location('_recovery_upper_shared_setup', _setup_path)
+-_setup = importlib.util.module_from_spec(_setup_spec)
+-_setup_spec.loader.exec_module(_setup)
+-if _setup.ROOT != ROOT or _setup.MIN_FREE_BYTES != 15 * 1024**3:
+-    raise RuntimeError('Wrong project or disk policy in shared-setup helper')
+-layout, require_free_disk = _setup.layout, _setup.require_free_disk
++ROOT = Path(__file__).resolve().parent
++MIN_FREE_BYTES = 15 * 1024**3
++
++
++def require_free_disk(path):
++    import shutil
++    path = Path(path)
++    while not path.exists():
++        path = path.parent
++    free = shutil.disk_usage(path).free
++    if free < MIN_FREE_BYTES:
++        raise RuntimeError('Fewer than 15 GiB free disk space; no compilation started')
++    return free
++
++
++def layout():
++    from build import workspace
++    return {'workspace': workspace()}
++
+ 
+ LEAN_MEMORY_MIB = 4096
+ RSS_LIMIT_KIB = 6 * 1024 * 1024
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CircleTransport/PairPaths.lean
++++ proof-development/lean/SuperpermutationUpperBound/CircleTransport/PairPaths.lean
+@@ -92,10 +92,10 @@
+       have hne' : a :: rest ≠ [] := by simp
+       have hlast := ih (portTarget r q) hq' a hne'
+         (fun b hb => hbase b (by simp [hb])) (fun b hb => hkind b (by simp [hb]))
+-      change ((Completion.portPath r final q ++ completionWalk (a :: rest) final (portTarget r q)).getLast _).tail =
+-        insertLetter ((a :: rest).getLast hne').tail final (completionExit (a :: rest) (portTarget r q))
+-      rw [List.getLast_append_of_ne_nil _ (completionWalk_nonempty (a :: rest) final (portTarget r q) hne')]
+-      exact hlast
++      exact (congrArg Row.tail (List.getLast_append_of_ne_nil
++        (l := Completion.portPath r final q)
++        (completionWalk_nonempty (r :: a :: rest) final q hne)
++        (completionWalk_nonempty (a :: rest) final (portTarget r q) hne'))).trans hlast
+ 
+ theorem completionWalk_internal (rs : List (Row α)) (hne : rs ≠ []) (final : α) (n q : Nat)
+     (hn : 3 ≤ n) (hq : q < n - 1)
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CircleTransport/TrackCounts.lean
++++ proof-development/lean/SuperpermutationUpperBound/CircleTransport/TrackCounts.lean
+@@ -147,10 +147,10 @@
+       have hne' : a :: rest ≠ [] := by simp
+       have hlast := ih (portTarget r q) hq' a hne'
+         (fun b hb => hbase b (by simp [hb])) (fun b hb => hkind b (by simp [hb]))
+-      change ((Transport.portPath r final q ++ transportWalk (a :: rest) final (portTarget r q)).getLast _).tail =
+-        insertLetter ((a :: rest).getLast hne').tail final (completionExit (a :: rest) (portTarget r q))
+-      rw [List.getLast_append_of_ne_nil _ (transportWalk_nonempty (a :: rest) final (portTarget r q) hne')]
+-      exact hlast
++      exact (congrArg Row.tail (List.getLast_append_of_ne_nil
++        (l := Transport.portPath r final q)
++        (transportWalk_nonempty (r :: a :: rest) final q hne)
++        (transportWalk_nonempty (a :: rest) final (portTarget r q) hne'))).trans hlast
+ 
+ theorem transportWalk_internal (rs : List (Row α)) (hne : rs ≠ []) (final : α) (n q : Nat)
+     (hn : 3 ≤ n) (hq : q < n - 1)
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Relabel.lean
++++ proof-development/lean/SuperpermutationUpperBound43586371/Relabel.lean
+@@ -92,7 +92,8 @@
+ 
+ theorem liftRow_map (r : Row α) (z : α) (j : Nat) :
+     Completion.liftRow (r.map f) (f z) j = (Completion.liftRow r z j).map f := by
+-  simp [Completion.liftRow, Row.map, insertLetter_map]
++  by_cases h : j < r.visible
++  all_goals simp [Completion.liftRow, Row.map, insertLetter_map, h]
+ 
+ theorem repairRow_map (r : Row α) (z : α) (j : Nat) :
+     Completion.repairRow (r.map f) (f z) j = (Completion.repairRow r z j).map f := by
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/UniformChoices.lean
++++ proof-development/lean/SuperpermutationUpperBound/BalancedCuts/UniformChoices.lean
+@@ -40,8 +40,13 @@
+   rw [Fintype.sum_prod_type]
+   apply Finset.sum_eq_zero
+   intro i _
+-  simp only [ChoiceSystem.incidence, uniformSystem, uniformWeight, Int.cast_sub,
+-    Int.cast_ite, Int.cast_one, Int.cast_zero, ← Finset.sum_mul,
++  have hinc (j : Fin h) :
++      ((uniformSystem source target).incidence v (i, j) : ℚ) =
++      (if source (i, j) = v then 1 else 0) -
++        (if target (i, j) = v then 1 else 0) := by
++    by_cases hs : source (i, j) = v <;> by_cases ht : target (i, j) = v <;>
++      simp [ChoiceSystem.incidence, uniformSystem, hs, ht]
++  simp only [hinc, uniformWeight, ← Finset.sum_mul,
+     Finset.sum_sub_distrib, hitem i, sub_self, zero_mul]
+ 
+ theorem uniform_feasible (source target : I × Fin h → V) (hpos : 0 < h)
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/SelectedGraph.lean
++++ proof-development/lean/SuperpermutationUpperBound/BalancedCuts/SelectedGraph.lean
+@@ -30,11 +30,22 @@
+       S.stateBalance y v := by
+   classical
+   rw [S.stateBalance_eq_selected y hint v]
++  have hcard (p : Selected y → Prop) [DecidablePred p] :
++      (Fintype.card {e // p e} : ℚ) = ∑ e, if p e then 1 else 0 := by
++    rw [Fintype.card_subtype p, Finset.card_eq_sum_ones]
++    simp only [Nat.cast_sum, Nat.cast_one, Finset.sum_filter]
++    apply Finset.sum_congr rfl
++    intro e _
++    by_cases he : p e <;> simp [he]
+   simp only [degreeImbalance, Int.cast_sub, Fintype.card_subtype,
+     Finset.card_eq_sum_ones, Nat.cast_sum, Nat.cast_one, Nat.cast_zero, Nat.cast_ite,
+     Int.cast_sum, Finset.sum_filter,
+     incidence, Int.cast_ite, Int.cast_one, Int.cast_zero,
+     Finset.sum_sub_distrib, selectedSource, selectedTarget]
++  simp only [Int.cast_natCast, hcard]
++  exact congrArg₂ (fun a b : ℚ => a - b)
++    (hcard (fun e => S.source e.val = v))
++    (hcard (fun e => S.target e.val = v))
+ 
+ theorem selected_degreeImbalance_bound
+     (S : ChoiceSystem I V C) (y : C → ℚ) (hint : IntegralVector y)
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/GraphTrails.lean
++++ proof-development/lean/SuperpermutationUpperBound/Assembly/GraphTrails.lean
+@@ -83,7 +83,7 @@
+     exact hne hmi.symm
+   have hperm : trails.flatten.Perm Finset.univ.toList := by
+     have h := hinv.filterMap Sum.getLeft?
+-    simpa [trails, List.filterMap_flatten, List.filterMap_map] using h
++    simpa [trails, List.filterMap_flatten, List.filterMap_map, Function.comp_def] using h
+   refine ⟨trails, hpaths, hperm, Nat.le_min.mpr ⟨?_, ?_⟩⟩
+   · have h := hpaths.length_le_flatten
+     rw [hperm.length_eq] at h
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/SupportedCutWords.lean
++++ proof-development/lean/SuperpermutationUpperBound/BalancedCuts/SupportedCutWords.lean
+@@ -31,7 +31,8 @@
+     intro i
+     apply (List.map_perm_map_iff (f := fun v : supportedOverlapState A ell => v.val)
+       Subtype.val_injective).mp
+-    simpa [List.map_map, Function.comp_def, source, target] using hbalance i
++    rw [List.map_map, List.map_map]
++    exact hbalance i
+   obtain ⟨selected, J, w, hJ, hw, hc, hs⟩ := balanced_cut_words words lengths source target
+     Subtype.val hh hl hell (fun _ => rfl) (fun _ => rfl) hbal P hsupport
+   exact ⟨selected, J, w, by simpa only [supportedOverlapState_card] using hJ, hw, hc, hs⟩
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Words.lean
++++ proof-development/lean/Hunter/Words.lean
+@@ -3,7 +3,14 @@
+ Released under Apache 2.0 license as described in the file LICENSE.
+ Authors: Uku Raudvere
+ -/
+-import Mathlib
++import Mathlib.Tactic
++import Mathlib.Data.List.Rotate
++import Mathlib.Data.Finset.Sort
++import Mathlib.Data.Fintype.Prod
++import Mathlib.Basic.Real.Basic
++import Mathlib.Order.Interval.Finset.Nat
++import Mathlib.Order.Lattice.Nat
++import Lean435Compatibility
+ 
+ /-!
+ # Permutation words, overlap weight, and the successor edges (Hunter §2.2)
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Bounds.lean
++++ proof-development/lean/Hunter/Bounds.lean
+@@ -4,6 +4,7 @@
+ Authors: Uku Raudvere
+ -/
+ import Hunter.Transform
++import Mathlib.Algebra.Order.Floor.Div
+ 
+ /-!
+ # The optimisation quantities (Hunter §2.6, §6)
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsGreedy.lean
++++ proof-development/lean/Hunter/ProofsGreedy.lean
+@@ -248,7 +248,7 @@
+ theorem greedyP_vert (hk : 1 ≤ k) {ℓ : ℕ} (hℓ0 : 0 < ℓ) (hℓ : ℓ ≤ k * (k - 1)) {t : ℕ}
+     (ht : t < ℓ) : (greedyP k hk ℓ hℓ0 hℓ).vert t = gV k hk t := by
+   rw [vert_getElem _ (by rw [greedyP_numVerts hk hℓ0 hℓ]; exact ht)]
+-  show ((List.range ℓ).map (gV k hk))[t]'_ = gV k hk t
++  change ((List.range ℓ).map (gV k hk))[t]'(by simpa using ht) = gV k hk t
+   rw [List.getElem_map, List.getElem_range]
+ 
+ theorem greedyP_exitless (hk : 1 ≤ k) (hk2 : 2 ≤ k) {ℓ : ℕ} (hℓ0 : 0 < ℓ)
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsGreedy2.lean
++++ proof-development/lean/Hunter/ProofsGreedy2.lean
+@@ -363,7 +363,7 @@
+ theorem greedyP2_vert (hk : 3 ≤ k) {ℓ : ℕ} (hℓ0 : 0 < ℓ) (hℓ : ℓ ≤ k * (k - 1) * (k - 2)) {t : ℕ}
+     (ht : t < ℓ) : (greedyP2 k hk ℓ hℓ0 hℓ).vert t = gV2 k hk t := by
+   rw [vert_getElem _ (by rw [greedyP2_numVerts hk hℓ0 hℓ]; exact ht)]
+-  show ((List.range ℓ).map (gV2 k hk))[t]'_ = gV2 k hk t
++  change ((List.range ℓ).map (gV2 k hk))[t]'(by simpa using ht) = gV2 k hk t
+   rw [List.getElem_map, List.getElem_range]
+ 
+ theorem greedyP2_exitless (hk : 3 ≤ k) {ℓ : ℕ} (hℓ0 : 0 < ℓ)
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/asym/ConstAsym/Main.lean
++++ proof-development/lean/ConstAsym/Main.lean
+@@ -1,21 +1,12 @@
+ import ConstAsym.Bridge
+-import SuperpermutationUpperBound43586371.Uniform.Main
+-import Hunter.Paper
+ 
+-/-!
+-# The shortest superpermutation: `(L(n) - n! - (n-1)! - (n-2)!) / (n-3)! → 0`
+-
+-`L n` is the least length of a word over `Fin n` that contains every permutation as a factor, in the vocabulary
+-of Pantone's `Challenge.lean` (`SuperpermutationBounds.Covers`).
+-
+-* Lower side: Hunter–Raudvere, `Hunter.Paper.factorial_clean` (commit d452221):
+-  `Ssuper n ≥ n! + (n-1)! + (n-2)! + (n-4)! - 2 (n-5)!` for `n ≥ 6`, moved to covering words by `ConstAsym.Bridge`.
+-* Upper side: `SuperpermutationUpperBound43586371.Uniform.coefficient_tends_to_zero` (const_uniform).
+--/
++/-! Declaration-preserving extraction of the shortest-length definitions from
++the supplied ConstAsym.Main. The unrelated older upper theorem and Hunter.Paper
++imports are omitted. The definitions and proofs below are unchanged. -/
+ 
+ namespace ConstAsym
+ 
+-open SuperpermutationBounds Filter Topology
++open SuperpermutationBounds
+ 
+ /-- The least length of a word over `Fin n` that contains every permutation of `Fin n` as a factor. -/
+ noncomputable def L (n : ℕ) : ℕ :=
+@@ -39,104 +30,5 @@
+ theorem L_le_length {n : ℕ} {w : List (Fin n)} (hw : Covers w) : L n ≤ w.length :=
+   Nat.sInf_le ⟨w, hw, rfl⟩
+ 
+-/-- `L` is the Hunter–Raudvere `Ssuper` for `n ≥ 1`. -/
+-theorem L_eq_ssuper {n : ℕ} (hn : 0 < n) : L n = Hunter.Ssuper n :=
+-  (ssuper_eq_sInf hn).symm
+-
+-theorem two_mul_factorial_le {n : ℕ} (hn : 6 ≤ n) : 2 * (n - 5).factorial ≤ (n - 4).factorial := by
+-  obtain ⟨m, rfl⟩ : ∃ m, n = m + 6 := ⟨n - 6, by omega⟩
+-  rw [show m + 6 - 4 = (m + 1) + 1 by omega, show m + 6 - 5 = m + 1 by omega, Nat.factorial_succ]
+-  exact Nat.mul_le_mul_right _ (by omega)
+-
+-/-- Hunter–Raudvere's lower bound for every covering word, in `ℕ` (`n ≥ 6`). -/
+-theorem hunter_lower_nat {n : ℕ} (hn : 6 ≤ n) {w : List (Fin n)} (hw : Covers w) :
+-    n.factorial + (n - 1).factorial + (n - 2).factorial + (n - 4).factorial
+-      ≤ w.length + 2 * (n - 5).factorial := by
+-  have h := Hunter.Paper.factorial_clean hn
+-  have h3 : ((Hunter.Ssuper n : ℕ) : ℝ) ≤ (w.length : ℝ) := by exact_mod_cast ssuper_le_length hw
+-  have h4 : ((n.factorial + (n - 1).factorial + (n - 2).factorial + (n - 4).factorial : ℕ) : ℝ)
+-      ≤ ((w.length + 2 * (n - 5).factorial : ℕ) : ℝ) := by
+-    push_cast
+-    linarith
+-  exact_mod_cast h4
+-
+-/-- Hunter–Raudvere's lower bound for `L` (`n ≥ 6`). -/
+-theorem hunter_lower_L {n : ℕ} (hn : 6 ≤ n) :
+-    F3 n + ((n - 4).factorial : ℚ) - 2 * ((n - 5).factorial : ℚ) ≤ (L n : ℚ) := by
+-  obtain ⟨w, hw, hl⟩ := L_spec n
+-  have h := hunter_lower_nat hn hw
+-  rw [hl] at h
+-  have h' : ((n.factorial + (n - 1).factorial + (n - 2).factorial + (n - 4).factorial : ℕ) : ℚ)
+-      ≤ ((L n + 2 * (n - 5).factorial : ℕ) : ℚ) := by exact_mod_cast h
+-  push_cast at h'
+-  unfold F3
+-  linarith
+-
+-/-- `n! + (n-1)! + (n-2)! ≤ L n` for `n ≥ 6`. -/
+-theorem F3_le_L {n : ℕ} (hn : 6 ≤ n) : F3 n ≤ (L n : ℚ) := by
+-  have h := hunter_lower_L hn
+-  have h2 : (2 * (n - 5).factorial : ℚ) ≤ ((n - 4).factorial : ℚ) := by
+-    exact_mod_cast two_mul_factorial_le hn
+-  linarith
+-
+-/-- **Two-sided form.**  For every rational `ε > 0` there is `N` with
+-`n! + (n-1)! + (n-2)! ≤ L n ≤ n! + (n-1)! + (n-2)! + ε (n-3)!` for all `n ≥ N`. -/
+-theorem two_sided :
+-    ∀ ε : ℚ, 0 < ε → ∃ N : ℕ, ∀ n : ℕ, N ≤ n →
+-      F3 n ≤ (L n : ℚ) ∧ (L n : ℚ) ≤ F3 n + ε * ((n - 3).factorial : ℚ) := by
+-  intro ε hε
+-  obtain ⟨N, hN⟩ := SuperpermutationUpperBound43586371.Uniform.coefficient_tends_to_zero ε hε
+-  refine ⟨max N 6, fun n hn => ⟨F3_le_L (le_of_max_le_right hn), ?_⟩⟩
+-  obtain ⟨v, hv, hvl⟩ := hN n (le_of_max_le_left hn)
+-  have : (L n : ℚ) ≤ v.length := by exact_mod_cast L_le_length hv
+-  linarith
+-
+-/-- **The coefficient of `(n-3)!` tends to `0`** (over `ℝ`):
+-`(L(n) - n! - (n-1)! - (n-2)!) / (n-3)! → 0`. -/
+-theorem coefficient_limit :
+-    Tendsto (fun n : ℕ => ((L n : ℝ) - (F3 n : ℝ)) / ((n - 3).factorial : ℝ)) atTop (𝓝 0) := by
+-  rw [Metric.tendsto_atTop]
+-  intro ε hε
+-  obtain ⟨q, hq0, hqε⟩ := exists_rat_btwn hε
+-  have hq : (0 : ℚ) < q := by exact_mod_cast hq0
+-  obtain ⟨N, hN⟩ := two_sided q hq
+-  refine ⟨N, fun n hn => ?_⟩
+-  obtain ⟨h1, h2⟩ := hN n hn
+-  have h1' : ((F3 n : ℚ) : ℝ) ≤ ((L n : ℚ) : ℝ) := Rat.cast_le.mpr h1
+-  have h2' : ((L n : ℚ) : ℝ) ≤ ((F3 n + q * ((n - 3).factorial : ℚ) : ℚ) : ℝ) := Rat.cast_le.mpr h2
+-  push_cast at h1' h2'
+-  have hf : (0 : ℝ) < ((n - 3).factorial : ℝ) := by exact_mod_cast Nat.factorial_pos _
+-  rw [Real.dist_eq, sub_zero, abs_of_nonneg (div_nonneg (by linarith) hf.le), div_lt_iff₀ hf]
+-  have := mul_lt_mul_of_pos_right hqε hf
+-  linarith
+-
+-/-- The same limit over `ℚ`. -/
+-theorem coefficient_limit_rat :
+-    Tendsto (fun n : ℕ => ((L n : ℚ) - F3 n) / ((n - 3).factorial : ℚ)) atTop (𝓝 0) := by
+-  rw [Metric.tendsto_atTop]
+-  intro ε hε
+-  obtain ⟨N, hN⟩ := Metric.tendsto_atTop.mp coefficient_limit ε hε
+-  refine ⟨N, fun n hn => ?_⟩
+-  have h := hN n hn
+-  rw [Real.dist_eq] at h
+-  rw [Rat.dist_eq]
+-  push_cast
+-  simpa only [sub_zero] using h
+-
+-/-- **Main theorem.**  With `L n` the least length of a word over `Fin n` containing every permutation
+-(Pantone's `Covers`): `L n = Hunter.Ssuper n` for `n ≥ 1`, `n! + (n-1)! + (n-2)! ≤ L n` for `n ≥ 6`, and
+-`(L n - n! - (n-1)! - (n-2)!) / (n-3)! → 0`. -/
+-theorem shortest_superpermutation_coefficient :
+-    (∀ n, 0 < n → L n = Hunter.Ssuper n) ∧
+-    (∀ n, 6 ≤ n → F3 n ≤ (L n : ℚ)) ∧
+-    Tendsto (fun n : ℕ => ((L n : ℝ) - (F3 n : ℝ)) / ((n - 3).factorial : ℝ)) atTop (𝓝 0) :=
+-  ⟨fun _ hn => L_eq_ssuper hn, fun _ hn => F3_le_L hn, coefficient_limit⟩
+ 
+ end ConstAsym
+-
+-#print axioms ConstAsym.L_eq_ssuper
+-#print axioms ConstAsym.hunter_lower_L
+-#print axioms ConstAsym.two_sided
+-#print axioms ConstAsym.coefficient_limit
+-#print axioms ConstAsym.coefficient_limit_rat
+-#print axioms ConstAsym.shortest_superpermutation_coefficient
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ChainGraph.lean
++++ proof-development/lean/PreimageChain/ChainGraph.lean
+@@ -428,7 +428,8 @@
+   have heE2 : e ∈ E2removed P (Sset P) := by
+     rw [Hunter.clm_e2 (Hunter.sset_sPrecond P), out, Finset.mem_filter]
+     refine ⟨heOut.1, ?_⟩
+-    simpa [heSource] using b.2
++    rw [heSource]
++    exact b.2
+   have heDouble : e.2 ∈ doubles P (Sset P) := by
+     rw [E2removed, Finset.mem_filter] at heE2
+     exact heE2.2
+@@ -556,7 +557,8 @@
+     apply Hunter.clm_e1 (Hunter.sset_sPrecond P)
+     rw [into, Finset.mem_filter]
+     refine ⟨heIn.1, ?_⟩
+-    simpa [heTarget] using a.2
++    rw [heTarget]
++    exact a.2
+   have heSourceS : e.1 ∈ Sset P := by
+     rw [E1removed, Finset.mem_filter] at heE1
+     exact heE1.2
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ComponentGeometry.lean
++++ proof-development/lean/PreimageChain/ComponentGeometry.lean
+@@ -402,8 +402,9 @@
+         (componentSeams p).card := by
+     unfold Hunter.ProofsLink2.posBoundaryCount componentSeams componentBoundaries
+     apply congrArg Finset.card
+-    ext j
+-    simp [Hunter.ProofsLedger.IsDoor]
++    apply Finset.filter_congr
++    intro j hj
++    rfl
+   rw [hceil, hcount] at hruns
+   simpa [componentPieceCount, Nat.mul_comm] using hruns
+ 
+--- research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PortalCoordinates.lean
++++ proof-development/lean/PreimageChain/PortalCoordinates.lean
+@@ -182,7 +182,11 @@
+ /-- 权三后继的六种尾部方向。 -/
+ inductive PortalOrientation where
+   | mab | mba | abm | amb | bma | bam
+-  deriving DecidableEq, Fintype
++  deriving DecidableEq
++
++instance : Fintype PortalOrientation where
++  elems := {.mab, .mba, .abm, .amb, .bma, .bam}
++  complete := by intro orientation; cases orientation <;> simp
+ 
+ /-- 左端长方向产生的第 `j` 个满片之第 `l` 个实际块词。 -/
+ def longRunBlockWord (U : List ℕ) (m a b c j l : ℕ) : List ℕ :=

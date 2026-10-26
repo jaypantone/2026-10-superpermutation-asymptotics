@@ -1,0 +1,570 @@
+\section{Literal contours and finite sets of states}
+\label{geo:section}
+
+This section constructs many families of cyclic bases that remain disjoint
+after certain local changes. The local changes will later prevent
+intersections between families built on different sets of control symbols.
+The construction keeps track of the actual order of the symbols. This is
+needed because the word assembly uses literal overlaps, not just cyclic
+equivalence classes.
+
+Fix an integer $r\geq 6$, and write $k=r-1$ and $d=r-3$. There are $M$
+distinct \emph{background symbols}, in a fixed cyclic order, and $r$
+distinct \emph{control symbols}. These two alphabets are disjoint. Number
+the background symbols by the elements of $\mathbb Z/M\mathbb Z$, in their
+cyclic order. A \emph{cut} is the position immediately before a background
+symbol; its coordinate is the number of that symbol. There are $k$
+stationary positions for control symbols and one mobile position. The
+stationary positions have fixed identities $0,\ldots,k-1$. Their identities
+do not change when their cuts pass the distinguished background symbol.
+
+A \emph{literal base} is a list containing all $M+r$ symbols exactly once.
+Two bases have the same \emph{cyclic class} if one is a cyclic rotation of
+the other. We always write the mobile symbol last. After deleting it, the
+remaining list is a representative of the stationary cyclic order. Thus
+the stationary cuts and their resident control symbols, together with the
+gap occupied by the mobile symbol, determine the literal base uniquely.
+The gap is necessary: the stationary cuts and the assignment of control
+symbols alone do not determine a base during a sequence of full moves.
+
+Put $h=M+k$, so a base has length $h+1$. For a base
+$b=b_0\cdots b_h$, define two literal operations by
+\[
+ F(b)=b_1\cdots b_{h-1}b_0b_h,
+ \qquad
+ S(b)=b_hb_0\cdots b_{h-3}b_{h-1}b_{h-2}.
+\]
+A \emph{full row} consists of a base with visible length $h+1$, and a
+\emph{short row} consists of a base with visible length $h-1$. Their
+\emph{charges} are respectively $0$ and $2$. A fixed extra symbol, called
+the satellite, is outside the base alphabet and is attached to every row
+when the rows are used in the word construction. It does not change in
+this section.
+
+The head of a row is the first $h-1$ symbols of its base. Its tail is the
+first $h-1$ symbols after rotating the base left by one more than its
+visible length. Two consecutive rows are compatible when the first tail
+equals the second head. The displayed formulas show directly that the
+successor of a full row with base $b$ may have base $F(b)$, and the
+successor of a short row may have base $S(b)$. A \emph{closed contour} is a
+nonempty cyclic list of compatible rows. Its source classes are the cyclic
+classes of its bases, with one occurrence for each row.
+
+\subsection{Positive updates and local simplicity}
+
+Suppose a stationary position contains $A$, the background symbol at its
+cut is $x$, and the mobile symbol is $T$. Apply $F$ until the base ends in
+$A,x,T$, and then apply $S$. We call this a \emph{positive update} of that
+stationary position. The cyclic order changes locally from
+\[
+ \cdots A,x,T\cdots
+ \quad\hbox{to}\quad
+ \cdots x,A,T\cdots.
+\]
+Consequently the old mobile symbol $T$ becomes the stationary resident at
+the next background cut, and $A$ becomes mobile. The new mobile is
+immediately before the new resident. In terms of the assignment of control
+symbols to positions, the update exchanges the mobile position with the
+chosen stationary position. No other stationary cut changes.
+
+A \emph{batch} updates every stationary position once, in some prescribed
+order. If the initial cuts are $q_0,\ldots,q_{k-1}$, then during batch $t$
+the current cuts are
+\begin{equation}
+ q_i+t+\epsilon_i\pmod M,
+ \qquad \epsilon_i\in\{0,1\}.
+ \label{geo:cuts}
+\end{equation}
+Here $\epsilon_i$ is one exactly when position $i$ has already been
+updated in the current batch. After the last update, increase $t$ by one
+and reset all the $\epsilon_i$ to zero. The short row used for that last
+update still has the old value of $t$ and has phase zero at its last
+target. Only its successor uses the reset convention. Full moves change
+the mobile gap and leave the data in \eqref{geo:cuts} unchanged.
+
+The circular distance between two residues modulo $M$ is the smaller of
+the two distances between them around the $M$ cuts. Call the initial cuts
+\emph{robust} if the indexed family
+\[
+ 0,\qquad q_i-q_j\quad(0\leq i,j<k,\ i\ne j)
+\]
+has circular distance at least five between any two different members.
+The word ``indexed'' matters: repeated differences are forbidden. In
+particular, the cuts are distinct. Perturbing each cut by zero or one
+leaves distinct stationary cuts at circular distance at least four.
+
+For example, with $r=6$ and $M=360$, the cuts
+\[
+ (q_0,q_1,q_2,q_3,q_4)=(0,5,25,125,155)
+\]
+are robust. Their positive integer differences are
+$5,20,25,30,100,120,125,130,150,155$. These differences, their negatives
+modulo $360$, and zero are separated by at least five.
+
+\begin{lemma}
+\label{geo:proper-run}
+Assume the cuts are robust. After a positive update, the next positive
+update reaches its required suffix in fewer than $h-1$ full moves.
+\end{lemma}
+\begin{proof}
+The stationary list has $h$ distinct symbols. Each full move rotates it
+one position, so the required target suffix is reached in a unique number
+$u$ of moves with $0\leq u<h$. It remains to exclude $u=h-1$.
+
+Let $x$ be the background symbol crossed by the preceding short move.
+Immediately after that move, the stationary list ends in $x$, and the
+position just updated has cut $x+1$. If $u=h-1$, its final symbol $x$
+becomes its first symbol. On the other hand, let $z$ be the cut of the
+next target. At the required suffix, the stationary list ends in that
+target's resident followed by $z$. The successor cut $z+1$ is unoccupied,
+because the current stationary cuts are separated by at least four.
+Therefore the first stationary symbol at this suffix is the background
+symbol $z+1$. We obtain $x=z+1$ modulo $M$.
+
+The previous target now has cut $x+1=z+2$, whereas the next target has
+cut $z$. If these are different stationary positions, their distance two
+contradicts the separation just stated. If they are the same position,
+the equality would give $2=0$ modulo $M$, which is impossible: robust
+cuts include at least two different cuts at circular distance at least
+five, so $M\geq10$. Thus $u\ne h-1$, proving the stronger bound.
+\end{proof}
+
+\begin{lemma}
+\label{geo:simplicity}
+Assume the cuts are robust. Consider a schedule of exactly $M$ batches
+that returns the complete literal base to its initial value. Its source
+classes are pairwise distinct.
+\end{lemma}
+\begin{proof}
+Suppose two emitted rows have the same cyclic base. If their mobile
+symbols are equal, they have $k$ common stationary control symbols;
+otherwise they have $k-1$. In either case there are at least two. A common
+stationary symbol occupies some position $i$ in the first row and some
+position $j$ in the second. Equality of its background cut gives
+\[
+ t'-t=q_i-q_j+\epsilon_i-\epsilon'_j\pmod M.
+\]
+The ordered pairs $(i,j)$ for different common symbols are distinct. Two
+off-diagonal pairs would place distinct nonzero ordered differences within
+distance two. One diagonal and one off-diagonal pair would place a
+nonzero difference within distance two of zero. Robustness excludes both
+possibilities. Therefore every common symbol occupies the same stationary
+position in both rows, and $t'-t$ is $0$, $1$, or $-1$ modulo $M$.
+
+Choose the direction of comparison so that the rows lie in the same batch
+or in consecutive batches of the cyclic schedule. Literal closure permits
+this comparison across the last and first batches. In the same batch,
+equality of the phases of a common stationary symbol implies that its
+position is not updated between the rows. In consecutive batches, its
+phase must be one in the first row and zero in the second. It has already
+been updated before the first row, and is not updated again before the
+second. Thus no common stationary position is updated in the interval
+between the rows.
+
+If the mobile symbols are equal, every stationary position is common.
+The two rows lie in a single run of full moves, possibly including its
+final short source row. The $h$ possible insertion gaps for the mobile
+in the fixed stationary circle give $h$ different cyclic bases. By
+Lemma~\ref{geo:proper-run}, that run has fewer than $h$ full moves, so no
+two of its source rows have the same cyclic base.
+
+If the mobile symbols differ, write them as $a$ and $b$. The only
+stationary position not common to the two rows is one position $j$,
+occupied by $b$ first and by $a$ second. All intervening updates must be
+at $j$. There is at most one such update in one batch, and at most two
+across the boundary between consecutive batches. The mobile changes, so
+the number of these exchanges is odd. It is therefore exactly one.
+
+Let $x$ be the cut of $j$ before that update. Before the short move, $b$
+is stationary at $x$ and $a$ is mobile. Afterwards, $a$ is stationary at
+$x+1$ and $b$ is mobile. Equality of the two cyclic bases requires $a$
+to occupy cut $x+1$ before the update. There is only one such mobile gap,
+because no stationary resident is at that cut before the update. This is
+the gap of the short source row. The same equality requires the new
+mobile $b$ to occupy cut $x$ afterwards. Immediately after the short move,
+the stationary list begins with $a$ and ends with the background symbol
+$x$. Inserting $b$ before $x$ therefore requires the final full gap,
+reached after exactly $h-1$ full moves. Lemma~\ref{geo:proper-run} says
+that the next target is reached strictly before this gap. The required
+row therefore does not occur. This excludes the final possibility.
+\end{proof}
+
+\subsection{The normal order and exact replacement intervals}
+
+Choose representatives $0=q_0<q_1<\cdots<q_{k-1}<M$. The \emph{normal
+order} is
+\[
+ O=(k-1,k-2,\ldots,0).
+\]
+Begin with the mobile immediately before the resident at position zero.
+As before, the mobile is the last symbol of the literal base. A complete
+normal batch acts on the $r$ control positions as an $r$-cycle, denoted
+$C$. Indeed, the original mobile goes to the first target; each subsequent
+target receives the resident displaced from the preceding target; and the
+resident of the last target becomes mobile.
+
+\begin{lemma}
+\label{geo:normal-counts}
+If $r$ divides $M$, then $M$ normal batches form a literally closed
+contour. Its number of rows $N_0$ and its charge $Q_0$ are
+\[
+ N_0=M\bigl((r-2)M+r(r-1)+1\bigr),
+ \qquad Q_0=2(r-1)M.
+\]
+\end{lemma}
+\begin{proof}
+The role assignment returns because $C^M$ is the identity. Every
+stationary cut advances $M$ times and therefore returns. The final target
+is again zero, so the mobile is again immediately before its resident.
+These data determine the same literal base, with the mobile last.
+
+In one normal batch the first full run crosses $q_{k-1}+1$ background
+symbols and all $k$ resident controls. After updating target $i$, the
+full run to target $i-1$ crosses $M+q_{i-1}-q_i$ background symbols and
+all $k$ resident controls. Consequently the total number of full moves is
+\[
+ q_{k-1}+1+k+
+ \sum_{i=1}^{k-1}(M+q_{i-1}-q_i+k)
+ =(k-1)M+1+k^2.
+\]
+There are also $k$ short rows, each of charge two. Multiplying the two
+batch totals by $M$ gives the formulas.
+\end{proof}
+
+We next describe a replacement that keeps a specified control symbol out
+of a specified stationary position for a chosen interval. Let $P$ be an
+order of the $k$ stationary positions, with first target $a$. Performing
+$P$ followed by its reverse is a \emph{parking pair}. Each position is
+updated twice. The exchanges of roles cancel in reverse order, so every
+control returns to its original role. The control that was initially
+mobile is placed at $a$ by the first exchange and recovered by the last.
+No intermediate exchange uses $a$. Throughout the pair, including all
+full rows, this control is either mobile or resident at $a$.
+
+For example, if $k=5$ and the forbidden position is $4$, use
+$P=(3,4,2,1,0)$. A control initially mobile stays out of position $4$
+throughout this order and its reverse. At the midpoint it is resident at
+position $3$, although all stationary cuts have already advanced once.
+
+\begin{lemma}
+\label{geo:parking-endpoint}
+Let $T$ be a positive integer. Replace $2rT+1$ consecutive normal batches
+by $rT$ parking pairs, all with the same order $P$, followed by one normal
+batch. The replacement has exactly the same final literal base as the
+normal interval and the same total number of short rows. A control
+initially mobile never occupies any stationary position different from
+the first target of $P$ during the parking portion.
+\end{lemma}
+\begin{proof}
+The parking pairs restore the role assignment, and the final normal
+batch applies $C$. The normal interval also applies $C$, because
+$C^{2rT+1}=C$. Both intervals advance every stationary cut $2rT+1$ times.
+Both end with an update of position zero. The post-update mobile gap is
+therefore the same, and the literal bases agree. Each interval has
+$k(2rT+1)$ short updates. The final assertion follows from the preceding
+description of each pair. Protection is asserted during the parking
+portion; the final normal batch must lie outside the interval to be
+protected.
+\end{proof}
+
+We call the final normal batch the \emph{cleanup batch}. It is needed
+because a parking pair can end with its mobile immediately before a
+resident other than that of position zero. Equality of role assignments
+alone would not give equality of literal endpoints.
+
+\subsection{A catalogue of joint role and phase states}
+
+Only two parking orders are needed. Put $P_0=O$, and obtain $P_1$ by
+exchanging the first two entries of $O$. For a forbidden position $j$,
+use $P_1$ when $j$ is the first target of $P_0$, and use $P_0$ otherwise.
+The chosen first target always differs from $j$. Fix this choice for all
+parking pairs in a replacement interval.
+
+An \emph{admissible schedule} is obtained from the normal $M$-batch
+contour by replacing mutually disjoint intervals as in
+Lemma~\ref{geo:parking-endpoint}, using only $P_0$ and $P_1$. An interval
+may be placed on the cyclic schedule; choose the initial cut outside the
+replacement intervals. Since each replacement has its normal literal
+endpoint, all replacements can be performed without changing the states
+at the other normal boundaries.
+
+Let a role assignment be a bijection from the $r$ positions, including
+the mobile position, to the $r$ named controls. Write $U_\ell(P)$ for the
+role action of the first $\ell$ updates of $P$ followed by its reverse,
+where $0\leq\ell\leq 2k$. For such a prefix define a phase vector by
+\[
+ \epsilon_\ell(P)=
+ \begin{cases}
+  \text{the indicator of the first $\ell$ targets of $P$},&0\leq\ell<k,\\
+  \text{the indicator of the first $\ell-k$ targets of $P^{\rm rev}$},
+       &k\leq\ell<2k,\\
+  0,&\ell=2k.
+ \end{cases}
+\]
+At the midpoint $\ell=k$, the translation has increased by one and the
+phase vector is zero. The role action remains $U_k(P)$; it has not reset.
+At $\ell=2k$, the translation has increased by two and both the phase
+vector and the role action have reset.
+
+Define the finite set of \emph{joint states}
+\begin{equation}
+ \mathcal J=
+ \left\{\bigl(C^sU_\ell(P),\epsilon_\ell(P)\bigr):
+      0\leq s<r,\ P\in\{P_0,P_1\},\ 0\leq\ell\leq2k\right\}.
+ \label{geo:joint-set}
+\end{equation}
+Composition here means chronological action on a role assignment: the
+normal batches act first, followed by the indicated prefix. We count
+joint states, not independent choices of a role permutation and a phase
+vector.
+
+\begin{lemma}
+\label{geo:joint-containment}
+Fix an initial role assignment $\sigma$. Every source row of an admissible
+schedule has stationary cuts $q_i+t+\epsilon_i$ and role assignment
+$\sigma\tau$ for some translation $t$ and some
+$(\tau,\epsilon)\in\mathcal J$. Moreover,
+\[
+ |\mathcal J|\leq2r(2k+1)=4r^2-2r<4r^2.
+\]
+\end{lemma}
+\begin{proof}
+A normal boundary has assignment $\sigma C^s$ for some $s$ modulo $r$.
+The proper prefixes of its batch are first-half prefixes of the $P_0$
+pair. Its final state is the empty prefix at normal phase $s+1$.
+
+A replacement starts at a normal boundary. Every complete parking pair
+restores its starting role assignment. Thus every pair in the replacement
+has the same list of relative role actions $C^sU_\ell(P)$. The reset
+convention in \eqref{geo:cuts} gives exactly the displayed phase vectors,
+including the midpoint. The cleanup has the proper prefixes of a $P_0$
+batch, and its final state is the next normal role phase. By
+Lemma~\ref{geo:parking-endpoint}, the subsequent normal boundary agrees
+with the original schedule, so the argument applies successively to all
+replacements.
+
+Full moves change neither the role assignment nor the stationary cuts.
+The short row preceding the last update of a batch is represented by the
+proper prefix before that update; its successor is represented at the
+reset boundary. Thus every emitted row has been included. Finally, $r$
+divides $M$, the translation increases by $M$, and the schedule closes
+literally. The last and first states obey the same convention. The
+cardinality bound counts the indices in \eqref{geo:joint-set}; repeated
+representations only decrease the number of states.
+\end{proof}
+
+\subsection{Many robust modular frames}
+
+The stationary cut set will have one additional algebraic property that
+allows us to reconstruct a missing cut. Choose integers
+\[
+ 0<z_1<\cdots<z_d<M,
+ \qquad s=z_1+\cdots+z_d\pmod M,
+\]
+where $s$ is represented in $\{0,\ldots,M-1\}$. Sort the $k=d+2$ points
+$0,z_1,\ldots,z_d,s$ into increasing order, and retain the result only
+when it is robust. This ordered cut tuple is a \emph{modular frame}.
+The point $s$ is its sum point. Assign coefficient $d-1$ to zero,
+coefficient $1$ to the sum point, and coefficient $-1$ to every $z_i$.
+These coefficients are all nonzero, their sum is zero, and their weighted
+sum of cuts is zero modulo $M$. Thus the relation is unchanged by a
+common translation. In the example above, $z=(5,25,125)$ and $s=155$.
+
+We use the following elementary fact for arbitrary moduli. For a nonzero
+integer $a$, the congruence $ax=b\pmod M$ has either no solutions or
+$\gcd(|a|,M)$ solutions in $\mathbb Z/M\mathbb Z$. Indeed, if one solution
+exists then all solutions form a translate of the kernel of multiplication
+by $a$. On writing $g=\gcd(|a|,M)$ and dividing by $g$, coprimality shows
+that the kernel consists of the $g$ multiples of $M/g$. In particular,
+there are at most $|a|$ solutions. No primality assumption is needed.
+
+\begin{lemma}
+\label{geo:frame-supply}
+Let $F_M$ be the number of robust modular frames. Then
+\[
+ F_M\geq
+ \frac{(M-1)^d-18k^4(M-1)^{d-1}}{d!}
+ \geq\frac{M^d}{d!}\left(1-\frac{19r^4}{M}\right).
+\]
+Each retained anchored cut set has a unique sum point.
+\end{lemma}
+\begin{proof}
+First choose an ordered vector from $\{1,\ldots,M-1\}^d$, without sorting
+its coordinates. Regard the cuts as evaluations of the formal points
+$0,e_1,\ldots,e_d,\boldsymbol 1$ in $\mathbb Z^d$. Their affine relations
+form a one-dimensional space, generated by
+\[
+ (d-1,-1,\ldots,-1,1).
+\]
+To verify this, a relation with coefficient $a$ at $\boldsymbol 1$ has
+coefficient $-a$ at each $e_i$, by comparing coordinates, and coefficient
+$(d-1)a$ at zero, by summing coefficients. Every nonzero relation
+therefore involves all $d+2\geq5$ points.
+
+A comparison of two distinct ordered differences, or of a nonzero
+difference with zero, involves at most four formal points. Its linear
+form is therefore nonzero. Every coefficient in that form has absolute
+value at most two. There are at most $k^4$ comparisons. For robustness,
+exclude the nine residues $-4,-3,\ldots,4$ for each comparison. Fix all
+but one coordinate with nonzero coefficient. The modular root bound gives
+at most two choices for the remaining coordinate for each excluded
+residue. The number of bad ordered vectors is at most
+$18k^4(M-1)^{d-1}$.
+
+The good vectors are invariant under coordinate permutation, and a good
+vector has distinct coordinates. Its orbit under coordinate permutation
+therefore has exactly $d!$ elements. Sorting gives the first inequality.
+For the second, use
+$(M-1)^d\geq M^d-dM^{d-1}$ and
+$d+18k^4\leq19r^4$.
+
+It remains to check that sorting has not identified different sum
+decorations. If an anchored cut set had two sum points $s$ and $s'$, the
+sum of all its cuts would be both $2s$ and $2s'$ modulo $M$. Distinct
+solutions require $M$ even and $s-s'=M/2$. The two ordered differences
+$s-s'$ and $s'-s$ would then coincide. This contradicts robustness, so
+the sum point is unique.
+\end{proof}
+
+\subsection{Reconstruction and disjoint labelled families}
+
+A \emph{labelled frame} is a pair $(q,\sigma)$, where $q$ is a robust
+modular frame and $\sigma$ is an initial bijective assignment of the $r$
+named controls to the $r$ positions. Its \emph{envelope} is the set of
+cyclic bases obtained by choosing an arbitrary translation, a joint state
+$(\tau,\epsilon)\in\mathcal J$, and an arbitrary mobile insertion gap,
+with stationary cuts $q_i+t+\epsilon_i$ and assignment $\sigma\tau$.
+Lemma~\ref{geo:joint-containment} shows that every source row of every
+admissible repair of this labelled frame lies in its envelope.
+
+\begin{lemma}
+\label{geo:reconstruction}
+Fix a labelled frame and fix a joint state on each side of a possible
+envelope intersection. The number of positional reconstruction witnesses
+for a target frame is at most
+\[
+ D_0=k(k-1)^2\bigl(d+1+\gcd(d-1,M)\bigr)
+       \leq2d\,k(k-1)^2\leq2r^4.
+\]
+A witness includes the matching of the retained stationary positions.
+\end{lemma}
+\begin{proof}
+A common cyclic base has at least $k-1$ controls stationary on both sides.
+If the mobile symbols agree, discard one of the $k$ common stationary
+controls. Choose the omitted stationary position on the source side and
+on the target side. The remaining $k-1$ stationary controls occur in the
+same cyclic order. The binary phase perturbations do not change their
+order, because the cuts remain separated by at least four. There are
+therefore $k-1$ possible cyclic matchings.
+
+For a matched source position $i$ and target position $j$, equality of
+the cuts gives
+\[
+ q'_j+\delta=q_i+\epsilon_i-\epsilon'_j\pmod M,
+\]
+where $\delta$ is the difference of the two common translations. The
+phase vectors are fixed, so the right-hand side is known. Choose also
+the target sum position $a\in\{1,\ldots,k-1\}$. This fixes its coefficient
+vector $c$. Set $w_j=q'_j+\delta$. Since $\sum c_j=0$, the target relation
+is $\sum c_jw_j=0$. It determines the omitted coordinate $w_j$ in at most
+$\gcd(|c_j|,M)$ ways. If position zero was retained, its known coordinate
+$w_0$ determines $\delta$; if it was omitted, its reconstructed coordinate
+does so. Subtracting $\delta$ then determines every target cut. Sorting
+and robustness can reject a reconstruction but cannot add one.
+
+For each fixed sum position, summing the root multiplicities over the
+omitted target position gives
+$d+1+\gcd(d-1,M)\leq2d$. There are $k$ source omissions, $k-1$ cyclic
+matchings, and $k-1$ choices of sum position. Multiplying gives the stated
+bound, which counts witnesses even if several reconstruct the same frame.
+\end{proof}
+
+\begin{lemma}
+\label{geo:labelled-packing}
+Put
+\[
+ \Delta=64r^8,
+ \qquad \eta=\frac{r!}{2d!(\Delta+1)}.
+\]
+For every $M\geq38r^4$, there are
+$\lfloor\eta M^d\rfloor$ labelled frames whose envelopes are pairwise
+disjoint.
+\end{lemma}
+\begin{proof}
+Form a finite graph whose vertices are all labelled frames, with an edge
+when two distinct vertices have intersecting envelopes. Distinct vertices
+with coincident envelopes are also adjacent. By
+Lemma~\ref{geo:frame-supply}, the graph has at least
+$r!M^d/(2d!)$ vertices.
+
+Fix a source vertex. For a chosen pair of joint states, each witness of
+Lemma~\ref{geo:reconstruction} determines the target frame and matches
+$r-2$ named stationary control symbols. Since the target role action is
+a permutation, those equalities determine the target initial assignment
+on $r-2$ positions. The remaining two labels have at most two assignments
+to the remaining positions. Thus the number of possible neighbouring
+vertices, including the source vertex itself, is at most
+\[
+ 2|\mathcal J|^2D_0\leq2(4r^2)^2(2r^4)=64r^8.
+\]
+This bound includes all assignments at the time the graph is formed. It
+would not be valid to select unlabelled frames first and then attach all
+$r!$ assignments to each selected frame.
+
+Greedily select a vertex and remove it and all its neighbours. Each
+selection removes at most $\Delta+1$ vertices. Continuing until no
+vertices remain produces an independent set with at least
+$r!M^d/(2d!(\Delta+1))=\eta M^d$ vertices. Select the required integer
+number from this independent set. Their envelopes are disjoint by the
+definition of the graph.
+\end{proof}
+
+For fixed $M$, the selected family can be used for every background circle
+and every set of $r$ active letters. To see this, first make the selection
+using $M$ formal background symbols and $r$ different formal control
+symbols. Replace the background symbols, in order, by the letters of any
+chosen background circle, and replace the formal controls by its active
+letters. These substitutions give an injective map on the entire formal
+alphabet. They commute with the construction of each row and with cyclic
+rotation. If two substituted rows were equal up to rotation, injectivity
+would give the same equality before substitution. Thus the selected
+envelopes remain disjoint. In particular, the choice of frames is
+independent of the guard positions introduced in the next section.
+
+\subsection{What the local construction supplies to assembly}
+
+For later use, the literal displacement also has an exact description.
+Give each background symbol its index modulo $h$ in a literal base. A
+full move changes that index by $-1$. A short move changes it by $+1$,
+except for the crossed background symbol, which stays at index $h-1$.
+In $M$ complete batches each stationary position crosses every background
+symbol exactly once. Every background symbol therefore has exactly $k$
+exceptional short moves. If the contour is literally closed, with $N$
+rows and total charge $Q$, this proves
+\begin{equation}
+ Q-N\equiv k\pmod h,
+ \qquad \gcd(|Q-N|,h)=\gcd(k,h)\leq k.
+ \label{geo:displacement}
+\end{equation}
+
+An untouched normal batch contains an actual consecutive run of literal
+$F$ successors of length at least
+\[
+ \frac{(k-1)M+k^2+1}{k}.
+\]
+It is an untouched batch that gives this estimate. The first full run of
+a cleanup batch can start at a different mobile gap and is not covered
+by the normal count. The global repair argument must therefore leave an
+untouched batch before applying a word assembly lemma that requires such
+a run.
+
+The results in this section construct disjoint envelopes for one active
+control alphabet on one fixed background. They also prove that every
+admissible repair stays inside its envelope. To use several overlapping
+active alphabets, one must additionally construct the forbidden-event
+catalogue, prove the deletion estimates, and place disjoint replacement
+intervals. An actual word bound further requires the lists of unused
+source classes, an iteration that inserts a variable number of controls,
+and additional cyclic words that meet every required literal overlap.
+Those are separate mathematical statements; the numerical counts in this
+section do not assume their existence.

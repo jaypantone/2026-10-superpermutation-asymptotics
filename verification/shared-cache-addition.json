@@ -1,0 +1,93 @@
+{
+  "module": "Mathlib.Algebra.Order.Floor.Div",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/shared-additions/1792984419849287000/Div.olean",
+    "Mathlib/Algebra/Order/Floor/Div.lean"
+  ],
+  "exit_code": 0,
+  "compiler_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "411ade89e6d72ff26638b3160c61c463ef1a603d1a96cfcbf493709cbc78c285",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 3,
+      "successful_samples": 3,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 77
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 77
+      },
+      "minimum_reported_free_percent": 77,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 705312,
+    "seconds": 2.118,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 62832,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "maintenance_locks": [
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/2ed35ae9139b152e/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4b94c5a78c72e474/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4ecafca2b07af6d7/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/632ad01d9d665d26/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/75acb2bd8c24641c/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/76313411d48f5de2/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/9ea991c9f161fd65/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/9ee512965f2dee2c/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/coefficient-two-audit-0a85cecc/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/d9ecf9b545415820/compile.lock",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/halfar-independent-0d3fc798-20261024/compile.lock"
+  ],
+  "initial_lean_processes": [],
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/shared-additions/1792984419849287000/compile.log",
+  "publication_status": "complete",
+  "published": [
+    {
+      "path": "/Users/jaypantone/Library/Caches/LeanShared/dependencies/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Floor/Div.ir",
+      "sha256": "7b990cd8b5fe823c65a4ce0389334565073e7125133704f2715d90c5475f004a"
+    },
+    {
+      "path": "/Users/jaypantone/Library/Caches/LeanShared/dependencies/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Floor/Div.ir.sig",
+      "sha256": "0e245bef41ad7865facb53656bda1c7c092b7e61d010feda16fba064933a5794"
+    },
+    {
+      "path": "/Users/jaypantone/Library/Caches/LeanShared/dependencies/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Floor/Div.olean.private",
+      "sha256": "e2f7822523bb782c725f9782c06cb131a83e16f93ca547248200471e612e6f29"
+    },
+    {
+      "path": "/Users/jaypantone/Library/Caches/LeanShared/dependencies/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Floor/Div.olean.server",
+      "sha256": "def1cfc97a2060aa88c2d5c0992f30b670d049cf8474ed331ad97ee45fa61a2c"
+    },
+    {
+      "path": "/Users/jaypantone/Library/Caches/LeanShared/dependencies/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Floor/Div.olean",
+      "sha256": "819bf224ecdd98caf31b5af2897835f424bfdc6a1a9db4ee6031cd089c6e64b3"
+    }
+  ]
+}

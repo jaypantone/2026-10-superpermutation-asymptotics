@@ -1,0 +1,58 @@
+{
+  "module": "Quantitative.StageSourceCertificate",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanchecker",
+    "-v",
+    "Quantitative.StageSourceCertificate"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "source_sha256": "f62799aa9d458193f835b4dcb82c3b9c67889f0423a3e6910a4c6b3cdd1f8d4e",
+  "olean_sha256": "4359bf9d4e0702d4d407b0e911297a8430dc21e24933465a79c352689cdf3f48",
+  "fresh": false,
+  "scope": "Module declarations against imported environment",
+  "checker": "Matching Lean kernel replay; not an external verifier",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/Quantitative.StageSourceCertificate-replay-20261026T062345.248030Z.log",
+  "completed_at": "2026-10-26T06:23:50.464626+00:00",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 6,
+      "successful_samples": 6,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 65
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 65
+      },
+      "minimum_reported_free_percent": 64,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 642560,
+    "seconds": 5.216,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 93185,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  }
+}

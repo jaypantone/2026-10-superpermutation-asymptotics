@@ -1,0 +1,74 @@
+{
+  "module": "SuperpermutationUpperBound.Transport.Local",
+  "started_at": "2026-10-26T02:49:14.165645+00:00",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean/SuperpermutationUpperBound/Transport/.lean-check-m3ee70sq/Local.olean",
+    "SuperpermutationUpperBound/Transport/Local.lean"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "e8a142de11c1c05c5d996600da68d7577b447df200e50189cac0dc82ee910694",
+  "imports": {
+    "SuperpermutationUpperBound.Rows": "580452ea460bd4fa9664fa8f54a2e92204081cf06ce3686e5849cd3d2048a583",
+    "SuperpermutationUpperBound.Foundation.Rotation": "4930a87cc27285a3655ea50ed756b5680e53c5c6ba7afeeb675a8ab86001852c"
+  },
+  "manifest_sha256": "4ef0f46c99f8dd278bc7f26cd368420887baa85920fd77c63cd83afc01fc7937",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/SuperpermutationUpperBound.Transport.Local.log",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 2,
+      "successful_samples": 2,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 78
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 78
+      },
+      "minimum_reported_free_percent": 78,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 352,
+    "seconds": 1.09,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 59441,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "compilation_performed": true,
+  "axiom_output": [
+    "'SuperpermutationUpperBound.Transport.insertLetter_perm' depends on axioms: [propext]",
+    "'SuperpermutationUpperBound.Transport.short_final_base_rotation' depends on axioms: [propext, Quot.sound]",
+    "'SuperpermutationUpperBound.Transport.short_final_base_cyclicEq' depends on axioms: [propext, Quot.sound]",
+    "'SuperpermutationUpperBound.Transport.fullRows_valid' depends on axioms: [propext, Quot.sound]",
+    "'SuperpermutationUpperBound.Transport.shortRows_valid' depends on axioms: [propext, Quot.sound]",
+    "'SuperpermutationUpperBound.Transport.fullRows_preserves_charge' depends on axioms: [propext, Quot.sound]",
+    "'SuperpermutationUpperBound.Transport.shortRows_preserves_charge' depends on axioms: [propext, Quot.sound]",
+    "'SuperpermutationUpperBound.Transport.rows_local_certificate' depends on axioms: [propext, Quot.sound]"
+  ],
+  "olean_sha256": "8bce49b15f2588035cdb9dbb302aafa4ead38d4e21d1e85026498b98975e7248"
+}

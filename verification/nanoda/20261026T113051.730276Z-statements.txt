@@ -1,0 +1,44 @@
+theorem CoefficientTwoPrecision.finite_covering_word (n r : Nat) (hr : LE.le (OfNat.ofNat 6) r)
+  (_hdiv : Dvd.dvd (OfNat.ofNat 6) r)
+  (hn :
+    LE.le
+      (HMul.hMul
+        (HMul.hMul (HMul.hMul (OfNat.ofNat 8) (HPow.hPow (OfNat.ofNat 10) (OfNat.ofNat 12)))
+          (HPow.hPow (OfNat.ofNat 352) (OfNat.ofNat 4))) (HPow.hPow r (OfNat.ofNat 61))) n) :
+  Exists
+    (fun (w : List (Fin n)) =>
+    And (SuperpermutationBounds.Covers w)
+      (LE.le (HMul.hMul r (List.length w))
+        (HAdd.hAdd (HMul.hMul r (SuperpermutationUpperBound.F3 n))
+          (HMul.hMul (HAdd.hAdd (HMul.hMul (OfNat.ofNat 2) r) (OfNat.ofNat 74))
+            (Nat.factorial (HSub.hSub n (OfNat.ofNat 4))))))) :=
+  _
+
+theorem CoefficientTwoPrecision.shortest_length_error (n : Nat)
+  (hn : LE.le (HMul.hMul CoefficientTwoPrecision.transferConstant (HPow.hPow (OfNat.ofNat 6) (OfNat.ofNat 61))) n)
+  (hn8 : LE.le (OfNat.ofNat 8) n) :
+  LE.le
+    (abs
+      (HSub.hSub
+        (HDiv.hDiv (HSub.hSub (Nat.cast (ConstAsym.L n)) (Rat.cast (SuperpermutationBounds.F3 n)))
+          (Nat.cast (Nat.factorial (HSub.hSub n (OfNat.ofNat 4))))) (OfNat.ofNat 2)))
+    (HMul.hMul CoefficientTwoPrecision.remainderConstant
+      (HPow.hPow (Nat.cast n) (HDiv.hDiv (Neg.neg (OfNat.ofNat 1)) (OfNat.ofNat 61)))) :=
+  _
+
+theorem CoefficientTwoPrecision.shortest_length_asymptotic :
+  Asymptotics.IsBigO Filter.atTop
+    (fun (n : Nat) =>
+    HSub.hSub (HSub.hSub (Nat.cast (ConstAsym.L n)) (Rat.cast (SuperpermutationBounds.F3 n)))
+      (HMul.hMul (OfNat.ofNat 2) (Nat.cast (Nat.factorial (HSub.hSub n (OfNat.ofNat 4))))))
+    (fun (n : Nat) =>
+    HMul.hMul (Nat.cast (Nat.factorial (HSub.hSub n (OfNat.ofNat 4))))
+      (HPow.hPow (Nat.cast n) (HDiv.hDiv (Neg.neg (OfNat.ofNat 1)) (OfNat.ofNat 61)))) :=
+  _
+
+axiom propext {a b : Prop} : Iff a b → Eq a b
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Prop} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+

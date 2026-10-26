@@ -1,0 +1,17 @@
+{
+  "checked_at": "2026-10-26T06:36:12.617861+00:00",
+  "pdf": "paper/manuscript.pdf",
+  "pdf_sha256": "e758ac1bafe673dabefbb60c8a96225a16138b53df99a596c7a4a33006807790",
+  "pages": 30,
+  "sources": {
+    "assembly.tex": "db545b932961ad1d910598db6933fa189e55a44fca46210400683a4540f2d530",
+    "geometry.tex": "82da32e011c0087be4480ffaec75896a6ba68f086c1fd7eed1807e192a2ca571",
+    "global.tex": "7f3b6cc4fbb43a4b8614d20828aa8767ebca75a91084abfbfa37d5a89c674c82",
+    "main.tex": "923d7b2226d263ba3b31f81bc77e1ec73fd50a65c239749aceedccc2a8fe16c3",
+    "references.bib": "4fe3be21ff990f4df0d79daecf8b2fb24f880f5fe210c3991e712ad5343be8de",
+    "transfer.tex": "a10c592540b258efa29d5a5306dc7190bd65b1a9fa4c7a4c8c9f243fb1dccb33"
+  },
+  "latex_diagnostics": "No errors, warnings, undefined references, overfull or underfull boxes in the final build.",
+  "visual_check": "All 30 final pages inspected in eight contact sheets. No clipping, collisions, bad formula breaks or unreadable glyphs observed.",
+  "status": "Complete manuscript and complete Lean 4.35.0 proof of the unconditional finite bound and two-sided exponent 1/61. Independent AI reviews completed; human review pending."
+}

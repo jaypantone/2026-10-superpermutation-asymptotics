@@ -1,0 +1,78 @@
+{
+  "module": "Hunter.ProofsQED",
+  "started_at": "2026-10-26T04:10:52.663316+00:00",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean/Hunter/.lean-check-dmqgii_x/ProofsQED.olean",
+    "Hunter/ProofsQED.lean"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "2d5f23eb6b0e9740d8bbb257b948d2ad58b3e9d54634d0c0a390ee029db89820",
+  "imports": {
+    "Hunter.ProofsEndgame": "ecba91675a2b0f1c2190881fb364bee3ae0efddff74dc39790da926d0d3e2732",
+    "Hunter.ProofsRigidity2": "d8d90a3529c8f68742e94a9a19a64ed1e052d53ed6fc1f6e121ed6a2d9f588fc",
+    "Hunter.ProofsClosure3": "9f3aa4979400244cb8b3815ff9b4a45f7d314a33c6df60feb81497555ac5636e"
+  },
+  "manifest_sha256": "4ef0f46c99f8dd278bc7f26cd368420887baa85920fd77c63cd83afc01fc7937",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/Hunter.ProofsQED-20261026T041524.675965Z.log",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 5,
+      "successful_samples": 5,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 66
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 66
+      },
+      "minimum_reported_free_percent": 66,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 2796448,
+    "seconds": 4.189,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 74355,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "compilation_performed": true,
+  "axiom_output": [
+    "'Hunter.ProofsQED.thm2_final' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Hunter.ProofsQED.thm1v1_final' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Hunter.ProofsQED.thm1v2_final' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Hunter.ProofsQED.eq_weak_final' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Hunter.ProofsQED.excessBlockCeilAll_of_residual' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Hunter.ProofsEndgame.excessBlockCeil_of_tightJumpFree' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Hunter.Proved.tau2_forced' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Hunter.Proved.tau3_forced' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Hunter.Proved.run_forced' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Hunter.Proved.runlen_pigeonhole' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'Hunter.Proved.chart_closure' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "olean_sha256": "9faf0d27a62cd6c29936fd4aa64986166acc8ba3eef966ca05f36493cd289fdd"
+}

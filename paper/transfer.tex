@@ -1,0 +1,498 @@
+% The abstract transfer has explicit construction hypotheses. Its final
+% corollaries instantiate them with the families in the preceding sections.
+\section{A finite transfer estimate}
+\label{sec-finite-transfer}
+
+We now estimate the length supplied by the assembly construction. The
+starting size will be close to $n$, and most extensions will use the
+families of Proposition~\ref{prop-global-counts}. A final sequence of
+extensions of size three reduces the pending fraction far enough for
+completion. We first give the transfer with explicit hypotheses and then
+verify them using the constructions in the preceding sections.
+
+\subsection{The construction statements needed for the estimate}
+
+For a stage of old size $m\ge2$, retain the counts $R,Q,c,P$ from
+Section~\ref{sec-assembly}. Define the rational numbers
+\[
+ y=\frac{Q}{m!},\qquad
+ z=\frac{c}{(m-1)!},\qquad
+ p=\frac{P}{(m-1)!},\qquad X=y+z.
+\]
+There are $(m-1)!$ cyclic classes on $m$ letters, so $p$ is the fraction
+of classes still awaiting an assignment. Normalizing the other counts by
+the indicated factorials will make inherited contributions unchanged
+under an extension.
+
+An extension from size $m$ to size $m+v$, where $v$ is a positive integer,
+uses nonnegative integer counts $B,q,c_{\mathrm{adv}}$. Put
+\[
+ D_{m,v}=\prod_{i=0}^{v-1}(m+i),\qquad
+ A_{m,v}=\prod_{i=1}^{v}(m+i).
+\]
+Lemma~\ref{lem-assembly-width} gives the bounds and update rules
+\begin{align}
+ 0&\le B\le D_{m,v}, \label{eq-transfer-source-bound}\\
+ R'&=A_{m,v}R+(m+v)PB,\notag\\
+ Q'&=A_{m,v}Q+(m+v)Pq,\notag\\
+ c'&=D_{m,v}c+Pc_{\mathrm{adv}},\notag\\
+ P'&=P(D_{m,v}-B). \label{eq-transfer-integer-update}
+\end{align}
+The distinctness hypothesis in Lemma~\ref{lem-assembly-universe} is
+required for \eqref{eq-transfer-source-bound} and for the complement
+count in the last line.
+
+Assume that the construction can start at any size $m_0\ge11$ with
+\[
+ (R,Q,c,P)=(0,0,0,(m_0-1)!).
+\]
+Use also the empty extensions from Section~\ref{sec-assembly}, which have
+size one and $B=q=c_{\mathrm{adv}}=0$. At the final intermediate size
+$h=n-3$, bounding the minimum in \eqref{eq-assembly-word} by $c+P$
+gives an actual superpermutation $w$ with
+\begin{equation}
+ |w|\le F_3(n)+Q+(2h-1)(c+P).
+ \label{eq-transfer-word-input}
+\end{equation}
+In the conditional results below, the initialization, the required
+extensions, and completion to an actual superpermutation are all hypotheses. Equations
+for counts without those construction statements are insufficient.
+
+\begin{lemma}\label{lem-transfer-normalization}
+The rules \eqref{eq-transfer-integer-update} preserve the identity
+$R+mP=m!$. With
+\[
+ f=\frac{B}{D_{m,v}},\qquad
+ g=\frac{q+c_{\mathrm{adv}}}{D_{m,v}},
+\]
+their normalized form is
+\begin{equation}
+ p'=p(1-f),\qquad
+ y'=y+p\frac{q}{D_{m,v}},\qquad
+ z'=z+p\frac{c_{\mathrm{adv}}}{D_{m,v}},\qquad
+ X'=X+pg.
+ \label{eq-transfer-normalized-update}
+\end{equation}
+In particular, $0\le p\le1$ throughout the construction, and empty
+extensions preserve $y,z,p$.
+\end{lemma}
+
+\begin{proof}
+Cancellation in the products gives
+\[
+ (m+v)D_{m,v}=mA_{m,v},\qquad
+ (m+v)!=A_{m,v}m!,\qquad
+ (m+v-1)!=D_{m,v}(m-1)!.
+\]
+Consequently,
+\[
+ R'+(m+v)P'
+ =A_{m,v}R+(m+v)PD_{m,v}
+ =A_{m,v}(R+mP).
+\]
+This is $(m+v)!$ when $R+mP=m!$. The initial counts satisfy that identity.
+Dividing the updates for $Q',c',P'$ by the appropriate new factorials
+proves \eqref{eq-transfer-normalized-update}. Initially $p=1$.
+The inequality $0\le f\le1$ therefore proves $0\le p\le1$ by induction.
+For an empty extension, $f=g=q=c_{\mathrm{adv}}=0$, so the normalized
+quantities do not change.
+\end{proof}
+
+\subsection{Two finite inequalities}
+
+The main estimate uses two short induction arguments. They apply to
+rational numbers and do not require an approximation to a product.
+
+\begin{lemma}\label{lem-transfer-pending}
+Let $f_0,\ldots,f_{J-1}$ lie in $[0,1]$. Set $p_0=1$ and
+$p_{i+1}=p_i(1-f_i)$. Then
+\[
+ p_J\left(1+\sum_{i=0}^{J-1}f_i\right)\le1.
+\]
+\end{lemma}
+
+\begin{proof}
+Write $s_j=\sum_{i<j}f_i$. All the numbers $p_j,s_j$ are nonnegative.
+Using $s_{j+1}=s_j+f_j$, we obtain
+\begin{align*}
+ p_{j+1}(1+s_{j+1})
+ &=p_j(1-f_j)(1+s_j+f_j)\\
+ &=p_j(1+s_j)-p_jf_j(s_j+f_j)\\
+ &\le p_j(1+s_j).
+\end{align*}
+The initial value is $p_0(1+s_0)=1$. Induction proves the claim.
+\end{proof}
+
+For example, if $f_0=f_1=1/2$, then $p_2=1/4$, and the left side of
+the lemma is $1/2$. The estimate remains valid if a selected density is
+one, in which case all subsequent pending mass is zero.
+
+\begin{lemma}\label{lem-transfer-cost}
+Suppose $p_{i+1}=p_i(1-f_i)$ and $X_{i+1}=X_i+p_i g_i$, with
+$p_i\ge0$. If $t g_i\le Kf_i$ for every $i<J$, where $t>0$, then
+\[
+ t(X_J-X_0)\le K(p_0-p_J).
+\]
+\end{lemma}
+
+\begin{proof}
+For each $i$,
+\[
+ t(X_{i+1}-X_i)=tp_i g_i
+ \le Kp_i f_i=K(p_i-p_{i+1}).
+\]
+Summing cancels all intermediate $X_i$ and $p_i$ and gives the result.
+\end{proof}
+
+\subsection{The schedule and its cost}
+
+Fix an integer $r\ge6$ divisible by six. Let $W$ be a positive multiple
+of $r$, let $E>0$, let $\rho\ge r^2$, and put
+\[
+ c_r=\frac{2(r-1)}{r-2}.
+\]
+At every multiple $m$ of $r$ with $m\ge4E$, assume that the construction
+provides an extension of size $W$ for which
+\begin{equation}
+ f_m=\frac{\rho W}{m}(1+\theta_m),\qquad
+ g_m=\frac{c_r\rho W}{m^2}(1+\varepsilon_m),\qquad
+ |\theta_m|,|\varepsilon_m|\le\frac{E}{m},
+ \label{eq-transfer-sparse-input}
+\end{equation}
+and
+\begin{equation}
+ c_{\mathrm{adv},m}\le\frac{r-1}{m}q_m.
+ \label{eq-transfer-circle-input}
+\end{equation}
+The final extensions come from Proposition~\ref{prop-assembly-dense}.
+For an extension of size three at any $a\ge49$, its inequalities and
+Lemma~\ref{lem-transfer-normalization} give
+\begin{equation}
+ p'\le\frac34p,\qquad
+ X'-X\le\frac8a(p-p'),\qquad
+ z'-z\le\frac{8p}{a(a+1)}.
+ \label{eq-transfer-dense-input}
+\end{equation}
+The extensions of size $W$ select a small proportion of the available
+classes. The extensions of size three remove at least one quarter of
+the pending mass. We use the latter only at the end.
+
+Here is the derivation of \eqref{eq-transfer-dense-input}. Its selected
+fraction is $f=B_a/D_{a,3}\ge1/4$, so
+$p'=p(1-f)\le3p/4$. The cost estimate of
+Proposition~\ref{prop-assembly-dense} gives
+\[
+ X'-X=p\frac{q_a+c_{\mathrm{adv},a}}{D_{a,3}}
+ \le\frac8a\frac{pB_a}{D_{a,3}}
+ =\frac8a(p-p').
+\]
+Finally, its circle count gives
+\[
+ z'-z=p\frac{(a+2)\nu_a}{a(a+1)(a+2)}
+ =\frac{p\nu_a}{a(a+1)}\le\frac{8p}{a(a+1)}.
+\]
+These are updates of the existing stage. In particular, the final
+extensions retain the rows and safe circles obtained during the sparse
+part of the construction.
+
+For a positive integer $n$, let $\ell$ be the least nonnegative integer
+such that $n<2^\ell$. Define
+\[
+ K=12\ell,\qquad \tau=3+36\ell.
+\]
+For example, $\ell=7$ when $n=64$, because the upper inequality in the
+definition is strict.
+
+\begin{theorem}\label{thm-transfer-finite}
+Assume the construction and completion statements above. If
+\begin{equation}
+ n\ge8rE,\qquad n\ge96r^2,\qquad
+ r+W+\tau\le\frac{n}{2r},
+ \label{eq-transfer-room}
+\end{equation}
+then there is a superpermutation $w$ on $n$ letters such that
+\[
+ |w|\le F_3(n)+\left(2+\frac{74}{r}\right)(n-4)!.
+\]
+\end{theorem}
+
+\begin{proof}
+Put $\alpha=(r-1)/r$, and let $m_0$ be the least multiple of $r$
+that is at least $\alpha n$. Thus
+\[
+ \alpha n\le m_0<\alpha n+r.
+\]
+Set $a=n-\tau$ and
+\[
+ J=\left\lfloor\frac{a-m_0}{W}\right\rfloor,
+ \qquad b=m_0+JW.
+\]
+Since $\lfloor x\rfloor>x-1$, the last condition in
+\eqref{eq-transfer-room} gives
+\[
+ J>\frac{n/r-r-\tau-W}{W}
+ \ge\frac{n}{2rW}>0.
+\]
+In particular $J\ge1$. Starting at $m_0$, use $J$ extensions of size
+$W$, then $a-b$ empty extensions, and finally $K$ extensions of size
+three. The floor defining $J$ gives $0\le a-b<W$. The final size is
+$a+3K=n-3$, as required for completion.
+
+The initial size satisfies $m_0\ge n/2\ge48r^2\ge11$. Each start
+$m_i=m_0+iW$ of an extension of size $W$ is a multiple of
+$r$ and lies between $n/2$ and $n$. Since $n\ge8rE$, it is at least
+$4E$. Also $a\ge n/2$, because $\tau\le n/(2r)$, and
+$a\ge n/2\ge48r^2>49$. Thus every extension used in this schedule
+is within its stated range. The last extension of size three starts at
+$n-6$.
+
+Write
+\[
+ \delta=\frac{2E}{n}\le\frac1{4r}.
+\]
+The two relative errors at each $m_i$ have absolute value at most
+$\delta$. In particular $f_{m_i}>0$. From
+\eqref{eq-transfer-sparse-input},
+\[
+ \frac{ng_{m_i}}{f_{m_i}}
+ \le\frac{c_r}{\alpha}\frac{1+\delta}{1-\delta}.
+\]
+Here
+\[
+ \frac{c_r}{\alpha}=\frac{2r}{r-2}
+ =2+\frac4{r-2}\le2+\frac6r,
+\]
+because $r\ge6$. Since $0\le\delta\le1/2$,
+\[
+ \frac{1+\delta}{1-\delta}
+ =1+\frac{2\delta}{1-\delta}
+ \le1+4\delta\le1+\frac1r.
+\]
+Finally,
+\[
+ \left(2+\frac6r\right)\left(1+\frac1r\right)
+ =2+\frac8r+\frac6{r^2}
+ \le2+\frac9r.
+\]
+Let $p_s,X_s,y_s,z_s$ be the normalized values after the extensions of
+size $W$. Lemma~\ref{lem-transfer-cost}, with $t=n$, now gives
+\begin{equation}
+ nX_s\le\left(2+\frac9r\right)(1-p_s)
+ \le2+\frac9r.
+ \label{eq-transfer-sparse-cost}
+\end{equation}
+
+We next bound $p_s$. Each selected density satisfies
+\[
+ f_{m_i}\ge\frac{\rho W}{n}(1-\delta)
+ \ge\frac{\rho W}{2n}.
+\]
+The lower bound on $J$ therefore yields
+\[
+ \sum_{i<J} f_{m_i}
+ \ge\frac{n}{2rW}\frac{\rho W}{2n}
+ =\frac{\rho}{4r}\ge\frac r4.
+\]
+Lemma~\ref{lem-transfer-pending} proves
+\begin{equation}
+ p_s\le\frac4{r+4}\le\frac4r.
+ \label{eq-transfer-pending-small}
+\end{equation}
+The intervening empty extensions preserve these normalized quantities.
+
+All the final extensions start at sizes at least $a$. Their cost bound
+in \eqref{eq-transfer-dense-input} telescopes to
+\[
+ X_{\mathrm{end}}-X_s
+ \le\frac8a(p_s-p_{\mathrm{end}})
+ \le\frac{8p_s}{a}.
+\]
+Using $n/a\le2$, \eqref{eq-transfer-sparse-cost}, and
+\eqref{eq-transfer-pending-small}, we obtain
+\begin{equation}
+ nX_{\mathrm{end}}\le2+\frac{73}{r}.
+ \label{eq-transfer-total-cost}
+\end{equation}
+
+The completion estimate also involves $z_{\mathrm{end}}$. During the
+extensions of size $W$, \eqref{eq-transfer-circle-input} gives
+\[
+ z_s\le\frac{r-1}{m_0}y_s.
+\]
+Their local cost satisfies $m_i g_{m_i}\le8f_{m_i}$, since
+$m_i\le n$ and $2+9/r\le8$. Applying
+Lemma~\ref{lem-transfer-cost} with $t=m_0$ gives
+$y_s\le X_s\le8/m_0$. Hence
+\[
+ z_s\le\frac{8(r-1)}{m_0^2}.
+\]
+For the final extensions, write $p_j$ for the pending mass before the
+$j$th one. The contraction $p_{j+1}\le3p_j/4$ implies
+$p_j\le4(p_j-p_{j+1})$. Summing gives
+$\sum_{j<K}p_j\le4(p_s-p_{\mathrm{end}})\le4$.
+The last inequality in \eqref{eq-transfer-dense-input} consequently gives
+\[
+ z_{\mathrm{end}}-z_s
+ \le\frac{32}{a(a+1)}.
+\]
+Both $m_0$ and $a$ are at least $n/2$, so
+\begin{equation}
+ z_{\mathrm{end}}\le\frac{32r+96}{n^2}.
+ \label{eq-transfer-final-circles}
+\end{equation}
+
+There are $12\ell$ final extensions. Since $p_s\le1$ and
+$(3/4)^4=81/256<1/2$, their contraction gives
+\begin{equation}
+ p_{\mathrm{end}}
+ \le(3/4)^{12\ell}<2^{-3\ell}<n^{-3}.
+ \label{eq-transfer-final-pending}
+\end{equation}
+The strict inequalities are valid because $\ell\ge1$ and $n<2^\ell$.
+
+Put $h=n-3$. Divide \eqref{eq-transfer-word-input} by $(n-4)!=(h-1)!$.
+The normalized excess is at most
+\begin{align*}
+ h y_{\mathrm{end}}+(2h-1)(z_{\mathrm{end}}+p_{\mathrm{end}})
+ &=hX_{\mathrm{end}}+(h-1)z_{\mathrm{end}}
+   +(2h-1)p_{\mathrm{end}}\\
+ &\le nX_{\mathrm{end}}+nz_{\mathrm{end}}+2np_{\mathrm{end}}.
+\end{align*}
+Equations \eqref{eq-transfer-total-cost}--\eqref{eq-transfer-final-pending}
+bound this by
+\[
+ 2+\frac{73}{r}+\frac{32r+96}{n}+\frac2{n^2}.
+\]
+For $r\ge6$, we have $32r+96\le48r$. The assumption $n\ge96r^2$
+therefore bounds the penultimate term by $1/(2r)$. It also implies
+$n^2\ge4r$, so the last term is at most $1/(2r)$. Their sum is at most
+$1/r$, which proves the theorem.
+\end{proof}
+
+\subsection{One explicit threshold}
+
+Choose the parameters in \eqref{eq-global-parameters}. By
+Lemma~\ref{lem-polynomial-width}, they satisfy
+$r^2\le W\le352r^9$ and $r^2\le\rho<r^2+1$. We need one further
+consequence of those bounds.
+
+\begin{lemma}\label{lem-transfer-parameter-bounds}
+The integer $W$ is divisible by $r$, and
+$E\le10^{12}352^4r^{58}$.
+\end{lemma}
+
+\begin{proof}
+The identity $W=r^2A$ proves divisibility. The upper bound for $W$ gives
+\[
+ E=10^{12}r^{22}W^4
+ \le10^{12}r^{22}(352r^9)^4
+ =10^{12}352^4r^{58}.
+\]
+\end{proof}
+
+\begin{lemma}\label{lem-transfer-binary-room}
+For these parameters, the condition $n\ge8rE$ implies every condition
+in \eqref{eq-transfer-room}.
+\end{lemma}
+
+\begin{proof}
+Since $W\ge r^2\ge1$, we have $E\ge W$ and
+$E\ge10^{12}r^{22}\ge2592r$. Consequently
+\[
+ n\ge8rE\ge(144r)^2.
+\]
+This proves $n\ge64$ and $n\ge96r^2$.
+
+Recall that $\ell$ is the least integer with $n<2^\ell$.
+Thus $\ell\ge7$ and $2^{\ell-1}\le n$. For every integer $t\ge7$,
+\[
+ t^2\le2^{t-1}.
+\]
+Indeed, the initial case is $49\le64$, and
+$(t+1)^2\le2t^2$ for $t\ge7$, which proves the induction step.
+It follows that $\ell^2\le n$. If $\ell\le144r$, then
+$144r\ell\le(144r)^2\le n$. If $\ell\ge144r$, then
+$144r\ell\le\ell^2\le n$. In either case,
+\[
+ 36\ell\le\frac{n}{4r}.
+\]
+Finally, $W\ge r^2\ge r+3$, and therefore
+\[
+ r+W+3\le2W\le2E\le\frac{n}{4r}.
+\]
+Adding the last two inequalities gives
+$r+W+\tau\le n/(2r)$, as required.
+\end{proof}
+
+\begin{corollary}\label{cor-transfer-polynomial-threshold}
+For every integer $r\ge6$ divisible by six and every integer
+$n\ge Cr^{61}$, there is an actual superpermutation $w$ satisfying
+\[
+ r|w|\le rF_3(n)+(2r+74)(n-4)!.
+\]
+\end{corollary}
+
+\begin{proof}
+Use the parameters of \eqref{eq-global-parameters}. At each multiple
+$m$ of $r$ with $m\ge4E$, Proposition~\ref{prop-global-counts}
+supplies actual source families above any chosen old cyclic order. Its
+distinct source classes lie in the universe of
+Lemma~\ref{lem-assembly-universe}, so $0\le B\le D_{m,W}$ and the
+required complement exists. The same proposition supplies the literal
+full run needed by Lemma~\ref{lem-assembly-connectors}. Together with
+Lemma~\ref{lem-assembly-orbits}, this gives the safe supported circle
+lists and transported components required by
+Lemma~\ref{lem-assembly-width}.
+
+Initialization and empty extensions are provided in
+Section~\ref{sec-assembly}. The final extensions and their normalized
+bounds are provided by Proposition~\ref{prop-assembly-dense} and
+\eqref{eq-transfer-dense-input}. The schedule has final old size $n-3$,
+and $n\ge Cr^{61}\ge11$, so \eqref{eq-assembly-word} gives its actual
+superpermutation. This verifies all the construction and completion
+hypotheses of Theorem~\ref{thm-transfer-finite}.
+
+Lemma~\ref{lem-transfer-parameter-bounds} gives
+\[
+ 8rE\le Cr^{59}\le Cr^{61}\le n.
+\]
+Lemma~\ref{lem-transfer-binary-room} supplies the other size conditions.
+Apply Theorem~\ref{thm-transfer-finite} and multiply its conclusion by
+the positive integer $r$.
+\end{proof}
+
+\subsection{The exponent in the asymptotic statement}
+
+\begin{corollary}\label{cor-transfer-asymptotic}
+\[
+ L(n)=F_3(n)+2(n-4)!+
+ O\!\left(\frac{(n-4)!}{n^{1/61}}\right).
+\]
+\end{corollary}
+
+\begin{proof}
+For $n\ge C6^{61}$, choose the largest positive multiple $r$ of six
+with $Cr^{61}\le n$. Such an $r$ exists, and maximality gives
+\[
+ Cr^{61}\le n<C(r+6)^{61}\le C(2r)^{61}.
+\]
+The last inequality uses $r\ge6$. Taking positive sixty-first roots
+now gives
+\[
+ \frac1r<2C^{1/61}n^{-1/61}.
+\]
+The word from Corollary~\ref{cor-transfer-polynomial-threshold} yields
+\[
+ \frac{L(n)-F_3(n)}{(n-4)!}-2
+ \le\frac{74}{r}
+ <148C^{1/61}n^{-1/61}.
+\]
+On the other side, use $(n-4)!=(n-4)(n-5)!$ to divide the imported lower bound
+\eqref{eq-main-lower} by $(n-4)!$. Since $n\ge8$, this gives
+\[
+ 2-\frac{L(n)-F_3(n)}{(n-4)!}
+ \le\frac2{n-4}\le\frac4n\le4n^{-1/61}.
+\]
+Both sides are bounded by a constant times $n^{-1/61}$. Multiplying
+by $(n-4)!$ proves the stated remainder.
+\end{proof}

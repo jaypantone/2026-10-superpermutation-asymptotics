@@ -1,0 +1,66 @@
+{
+  "module": "SuperpermutationUpperBound.BalancedCuts.Residual",
+  "started_at": "2026-10-26T03:16:59.016619+00:00",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean/SuperpermutationUpperBound/BalancedCuts/.lean-check-ttnp_wax/Residual.olean",
+    "SuperpermutationUpperBound/BalancedCuts/Residual.lean"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "8947c0a4f5a23c5ea84f38996eff66350ecb169cea3d26b3f6aba28d88008b76",
+  "imports": {
+    "SuperpermutationUpperBound.BalancedCuts.Fractional": "e44fb00e35ed7b8549938c790b9fa7ccff6983c5a39dd85dc9f6d9d810f6b80c",
+    "SuperpermutationUpperBound.BalancedCuts.SparseState": "db86b35f1985c69a90ff6823de8e235b423a001a241c8baf069ed4706e976f08",
+    "SuperpermutationUpperBound.BalancedCuts.Incidence": "a448147a88f536b1a1a2e6fb5cee798849e7922f6e04532140b621a36143c760"
+  },
+  "manifest_sha256": "4ef0f46c99f8dd278bc7f26cd368420887baa85920fd77c63cd83afc01fc7937",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/SuperpermutationUpperBound.BalancedCuts.Residual-20261026T031714.960577Z.log",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 4,
+      "successful_samples": 4,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 77
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 77
+      },
+      "minimum_reported_free_percent": 77,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 1953136,
+    "seconds": 3.156,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 63692,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "compilation_performed": true,
+  "axiom_output": [],
+  "olean_sha256": "e4ba6b1a8a823d0d3753239af2870464f8dec27eac38354f2c6eec62fb382a9c"
+}

@@ -1,0 +1,1769 @@
+{
+  "scope": "Inherited source files included in this release. Original paths refer to the archived development inputs. All released Lean proof sources are byte-for-byte identical to the successful final audit.",
+  "files": [
+    {
+      "path": "lean/PositiveParking.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/lean/PositiveParking.lean",
+      "original_sha256": "564d72f995d1abe60706dc5df5619152bc97807e0eb9305bf6e551676ef0c60b",
+      "release_sha256": "564d72f995d1abe60706dc5df5619152bc97807e0eb9305bf6e551676ef0c60b"
+    },
+    {
+      "path": "lean/IntegerControlGrid.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/lean/IntegerControlGrid.lean",
+      "original_sha256": "d071f46c0588ac8ef3e1603efc7c5b7a0506b06e7b199fa4de2f0e285a642dd5",
+      "release_sha256": "d071f46c0588ac8ef3e1603efc7c5b7a0506b06e7b199fa4de2f0e285a642dd5"
+    },
+    {
+      "path": "lean/Challenge.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/Challenge.lean",
+      "original_sha256": "559e5613aa4e211e806f7a2104d79f3223e83e8116a9434ecb490e13b0ad3968",
+      "release_sha256": "559e5613aa4e211e806f7a2104d79f3223e83e8116a9434ecb490e13b0ad3968"
+    },
+    {
+      "path": "lean/build_guard.py",
+      "original_source": "/Users/jaypantone/Dropbox/Research/AI-work/other-things/check-lean-bound/research-plan-2026-10/lane-astra-half/submission-prep/2026-10-24/local-completion/author/completion_guard.py",
+      "original_sha256": "ac60b0d45e377babc93c43f1b4996168651c977d65dcc6c7526a6e51d2d6dd53",
+      "release_sha256": "96265452e634e8523e01aa74657d64df5d014a4a53e8dd16cb5437bbaa80c253"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Foundation/Words.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Foundation/Words.lean",
+      "original_sha256": "28a17c98cf60263d524199225b8479155044e6a2e0813c6620a9a5826d9c1355",
+      "release_sha256": "28a17c98cf60263d524199225b8479155044e6a2e0813c6620a9a5826d9c1355"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Rows.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Rows.lean",
+      "original_sha256": "867548e8ca1954a97ba83086fac3452d2e08d6b76180d2ca86c441a94ec521a0",
+      "release_sha256": "867548e8ca1954a97ba83086fac3452d2e08d6b76180d2ca86c441a94ec521a0"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Foundation/Rotation.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Foundation/Rotation.lean",
+      "original_sha256": "6161bb54af61d6ab0b2cb2b995f0b69c62b0ecc496504e8f705eb8ec48e300c6",
+      "release_sha256": "6161bb54af61d6ab0b2cb2b995f0b69c62b0ecc496504e8f705eb8ec48e300c6"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/CyclicBlocks.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CyclicBlocks.lean",
+      "original_sha256": "0eae0f6e7fed658522b9a5e61e595bd94c563a4139171c7a444c62db0eb09a27",
+      "release_sha256": "0eae0f6e7fed658522b9a5e61e595bd94c563a4139171c7a444c62db0eb09a27"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Packing.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Packing.lean",
+      "original_sha256": "25635464c123d06572672a733b08d4f94cf11a2a45fee09168c461a0f56cb155",
+      "release_sha256": "25635464c123d06572672a733b08d4f94cf11a2a45fee09168c461a0f56cb155"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/Local.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/Local.lean",
+      "original_sha256": "e8a142de11c1c05c5d996600da68d7577b447df200e50189cac0dc82ee910694",
+      "release_sha256": "e8a142de11c1c05c5d996600da68d7577b447df200e50189cac0dc82ee910694"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/Blocks.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/Blocks.lean",
+      "original_sha256": "39094edb34bb7ba7729019fca5d20036dcf0a04b5e2769ccc2f36c7549f2db61",
+      "release_sha256": "39094edb34bb7ba7729019fca5d20036dcf0a04b5e2769ccc2f36c7549f2db61"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/Ports.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/Ports.lean",
+      "original_sha256": "5c2e01e12ba1d4c033f1174d76a152739371bde4f9fa583497cff65762652701",
+      "release_sha256": "5c2e01e12ba1d4c033f1174d76a152739371bde4f9fa583497cff65762652701"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Completion/Projection.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Completion/Projection.lean",
+      "original_sha256": "f25c4a66d333d219b7aadfdc5696304a522cdf1eda292447282e21d205e71cf5",
+      "release_sha256": "f25c4a66d333d219b7aadfdc5696304a522cdf1eda292447282e21d205e71cf5"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Partition/FullCharts.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Partition/FullCharts.lean",
+      "original_sha256": "45f5f56fb1b3648eb49008c3f12869bde5e919f76cde33db38cfce5497f409bc",
+      "release_sha256": "45f5f56fb1b3648eb49008c3f12869bde5e919f76cde33db38cfce5497f409bc"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/CircleTransport/Circles.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CircleTransport/Circles.lean",
+      "original_sha256": "46ffd83eda9a0eb21e35ac07565e093d8d66c2b92fdcacce5465a9d98900a693",
+      "release_sha256": "46ffd83eda9a0eb21e35ac07565e093d8d66c2b92fdcacce5465a9d98900a693"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/RowSpelling.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/RowSpelling.lean",
+      "original_sha256": "58f3f54601f3b88f87688168bbfecd2d8e141767d8e252e6f9bbb8c0e5c17e5b",
+      "release_sha256": "58f3f54601f3b88f87688168bbfecd2d8e141767d8e252e6f9bbb8c0e5c17e5b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Foundation/Overlap.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Foundation/Overlap.lean",
+      "original_sha256": "2bb342d3e51704b57dc24ddf4f58bfd2f0e7fcb1e0fedd05aa001474b3d38c9f",
+      "release_sha256": "2bb342d3e51704b57dc24ddf4f58bfd2f0e7fcb1e0fedd05aa001474b3d38c9f"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/TrailSpelling.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/TrailSpelling.lean",
+      "original_sha256": "f4115ad312d03803806b8167e65850b4a77ae5e48569b8993d391e2af3e0b300",
+      "release_sha256": "f4115ad312d03803806b8167e65850b4a77ae5e48569b8993d391e2af3e0b300"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/Paths.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/Paths.lean",
+      "original_sha256": "6fb093bee109d48db4a7abe3b2fa20e40534117e44f48e81db914cbb87adb642",
+      "release_sha256": "6fb093bee109d48db4a7abe3b2fa20e40534117e44f48e81db914cbb87adb642"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/IndexedPaths.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/IndexedPaths.lean",
+      "original_sha256": "9002a360d8bb16481d4a700c3e3a7a05a25afa1416ce3d893a60a4e6cdcbc600",
+      "release_sha256": "9002a360d8bb16481d4a700c3e3a7a05a25afa1416ce3d893a60a4e6cdcbc600"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/Successor.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/Successor.lean",
+      "original_sha256": "f75b39a1cb7dca926e8a3fd8837b5a86cbb155f2d20df3c4b71751813e7c714c",
+      "release_sha256": "f75b39a1cb7dca926e8a3fd8837b5a86cbb155f2d20df3c4b71751813e7c714c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/Monodromy.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/Monodromy.lean",
+      "original_sha256": "e4f1e4530d33b5ef15c757a7ae9799f78019c89a1b4dfdd4ba806a5c91c28708",
+      "release_sha256": "e4f1e4530d33b5ef15c757a7ae9799f78019c89a1b4dfdd4ba806a5c91c28708"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/OrbitAssembly.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/OrbitAssembly.lean",
+      "original_sha256": "0c7993101e676580dbe44ca4fe5bc3b270314422a3819a8043587098765bd4e0",
+      "release_sha256": "0c7993101e676580dbe44ca4fe5bc3b270314422a3819a8043587098765bd4e0"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Foundation/Relabeling.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Foundation/Relabeling.lean",
+      "original_sha256": "24ef5d3d2493a2044f0e0379f80eaa420a6e777941d6392a9b058ffd3df1e71b",
+      "release_sha256": "24ef5d3d2493a2044f0e0379f80eaa420a6e777941d6392a9b058ffd3df1e71b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/FiniteOrbits.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/FiniteOrbits.lean",
+      "original_sha256": "bb67023392f0e6518f1e292dce26f0a77851ef9907407efd65d4c1767918cbc5",
+      "release_sha256": "bb67023392f0e6518f1e292dce26f0a77851ef9907407efd65d4c1767918cbc5"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/FullLap.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/FullLap.lean",
+      "original_sha256": "d4b52a34fd6ff40a410333de7751f79e88abdb28bc936ad39b9f68fd6cd3628c",
+      "release_sha256": "d4b52a34fd6ff40a410333de7751f79e88abdb28bc936ad39b9f68fd6cd3628c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/OrbitCounts.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/OrbitCounts.lean",
+      "original_sha256": "7494dd37bb53e384ab303f2b96954f9cf02a21f785cac6e7e66eb67b0ba6f97b",
+      "release_sha256": "7494dd37bb53e384ab303f2b96954f9cf02a21f785cac6e7e66eb67b0ba6f97b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/CircleTransport/TwoInsertion.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CircleTransport/TwoInsertion.lean",
+      "original_sha256": "b3e15a936a14d3f177e5ad7b006f2e1799b153844f7d08476ead5dd895c2def8",
+      "release_sha256": "b3e15a936a14d3f177e5ad7b006f2e1799b153844f7d08476ead5dd895c2def8"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Completion/Local.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Completion/Local.lean",
+      "original_sha256": "7725e056d3e9e96510ebdd209efea795dd8205df6beba1fbc28ee52e0a7aa0de",
+      "release_sha256": "7725e056d3e9e96510ebdd209efea795dd8205df6beba1fbc28ee52e0a7aa0de"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Completion/Paths.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Completion/Paths.lean",
+      "original_sha256": "74409d0e853591dbf09cd1f23e8219112710a3925b1e21d8d99086b46225efe6",
+      "release_sha256": "74409d0e853591dbf09cd1f23e8219112710a3925b1e21d8d99086b46225efe6"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/Counts.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/Counts.lean",
+      "original_sha256": "a0a08fb8911e463a0f88d54dc0243b6025894b87371411304d897f642f271714",
+      "release_sha256": "a0a08fb8911e463a0f88d54dc0243b6025894b87371411304d897f642f271714"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Foundation/SupportedWords.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Foundation/SupportedWords.lean",
+      "original_sha256": "f5e0dca05a3502c9fa63f25ce5128b8626a944727c7666107097e7f9b34cde52",
+      "release_sha256": "f5e0dca05a3502c9fa63f25ce5128b8626a944727c7666107097e7f9b34cde52"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/Closed.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/Closed.lean",
+      "original_sha256": "ec99a3e6dd1a6fcc030c55d503cb0b42f21d3fcff2f47cd010a37857a5e791f4",
+      "release_sha256": "ec99a3e6dd1a6fcc030c55d503cb0b42f21d3fcff2f47cd010a37857a5e791f4"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Transport/Winding.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Transport/Winding.lean",
+      "original_sha256": "88f5470fb6408d48b58a963af461270f48cb1defea9fd944d226670ff967b359",
+      "release_sha256": "88f5470fb6408d48b58a963af461270f48cb1defea9fd944d226670ff967b359"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/CircleTransport/PairPaths.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CircleTransport/PairPaths.lean",
+      "original_sha256": "80b6b80837eff098b0e2a8ce7b5589e6671a1faccf8a9b60b8107fb3720afa82",
+      "release_sha256": "8ad6f524423bf6eb00c122f5b67d1593e0132755515cb8481530641bede6911e"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/CircleTransport/Transport.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CircleTransport/Transport.lean",
+      "original_sha256": "fbc52f54b4632579d618ce5fd2266683623474f48d848a6ba7b5ffc03c277fd4",
+      "release_sha256": "fbc52f54b4632579d618ce5fd2266683623474f48d848a6ba7b5ffc03c277fd4"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/CircleTransport/Tracks.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CircleTransport/Tracks.lean",
+      "original_sha256": "4e895999bb8cb3452bcf3682ca9db5599dff6e195b64532ba3add155da7038cc",
+      "release_sha256": "4e895999bb8cb3452bcf3682ca9db5599dff6e195b64532ba3add155da7038cc"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Foundation/RowRelabeling.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Foundation/RowRelabeling.lean",
+      "original_sha256": "da050788477ce5775ef7c9a9825f0a32e25a3e807dce5239a0bbfee1ea3cdd8a",
+      "release_sha256": "da050788477ce5775ef7c9a9825f0a32e25a3e807dce5239a0bbfee1ea3cdd8a"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Partition/Basic.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Partition/Basic.lean",
+      "original_sha256": "c6feeba78f44072709a4784445c334af24c086591b49c88f32bb079877a506ec",
+      "release_sha256": "c6feeba78f44072709a4784445c334af24c086591b49c88f32bb079877a506ec"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Certificates/SmallSeed.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Certificates/SmallSeed.lean",
+      "original_sha256": "585c39d96da64039024d7c7c7d6564cb710a2c22caf5384258017d2943aa0f62",
+      "release_sha256": "585c39d96da64039024d7c7c7d6564cb710a2c22caf5384258017d2943aa0f62"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Partition/SeedBase.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Partition/SeedBase.lean",
+      "original_sha256": "eb3d53264788848d0900042dde6db76b951d1de349659299bc06e2aa73f79f66",
+      "release_sha256": "eb3d53264788848d0900042dde6db76b951d1de349659299bc06e2aa73f79f66"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Certificates/NatSeeds.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Certificates/NatSeeds.lean",
+      "original_sha256": "5c2a789d78c77541dfe5e8d3107c342051913911c83184792a8bcb13b40383df",
+      "release_sha256": "5c2a789d78c77541dfe5e8d3107c342051913911c83184792a8bcb13b40383df"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Partition/OriginalSeven.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Partition/OriginalSeven.lean",
+      "original_sha256": "456b97e0b2ab60e408c907b4ddffc20c0522117498954b3ad06468818a79e2d8",
+      "release_sha256": "456b97e0b2ab60e408c907b4ddffc20c0522117498954b3ad06468818a79e2d8"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Partition/Iterated.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Partition/Iterated.lean",
+      "original_sha256": "9af2c70fdfffc1513bd9f5677e0b9db6ef3ee13f897946884301beb94a2645bb",
+      "release_sha256": "9af2c70fdfffc1513bd9f5677e0b9db6ef3ee13f897946884301beb94a2645bb"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Partition/AllSizes.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Partition/AllSizes.lean",
+      "original_sha256": "11e43126a42adb5fd2924eb75022f74fbf6ae8a46d7d8a61dd1b065971b1721a",
+      "release_sha256": "11e43126a42adb5fd2924eb75022f74fbf6ae8a46d7d8a61dd1b065971b1721a"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Partition/ClosedFamily.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Partition/ClosedFamily.lean",
+      "original_sha256": "c228b7ec2040cd6ffa4770e566e48e4e3f6bea7358e2dbedf25d9e6195a77357",
+      "release_sha256": "c228b7ec2040cd6ffa4770e566e48e4e3f6bea7358e2dbedf25d9e6195a77357"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/TrailWords.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/TrailWords.lean",
+      "original_sha256": "68ca5c40e63af26477491f7f7cfe24d63a3f86c6f02e5595c7d570c5ec1f8091",
+      "release_sha256": "68ca5c40e63af26477491f7f7cfe24d63a3f86c6f02e5595c7d570c5ec1f8091"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/CircleTransport/TrackCounts.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CircleTransport/TrackCounts.lean",
+      "original_sha256": "b0bc9d26e68bc9d7021c577c2c24fcd224d86a33213a0a4f9a0fdab43afece4c",
+      "release_sha256": "f8fb33f1ae53084da0426e97db18a1d180ecb73aa60b5cb00146ccef56712d31"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Repeat.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Repeat.lean",
+      "original_sha256": "9415ff0b4242c1f95d7b5a1d2258d0c0d394fc36481c85fae66596c1d00de939",
+      "release_sha256": "9415ff0b4242c1f95d7b5a1d2258d0c0d394fc36481c85fae66596c1d00de939"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Completion/Counts.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Completion/Counts.lean",
+      "original_sha256": "0180b109e48fad7f8494b8691b66b50a30488810f06da5c295561d3b85ef7cd9",
+      "release_sha256": "0180b109e48fad7f8494b8691b66b50a30488810f06da5c295561d3b85ef7cd9"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Completion/Coverage.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Completion/Coverage.lean",
+      "original_sha256": "c28a1825647bee8489dd37c1a992bb45baeb733c335ceb167ff2e8b59f81d3f2",
+      "release_sha256": "c28a1825647bee8489dd37c1a992bb45baeb733c335ceb167ff2e8b59f81d3f2"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Completion/PartitionCoverage.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Completion/PartitionCoverage.lean",
+      "original_sha256": "d5a83b536d1014f55d4ec76f25c42f6e818fe5880ad5d4393fbf4704d6c4d7f7",
+      "release_sha256": "d5a83b536d1014f55d4ec76f25c42f6e818fe5880ad5d4393fbf4704d6c4d7f7"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Foundation/WordSupport.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Foundation/WordSupport.lean",
+      "original_sha256": "1b3549caacfe047ffefeceb45ef72b7cff23d109387c6cdf8c920c889b9acbdd",
+      "release_sha256": "1b3549caacfe047ffefeceb45ef72b7cff23d109387c6cdf8c920c889b9acbdd"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Completion/Alphabet.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Completion/Alphabet.lean",
+      "original_sha256": "3cfde9f3c10f075f5f0b26a261a6dd813e5673ff795d798b2692cf77ca4f0c0c",
+      "release_sha256": "3cfde9f3c10f075f5f0b26a261a6dd813e5673ff795d798b2692cf77ca4f0c0c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Certificates/CirclePointers.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Certificates/CirclePointers.lean",
+      "original_sha256": "2493279c994883b98a4f463a1585fd9c8b8ec22fe2a15afc22112812ccb99704",
+      "release_sha256": "2493279c994883b98a4f463a1585fd9c8b8ec22fe2a15afc22112812ccb99704"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Levels.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Levels.lean",
+      "original_sha256": "dec21990eb7d0987a63da756d49c68f14b65d1781c46e83d8f1b1e89cc7274de",
+      "release_sha256": "dec21990eb7d0987a63da756d49c68f14b65d1781c46e83d8f1b1e89cc7274de"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Relabel.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Relabel.lean",
+      "original_sha256": "b34ec99960b9dc135ee21b573d9ec1bfd5eda91fd2ceca2bddcbb3801a85cbd5",
+      "release_sha256": "f926817b575934394053950e17a72ffe7c1017d626a3dfba3ecc52df0683bbd4"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/MacroWords.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/MacroWords.lean",
+      "original_sha256": "eca140513e929558f8398c4e2ccd901df1fe54d42315420ac19db210c97446dd",
+      "release_sha256": "eca140513e929558f8398c4e2ccd901df1fe54d42315420ac19db210c97446dd"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/CycleSplicing.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/CycleSplicing.lean",
+      "original_sha256": "43666ce498bf94cb590f8f8661431606740a6028b9d996443f3fd4aa14bac53d",
+      "release_sha256": "43666ce498bf94cb590f8f8661431606740a6028b9d996443f3fd4aa14bac53d"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/CycleConnectivity.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/CycleConnectivity.lean",
+      "original_sha256": "9484a3616f6487b05afef8b0e8a75d8fbe71604d277379656541eb9a203546a1",
+      "release_sha256": "9484a3616f6487b05afef8b0e8a75d8fbe71604d277379656541eb9a203546a1"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/BalancedGraph.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/BalancedGraph.lean",
+      "original_sha256": "758c84d6f5f2e062f50a7e813065d2abb48e33a67444724d8b1fa1298ae743d2",
+      "release_sha256": "758c84d6f5f2e062f50a7e813065d2abb48e33a67444724d8b1fa1298ae743d2"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/DisjointCycles.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/DisjointCycles.lean",
+      "original_sha256": "9434c64b6121f46a25e6377dddf9e2ce393eb9acba71d6a88d85a9b2c1986b4b",
+      "release_sha256": "9434c64b6121f46a25e6377dddf9e2ce393eb9acba71d6a88d85a9b2c1986b4b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/MacroSpelling.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/MacroSpelling.lean",
+      "original_sha256": "cc6fc340aef6794f20e8c5adfdbac136da0e2c53f60af9ebc7c2821c22a8e2d5",
+      "release_sha256": "cc6fc340aef6794f20e8c5adfdbac136da0e2c53f60af9ebc7c2821c22a8e2d5"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/OpenCycles.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/OpenCycles.lean",
+      "original_sha256": "b43eb5fe8fe1277926f6e85f427724862642254cb7316249fbebdf832f824091",
+      "release_sha256": "b43eb5fe8fe1277926f6e85f427724862642254cb7316249fbebdf832f824091"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/RemoveEdges.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/RemoveEdges.lean",
+      "original_sha256": "909eda49b1e1f876697a7c3e14fafe1a6950b943f938ed124e8837493cfe05e0",
+      "release_sha256": "909eda49b1e1f876697a7c3e14fafe1a6950b943f938ed124e8837493cfe05e0"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/WordTrails.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/WordTrails.lean",
+      "original_sha256": "d5913e5f1eddaa518c623806707eb9a9c2ec0d517002a47c30e2e092a08da5f6",
+      "release_sha256": "d5913e5f1eddaa518c623806707eb9a9c2ec0d517002a47c30e2e092a08da5f6"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/RowEdges.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/RowEdges.lean",
+      "original_sha256": "3c18c8ea650c0d38ffddc383b9dab5d14fba282d35d16bddcc07c9eb4ad217d1",
+      "release_sha256": "3c18c8ea650c0d38ffddc383b9dab5d14fba282d35d16bddcc07c9eb4ad217d1"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/OccurrencePaths.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/OccurrencePaths.lean",
+      "original_sha256": "1bdaf73163f569b93f1fc8cc14d92d4ed59cd4ace9e3154fcc64eba963accf4e",
+      "release_sha256": "1bdaf73163f569b93f1fc8cc14d92d4ed59cd4ace9e3154fcc64eba963accf4e"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/CycleTrailCount.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/CycleTrailCount.lean",
+      "original_sha256": "bf717bfe8ce6f595a5400d9b194055bc7a741161bd4865dd01fee423817acc71",
+      "release_sha256": "bf717bfe8ce6f595a5400d9b194055bc7a741161bd4865dd01fee423817acc71"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/CoveredComponents.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/CoveredComponents.lean",
+      "original_sha256": "d4d77f63661c30324830bdad8c5283c96459b9d2e3634ab1b7ca19e0f23c824b",
+      "release_sha256": "d4d77f63661c30324830bdad8c5283c96459b9d2e3634ab1b7ca19e0f23c824b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/RotationConnectors.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/RotationConnectors.lean",
+      "original_sha256": "ac6108767aba9d5127700bec1288f0177564df4daaf4767cf3e8deb5feaef38c",
+      "release_sha256": "ac6108767aba9d5127700bec1288f0177564df4daaf4767cf3e8deb5feaef38c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/BalancedChoices.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/BalancedChoices.lean",
+      "original_sha256": "24af3388249d1f531e96ca90e677e79cd5cc0e4f34ba7e814bc4c4eda021ad99",
+      "release_sha256": "24af3388249d1f531e96ca90e677e79cd5cc0e4f34ba7e814bc4c4eda021ad99"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/CircleModules.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/CircleModules.lean",
+      "original_sha256": "879f29c5496ceb8e0bd5efa3578b6ec598fafee743e075e02b6d057f21ffaa26",
+      "release_sha256": "879f29c5496ceb8e0bd5efa3578b6ec598fafee743e075e02b6d057f21ffaa26"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/RotationEdges.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/RotationEdges.lean",
+      "original_sha256": "82ca943e7e49b9b64da9f3f7e42204f37341832fa2ec2c957727988c55e4122c",
+      "release_sha256": "82ca943e7e49b9b64da9f3f7e42204f37341832fa2ec2c957727988c55e4122c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/CoveredModuleWords.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/CoveredModuleWords.lean",
+      "original_sha256": "87d77a1f391429d71abfe5030295c72d153aefcd733d144222018a0c216c702c",
+      "release_sha256": "87d77a1f391429d71abfe5030295c72d153aefcd733d144222018a0c216c702c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/ModuleCosts.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/ModuleCosts.lean",
+      "original_sha256": "b95318055b9eeac98734fe67363e870647c468b3fb868013d3ca745db4a93b62",
+      "release_sha256": "b95318055b9eeac98734fe67363e870647c468b3fb868013d3ca745db4a93b62"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/ConnectorFamily.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/ConnectorFamily.lean",
+      "original_sha256": "22dd7e3116a5fa8a9290e029529d4176cf688f3753fea401b96e8d81004e5f6b",
+      "release_sha256": "22dd7e3116a5fa8a9290e029529d4176cf688f3753fea401b96e8d81004e5f6b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/RowMacroFamily.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/RowMacroFamily.lean",
+      "original_sha256": "e97b0d66440b2f2d34a8dd3ca3ee39fe44439f165863f771cb8641d4881ecdab",
+      "release_sha256": "e97b0d66440b2f2d34a8dd3ca3ee39fe44439f165863f771cb8641d4881ecdab"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/Definitions.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/Definitions.lean",
+      "original_sha256": "ef87b8eb50422396292c2ceb06e02d47587b705aa7900d53df3cf932e21f97e5",
+      "release_sha256": "ef87b8eb50422396292c2ceb06e02d47587b705aa7900d53df3cf932e21f97e5"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/UniformChoices.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/UniformChoices.lean",
+      "original_sha256": "06aa9c720bfba50a1a036d7d9fc55219d6dd620de96cf864ca5fd99a6f644056",
+      "release_sha256": "70e46532932f42b8933e0d219b3c1110fbdcad4186e896f9ed1b0c03ebb260ba"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/SparseSupport.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/SparseSupport.lean",
+      "original_sha256": "413fcf7cc818544168b74d8d15bef197bf14eb1848827a1ce14425a35228eadb",
+      "release_sha256": "413fcf7cc818544168b74d8d15bef197bf14eb1848827a1ce14425a35228eadb"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/Fractional.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/Fractional.lean",
+      "original_sha256": "e75bfa4de74b73aa4a0d598644cbc94829ef6b26465d45f3ea428692498b3c8c",
+      "release_sha256": "e75bfa4de74b73aa4a0d598644cbc94829ef6b26465d45f3ea428692498b3c8c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/SparseState.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/SparseState.lean",
+      "original_sha256": "7ad35073a644b250d425c4a53cfd351e4b5607fc9bd1f1a94edf76b515444054",
+      "release_sha256": "7ad35073a644b250d425c4a53cfd351e4b5607fc9bd1f1a94edf76b515444054"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/Incidence.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/Incidence.lean",
+      "original_sha256": "7b9bf7f3708f4b95a54ae4281094e610bcec0f04f312e37036bca279b6739d71",
+      "release_sha256": "7b9bf7f3708f4b95a54ae4281094e610bcec0f04f312e37036bca279b6739d71"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/Residual.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/Residual.lean",
+      "original_sha256": "8947c0a4f5a23c5ea84f38996eff66350ecb169cea3d26b3f6aba28d88008b76",
+      "release_sha256": "8947c0a4f5a23c5ea84f38996eff66350ecb169cea3d26b3f6aba28d88008b76"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/Rounding.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/Rounding.lean",
+      "original_sha256": "b75b6d89dadf7b9cc9483391340266f148f009ec1f5afe554b40b9dbc34ca84e",
+      "release_sha256": "b75b6d89dadf7b9cc9483391340266f148f009ec1f5afe554b40b9dbc34ca84e"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/Selection.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/Selection.lean",
+      "original_sha256": "9f81a432646575ebd811b3ab817b10c4c91d689c157b205e5ccced5d8ee9565c",
+      "release_sha256": "9f81a432646575ebd811b3ab817b10c4c91d689c157b205e5ccced5d8ee9565c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/ImbalanceCounts.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/ImbalanceCounts.lean",
+      "original_sha256": "8edf48b0f095b43cb130bc098a76570fed1fcbc969d05078f7c520b0ed5fbc8c",
+      "release_sha256": "8edf48b0f095b43cb130bc098a76570fed1fcbc969d05078f7c520b0ed5fbc8c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/BalancingEdges.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/BalancingEdges.lean",
+      "original_sha256": "9c6be9e2f37dee945a7940fb630566201b583d4d9d12bf04fcfea313a57c5b85",
+      "release_sha256": "9c6be9e2f37dee945a7940fb630566201b583d4d9d12bf04fcfea313a57c5b85"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/SelectedGraph.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/SelectedGraph.lean",
+      "original_sha256": "b78c66d0aecf9528aeed7ade91912ab2ba4f99ebde7b5db8b34c1b866f022353",
+      "release_sha256": "0b3acb4ab3e5284abfdf2c3f6a086ff68cd39fb7b81678f7f30e5eee656baf9f"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/GraphTrails.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/GraphTrails.lean",
+      "original_sha256": "6e396d4a8d5e28211af21c50c117c30f0f4dc8ad7ba8776342dd1bf09d337979",
+      "release_sha256": "f4fdc16451a372e54e3fcd1555f8b85163f23fb423ad0e6778a2b4499abc8c59"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/WordAssembly.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/WordAssembly.lean",
+      "original_sha256": "75031d424868088c047f32639c3abcfa69770b7431a5e591dbf208c92d1d8cc2",
+      "release_sha256": "75031d424868088c047f32639c3abcfa69770b7431a5e591dbf208c92d1d8cc2"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/CutWords.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/CutWords.lean",
+      "original_sha256": "2f7f97d5e2ce5be80ba4bbea3a1c53a2cbb5b6f624c930e2b030fb0b6714a151",
+      "release_sha256": "2f7f97d5e2ce5be80ba4bbea3a1c53a2cbb5b6f624c930e2b030fb0b6714a151"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/OverlapStates.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/OverlapStates.lean",
+      "original_sha256": "724ea3ca1f0ff8c576fb46410de9203387b2a05ad627955cb2bc442528465eb6",
+      "release_sha256": "724ea3ca1f0ff8c576fb46410de9203387b2a05ad627955cb2bc442528465eb6"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/SupportedStates.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant/patches/SuperpermutationUpperBound/Assembly/SupportedStates.lean",
+      "original_sha256": "a36a1939cafc538e0a921f7f4ccd95f0efbd8cb4dd848c4d22795389bfc08060",
+      "release_sha256": "a36a1939cafc538e0a921f7f4ccd95f0efbd8cb4dd848c4d22795389bfc08060"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/BalancedCuts/SupportedCutWords.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/SupportedCutWords.lean",
+      "original_sha256": "ebdba9845f8709937555afd05eb34582398fd3f3052d081a2acda92e901adbef",
+      "release_sha256": "655e69bfb92ac8c4777e84d8f320940409ff89af50f7bf0288c8f2306e05a42c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/BalancedCircleWords.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/BalancedCircleWords.lean",
+      "original_sha256": "2d01515a14a407f648cf011d03906a4808b0adfb923201a0aa504d5176242d30",
+      "release_sha256": "2d01515a14a407f648cf011d03906a4808b0adfb923201a0aa504d5176242d30"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/ConnectorWords.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/ConnectorWords.lean",
+      "original_sha256": "1a1a8760dbe787cbf2a42ab877d6224a18943dae838b2c5cacdc93f5ac431191",
+      "release_sha256": "1a1a8760dbe787cbf2a42ab877d6224a18943dae838b2c5cacdc93f5ac431191"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Assembly/CircleRows.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/CircleRows.lean",
+      "original_sha256": "b7596510d22a46c6cb49989b0f2754aad2024df17db3c239fc6549f0786042a2",
+      "release_sha256": "b7596510d22a46c6cb49989b0f2754aad2024df17db3c239fc6549f0786042a2"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/WordOfLevel.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/WordOfLevel.lean",
+      "original_sha256": "873af1e9a51525b3a6435d61d28b55e81e6676eb20abc5fdf62eb7da906940b6",
+      "release_sha256": "873af1e9a51525b3a6435d61d28b55e81e6676eb20abc5fdf62eb7da906940b6"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Hybrid.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Hybrid.lean",
+      "original_sha256": "1d693bd38bf09f2b8dafff67c9298925eb627688898d65634f466cec54abd28a",
+      "release_sha256": "1d693bd38bf09f2b8dafff67c9298925eb627688898d65634f466cec54abd28a"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Thirteen.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Thirteen.lean",
+      "original_sha256": "7b12942682417b629ad0cb36f949f08b619bb7e177b0247ce10b7e28d5bfd5eb",
+      "release_sha256": "7b12942682417b629ad0cb36f949f08b619bb7e177b0247ce10b7e28d5bfd5eb"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Bounds/Definitions.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Bounds/Definitions.lean",
+      "original_sha256": "adfb72ea0548c3767dcea3f24075096bc7c7c68ece6197b2b507efaa486964ee",
+      "release_sha256": "adfb72ea0548c3767dcea3f24075096bc7c7c68ece6197b2b507efaa486964ee"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/AllSizes.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/AllSizes.lean",
+      "original_sha256": "28f8bd47ddfefd7f8e5d25d6ab700319cacb63444a3fc863d63cac7fbdad236b",
+      "release_sha256": "28f8bd47ddfefd7f8e5d25d6ab700319cacb63444a3fc863d63cac7fbdad236b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Certificate/Checks.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Certificate/Checks.lean",
+      "original_sha256": "d387b9316594c18e6fc67ab25ef2f67e5b9821d9c5ed547cebe3026c802a367a",
+      "release_sha256": "d387b9316594c18e6fc67ab25ef2f67e5b9821d9c5ed547cebe3026c802a367a"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/BlockG.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/BlockG.lean",
+      "original_sha256": "83ca3093fa405dbca10eebc1cc52756234c17184385f83430fb1b6bd70e3cbd3",
+      "release_sha256": "83ca3093fa405dbca10eebc1cc52756234c17184385f83430fb1b6bd70e3cbd3"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/BlockUp.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/BlockUp.lean",
+      "original_sha256": "9cafa9c93f5979badcedb965aa348417a3a0729279845807a0eb0307ee834d30",
+      "release_sha256": "9cafa9c93f5979badcedb965aa348417a3a0729279845807a0eb0307ee834d30"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Stage.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Stage.lean",
+      "original_sha256": "8f0bc444af8dd7968f0b59de19cd0dc7e875542e71d913e1fff3a68b3943a05b",
+      "release_sha256": "8f0bc444af8dd7968f0b59de19cd0dc7e875542e71d913e1fff3a68b3943a05b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/NoSeed.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/NoSeed.lean",
+      "original_sha256": "410082be04378704c2c983755c3c86e335727ef428e847a54a85e080746a124c",
+      "release_sha256": "410082be04378704c2c983755c3c86e335727ef428e847a54a85e080746a124c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/AllSizesG.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/AllSizesG.lean",
+      "original_sha256": "f2bd9bf25d1856ee8169eb6a969be921c8b35c2b82004179e8b25db36dd0186a",
+      "release_sha256": "f2bd9bf25d1856ee8169eb6a969be921c8b35c2b82004179e8b25db36dd0186a"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Uniform/Walk.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Uniform/Walk.lean",
+      "original_sha256": "8c3c384ec4b234bfecd0425884352a0e12af32a8af1e406cc9687f5338a64548",
+      "release_sha256": "8c3c384ec4b234bfecd0425884352a0e12af32a8af1e406cc9687f5338a64548"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RWalk.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RWalk.lean",
+      "original_sha256": "20246db9a87cd9e3ccf6a6d2713a84970216be13c880bc4a445fa56689d09a9e",
+      "release_sha256": "20246db9a87cd9e3ccf6a6d2713a84970216be13c880bc4a445fa56689d09a9e"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Uniform/Canon.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Uniform/Canon.lean",
+      "original_sha256": "c613cd9ae963bb0cad4b53e742005f0d5c05131a4aa5c14491ea916f9c1cfab5",
+      "release_sha256": "c613cd9ae963bb0cad4b53e742005f0d5c05131a4aa5c14491ea916f9c1cfab5"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Uniform/Distinct.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Uniform/Distinct.lean",
+      "original_sha256": "830577e45fcb25e480e0d3d885e2f5b23c30f9831d5f514d3f2160cdf370bd2a",
+      "release_sha256": "830577e45fcb25e480e0d3d885e2f5b23c30f9831d5f514d3f2160cdf370bd2a"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RDistinct.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RDistinct.lean",
+      "original_sha256": "fd6f67b75a64fb94956894868259ebb0705591e1c5995c799a97908a5fc2578b",
+      "release_sha256": "fd6f67b75a64fb94956894868259ebb0705591e1c5995c799a97908a5fc2578b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Uniform/WalkLoops.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Uniform/WalkLoops.lean",
+      "original_sha256": "49ff06c3e0bc8d28c41f1d82cf89770630925c87f5c8466eb553339c6d8a934c",
+      "release_sha256": "49ff06c3e0bc8d28c41f1d82cf89770630925c87f5c8466eb553339c6d8a934c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RArith.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RArith.lean",
+      "original_sha256": "3aa863ad28b0339bf8c83cd06dce97d0caa16bb0125655e9210d8beacfe10f0b",
+      "release_sha256": "3aa863ad28b0339bf8c83cd06dce97d0caa16bb0125655e9210d8beacfe10f0b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RLoops.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RLoops.lean",
+      "original_sha256": "c034395e219e4c0486c06c1af0e2f6ffc532fc9e7294d41415f7004392e04302",
+      "release_sha256": "c034395e219e4c0486c06c1af0e2f6ffc532fc9e7294d41415f7004392e04302"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RBlockRows.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RBlockRows.lean",
+      "original_sha256": "255330e0806fa687083a8805440855ca78494b436cbe453abfd10f62a837db82",
+      "release_sha256": "255330e0806fa687083a8805440855ca78494b436cbe453abfd10f62a837db82"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Uniform/Ports.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Uniform/Ports.lean",
+      "original_sha256": "195ac431338e997fd2c56ac0b74fa0899ac4087bc703c081c5671e309e00ebe6",
+      "release_sha256": "195ac431338e997fd2c56ac0b74fa0899ac4087bc703c081c5671e309e00ebe6"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RPorts.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RPorts.lean",
+      "original_sha256": "045b90fac9d80370677ce535d64b33f32915cdbfee492890558227cd370bff76",
+      "release_sha256": "045b90fac9d80370677ce535d64b33f32915cdbfee492890558227cd370bff76"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Uniform/Block.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Uniform/Block.lean",
+      "original_sha256": "f98a913c1b7f4d0d3d0245e98d7a6fbe219b539d14b9cccc2ac55f4c11337e5b",
+      "release_sha256": "f98a913c1b7f4d0d3d0245e98d7a6fbe219b539d14b9cccc2ac55f4c11337e5b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RBlock.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RBlock.lean",
+      "original_sha256": "7b26497b62e91848d057c0f97a476ae1f292e9a9908ad47bba14625c7418d19b",
+      "release_sha256": "7b26497b62e91848d057c0f97a476ae1f292e9a9908ad47bba14625c7418d19b"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Uniform/Arith.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Uniform/Arith.lean",
+      "original_sha256": "8143a28739763316875fda7c5735481c7db18b1f6dd274799eae2b5b46541aa6",
+      "release_sha256": "8143a28739763316875fda7c5735481c7db18b1f6dd274799eae2b5b46541aa6"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Uniform/Iterate.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Uniform/Iterate.lean",
+      "original_sha256": "cedd82a71ce49e780f2ff84b43d96b5667012ad02ec27e118c04bec2d648857f",
+      "release_sha256": "cedd82a71ce49e780f2ff84b43d96b5667012ad02ec27e118c04bec2d648857f"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RIterate.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RIterate.lean",
+      "original_sha256": "1be1d7401a3bd5552c96d7d1f710aea0b69d321cb708cce9dc00c009c7efdd7d",
+      "release_sha256": "1be1d7401a3bd5552c96d7d1f710aea0b69d321cb708cce9dc00c009c7efdd7d"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound/Bounds/AsymptoticEpsilon.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Bounds/AsymptoticEpsilon.lean",
+      "original_sha256": "5cdebaef344461e1433266b8aea410be1ecdf57a9432787de17dc1aee95f24f8",
+      "release_sha256": "5cdebaef344461e1433266b8aea410be1ecdf57a9432787de17dc1aee95f24f8"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/Uniform/Bounds.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Uniform/Bounds.lean",
+      "original_sha256": "412c7c098e4b61f0f71c1460686e1eb7e51cdf95625a154dca5c54cdb8c77879",
+      "release_sha256": "412c7c098e4b61f0f71c1460686e1eb7e51cdf95625a154dca5c54cdb8c77879"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RMain.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RMain.lean",
+      "original_sha256": "a82369da0ecc1ef730a6687b91ec6322e988d02a8c3f2013b2367217622a738f",
+      "release_sha256": "a82369da0ecc1ef730a6687b91ec6322e988d02a8c3f2013b2367217622a738f"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RRate.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RRate.lean",
+      "original_sha256": "510bdbd3fe08d9a0e61234de88fd0682ba98574f7a68c0048b5e9b331ca85b5c",
+      "release_sha256": "510bdbd3fe08d9a0e61234de88fd0682ba98574f7a68c0048b5e9b331ca85b5c"
+    },
+    {
+      "path": "lean/SuperpermutationUpperBound43586371/UniR/RRate8.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/UniR/RRate8.lean",
+      "original_sha256": "149fbe9106daf49cb4b1298b46a255021d8bee5b2875ecd921cc2a6d5f78ee58",
+      "release_sha256": "149fbe9106daf49cb4b1298b46a255021d8bee5b2875ecd921cc2a6d5f78ee58"
+    },
+    {
+      "path": "lean/Hunter/Words.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Words.lean",
+      "original_sha256": "61de1465e5ddf06aaaa925daa41d81c7da6a84a8bedf62563cdc8690cafb45bf",
+      "release_sha256": "f605c421df23c752a160f771e57b543df78e173c21b91ac2fa5433caca3cf8d1"
+    },
+    {
+      "path": "lean/Hunter/Graph.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Graph.lean",
+      "original_sha256": "1ff20eb3fa0b0f217ea57194e55efdcef7a282c4ed80a2e03691e97f880fef86",
+      "release_sha256": "1ff20eb3fa0b0f217ea57194e55efdcef7a282c4ed80a2e03691e97f880fef86"
+    },
+    {
+      "path": "lean/Hunter/Paths.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Paths.lean",
+      "original_sha256": "6d6d69f8d7c920b3e3d45b7a1840b643e54482e358ac18676358ac0d27a4518b",
+      "release_sha256": "6d6d69f8d7c920b3e3d45b7a1840b643e54482e358ac18676358ac0d27a4518b"
+    },
+    {
+      "path": "lean/Hunter/Transform.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Transform.lean",
+      "original_sha256": "48accaa7f1c2a154eac1a38965d23c762cb70eba41d03947304866045d100b39",
+      "release_sha256": "48accaa7f1c2a154eac1a38965d23c762cb70eba41d03947304866045d100b39"
+    },
+    {
+      "path": "lean/Hunter/Bounds.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Bounds.lean",
+      "original_sha256": "09e6711f1086e264346b420de6e92e1be5f4b01854ed0b68e9a48c0e2bed0734",
+      "release_sha256": "4d62bf85e352f8e889c0b2c76777fda8570efae87efcc6e0453bec2bfcacd05d"
+    },
+    {
+      "path": "lean/ConstAsym/Bridge.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/asym/ConstAsym/Bridge.lean",
+      "original_sha256": "7a0b0e6df8c85f8fe85ff8193952d8ef8fc5b16960695cc520b9bfd864f418f8",
+      "release_sha256": "7a0b0e6df8c85f8fe85ff8193952d8ef8fc5b16960695cc520b9bfd864f418f8"
+    },
+    {
+      "path": "lean/Hunter/Defs.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Defs.lean",
+      "original_sha256": "1da943fc067af66f09c04f93613c0efcc3be401a828d0a2d73a49592d84e0d05",
+      "release_sha256": "1da943fc067af66f09c04f93613c0efcc3be401a828d0a2d73a49592d84e0d05"
+    },
+    {
+      "path": "lean/Hunter/Appendix.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Appendix.lean",
+      "original_sha256": "e49df873208ce237ec4b50667aff3854f6f077e87d9072eb7f3797f5a721482c",
+      "release_sha256": "e49df873208ce237ec4b50667aff3854f6f077e87d9072eb7f3797f5a721482c"
+    },
+    {
+      "path": "lean/Hunter/ProofsReductions.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsReductions.lean",
+      "original_sha256": "fa9f2c19fa422edc1c8e783c12618a57f490a3e0c914e52e7593b594e02e05b7",
+      "release_sha256": "fa9f2c19fa422edc1c8e783c12618a57f490a3e0c914e52e7593b594e02e05b7"
+    },
+    {
+      "path": "lean/Hunter/ProofsSpine.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsSpine.lean",
+      "original_sha256": "5557785b5505f5e706c62f2c131c660642178d08e3feed90ac46ec906d386e2a",
+      "release_sha256": "5557785b5505f5e706c62f2c131c660642178d08e3feed90ac46ec906d386e2a"
+    },
+    {
+      "path": "lean/Hunter/ProofsExitless.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsExitless.lean",
+      "original_sha256": "d19c5c0a9e0bf7d842ce6bb8e22b008b30b5a21da3af13ecc364c881da25e5f5",
+      "release_sha256": "d19c5c0a9e0bf7d842ce6bb8e22b008b30b5a21da3af13ecc364c881da25e5f5"
+    },
+    {
+      "path": "lean/Hunter/ProofsStructure.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsStructure.lean",
+      "original_sha256": "3b7b146ac4277a331009b00d11fe4fc610aea3202d4c7b16c72dcbcbb837a82b",
+      "release_sha256": "3b7b146ac4277a331009b00d11fe4fc610aea3202d4c7b16c72dcbcbb837a82b"
+    },
+    {
+      "path": "lean/Hunter/ProofsWP.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsWP.lean",
+      "original_sha256": "cc35c405935d09d4eecc1952ec58d2c58c9083bdc0ebce9208692ffefaa539d8",
+      "release_sha256": "cc35c405935d09d4eecc1952ec58d2c58c9083bdc0ebce9208692ffefaa539d8"
+    },
+    {
+      "path": "lean/Hunter/ProofsPathrule.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsPathrule.lean",
+      "original_sha256": "d795f5a298f42273e6a05d4a50ca16b49d8096b033fb55c89f846209cb2478bf",
+      "release_sha256": "d795f5a298f42273e6a05d4a50ca16b49d8096b033fb55c89f846209cb2478bf"
+    },
+    {
+      "path": "lean/Hunter/ProofsConfinement.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsConfinement.lean",
+      "original_sha256": "efbc088169feb1e0a455f9839099f5b3e418cb42f9859ff7b2ed249e588c0077",
+      "release_sha256": "efbc088169feb1e0a455f9839099f5b3e418cb42f9859ff7b2ed249e588c0077"
+    },
+    {
+      "path": "lean/Hunter/ProofsMore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsMore.lean",
+      "original_sha256": "c6f1189808d526a5ad0613853d73e2c6c46a0a03f8a9d642bc8498ccfb41af7b",
+      "release_sha256": "c6f1189808d526a5ad0613853d73e2c6c46a0a03f8a9d642bc8498ccfb41af7b"
+    },
+    {
+      "path": "lean/Hunter/ProofsB2.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsB2.lean",
+      "original_sha256": "60bc5f4d23aa268a04650d213b7a6387b6b56a24a3ef4bd27b5eb23d68a8705b",
+      "release_sha256": "60bc5f4d23aa268a04650d213b7a6387b6b56a24a3ef4bd27b5eb23d68a8705b"
+    },
+    {
+      "path": "lean/Hunter/ProofsRecursion.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsRecursion.lean",
+      "original_sha256": "11e7ebbf117072dab58c50efecbf43a0bd6b9248fe91e9540b890c47a338259a",
+      "release_sha256": "11e7ebbf117072dab58c50efecbf43a0bd6b9248fe91e9540b890c47a338259a"
+    },
+    {
+      "path": "lean/Hunter/ProofsGB2.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsGB2.lean",
+      "original_sha256": "40abbb9e8a1079bacf460fb7ac8199acfde7d61c247589bb07ae2fe5566c83df",
+      "release_sha256": "40abbb9e8a1079bacf460fb7ac8199acfde7d61c247589bb07ae2fe5566c83df"
+    },
+    {
+      "path": "lean/Hunter/ProofsGreedy.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsGreedy.lean",
+      "original_sha256": "aa75f88b41d1c71783666bb319d517c3ece4a30f6ccacd6654a29b9228c9d3ed",
+      "release_sha256": "96cb58994097842c49fb11853fa10b1face007f242669fbc424d9910fdea98fe"
+    },
+    {
+      "path": "lean/Hunter/ProofsGreedy2.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsGreedy2.lean",
+      "original_sha256": "d0388874338a5381e3b311c216713982fda70d226f1ac9779908e71866f19e1b",
+      "release_sha256": "0c19a5efdb53fca582e245a2dd3163cba946fc34f06114fefa60636746c450ac"
+    },
+    {
+      "path": "lean/Hunter/ProofsUnwind.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsUnwind.lean",
+      "original_sha256": "fb7aaafc6c7c18750ebfdcd6f3379aa913518b1db329a8d3d9ae0749aa670666",
+      "release_sha256": "fb7aaafc6c7c18750ebfdcd6f3379aa913518b1db329a8d3d9ae0749aa670666"
+    },
+    {
+      "path": "lean/Hunter/ProofsUnwind2.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsUnwind2.lean",
+      "original_sha256": "5760441db9632ad32dbbf30226323468b2ee4e911def40ddb4dc8f60fca5232f",
+      "release_sha256": "5760441db9632ad32dbbf30226323468b2ee4e911def40ddb4dc8f60fca5232f"
+    },
+    {
+      "path": "lean/Hunter/ProofsExcess.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsExcess.lean",
+      "original_sha256": "c420cd14df9f54f5db6635c2763993a00dbb8fad4f42daca5e75703ba4e7407f",
+      "release_sha256": "c420cd14df9f54f5db6635c2763993a00dbb8fad4f42daca5e75703ba4e7407f"
+    },
+    {
+      "path": "lean/Hunter/ProofsSPrime.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsSPrime.lean",
+      "original_sha256": "69761fb84dd33cd218f43d02cce53873a7ee0105e8919489d5cb109d4f20c69c",
+      "release_sha256": "69761fb84dd33cd218f43d02cce53873a7ee0105e8919489d5cb109d4f20c69c"
+    },
+    {
+      "path": "lean/Hunter/ProofsDeficit.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsDeficit.lean",
+      "original_sha256": "b004cc16015c07b716f0d67890ff6db9c87a17c778e006be92b3e17b11f6aef8",
+      "release_sha256": "b004cc16015c07b716f0d67890ff6db9c87a17c778e006be92b3e17b11f6aef8"
+    },
+    {
+      "path": "lean/Hunter/ProofsWindow.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsWindow.lean",
+      "original_sha256": "837c13be7ae5c7e4dfd74f495dc17e9992216dcf13106bbdfb5bf2724a4162b3",
+      "release_sha256": "837c13be7ae5c7e4dfd74f495dc17e9992216dcf13106bbdfb5bf2724a4162b3"
+    },
+    {
+      "path": "lean/Hunter/ProofsUnwind3.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsUnwind3.lean",
+      "original_sha256": "2837475db99fa23981568fd878d7c3757dadcdf0b2880417fc1ca61c5a899043",
+      "release_sha256": "2837475db99fa23981568fd878d7c3757dadcdf0b2880417fc1ca61c5a899043"
+    },
+    {
+      "path": "lean/Hunter/ProofsUnwind4.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsUnwind4.lean",
+      "original_sha256": "c1804233cb239b204f9c228c7d74bb27c3fa073476343787eca1af1803924774",
+      "release_sha256": "c1804233cb239b204f9c228c7d74bb27c3fa073476343787eca1af1803924774"
+    },
+    {
+      "path": "lean/Hunter/ProofsPu.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsPu.lean",
+      "original_sha256": "ab036a18d97f85ccc69bc92c3596152bced9b82000953847fab73a8a39ca5d7e",
+      "release_sha256": "ab036a18d97f85ccc69bc92c3596152bced9b82000953847fab73a8a39ca5d7e"
+    },
+    {
+      "path": "lean/Hunter/ProofsHrev.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsHrev.lean",
+      "original_sha256": "0553bea5116484b39bd8a057c0dd5f3d9465613e99d18b3dd30290bee1e441e3",
+      "release_sha256": "0553bea5116484b39bd8a057c0dd5f3d9465613e99d18b3dd30290bee1e441e3"
+    },
+    {
+      "path": "lean/Hunter/ProofsPhi.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsPhi.lean",
+      "original_sha256": "187f507e0e766250efd2cebf547254b857d743585158c62041d321f295712b63",
+      "release_sha256": "187f507e0e766250efd2cebf547254b857d743585158c62041d321f295712b63"
+    },
+    {
+      "path": "lean/Hunter/ProofsLstar.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsLstar.lean",
+      "original_sha256": "78e42ab162086e1c5af06bd6d58717b9d3a590a6adc185a3e8476a3fe21a7e44",
+      "release_sha256": "78e42ab162086e1c5af06bd6d58717b9d3a590a6adc185a3e8476a3fe21a7e44"
+    },
+    {
+      "path": "lean/Hunter/ProofsClosure3.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsClosure3.lean",
+      "original_sha256": "9548eb1cb75525b249f4dfacfe95ba57458cae541945ec372a1ab42f1ec4c3ee",
+      "release_sha256": "9548eb1cb75525b249f4dfacfe95ba57458cae541945ec372a1ab42f1ec4c3ee"
+    },
+    {
+      "path": "lean/Hunter/ProofsRigidity2.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsRigidity2.lean",
+      "original_sha256": "230976edbfc022402a72204c84c70833c7786ff79c055ddff390675eea3c5563",
+      "release_sha256": "230976edbfc022402a72204c84c70833c7786ff79c055ddff390675eea3c5563"
+    },
+    {
+      "path": "lean/Hunter/ProofsMeta.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsMeta.lean",
+      "original_sha256": "74efae0cfbc15f1dd9f325f6ecf6e2c88d1b44ee850acf3d0aba96e3dbe09a9c",
+      "release_sha256": "74efae0cfbc15f1dd9f325f6ecf6e2c88d1b44ee850acf3d0aba96e3dbe09a9c"
+    },
+    {
+      "path": "lean/Hunter/ProofsMeta2.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsMeta2.lean",
+      "original_sha256": "61f4d59b3924290e1f81311b6d098dcafafc44e6a074eb2f1f00ad284c97a77e",
+      "release_sha256": "61f4d59b3924290e1f81311b6d098dcafafc44e6a074eb2f1f00ad284c97a77e"
+    },
+    {
+      "path": "lean/Hunter/ProofsMeta3.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsMeta3.lean",
+      "original_sha256": "e7ae9b8c3183697f4c6c741ddc01022061e023e7a9405f56eb402ebd94222c90",
+      "release_sha256": "e7ae9b8c3183697f4c6c741ddc01022061e023e7a9405f56eb402ebd94222c90"
+    },
+    {
+      "path": "lean/Hunter/ProofsMeta4.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsMeta4.lean",
+      "original_sha256": "ad9de55ddde94738b1e1c8d4e7ce75ac3624f9d40de200ce7a177f98f1212a4a",
+      "release_sha256": "ad9de55ddde94738b1e1c8d4e7ce75ac3624f9d40de200ce7a177f98f1212a4a"
+    },
+    {
+      "path": "lean/Hunter/Refutations.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Refutations.lean",
+      "original_sha256": "fd2d7e76ecf73235e78f5d8fc60e62020c1a290a8b2ac4cc38ea96961dc331f5",
+      "release_sha256": "fd2d7e76ecf73235e78f5d8fc60e62020c1a290a8b2ac4cc38ea96961dc331f5"
+    },
+    {
+      "path": "lean/Hunter/ProofsMeta5.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsMeta5.lean",
+      "original_sha256": "f5d4d4d23a807fdfca09b0139d18357fd78b4f0e78cade57115669f908e50ea8",
+      "release_sha256": "f5d4d4d23a807fdfca09b0139d18357fd78b4f0e78cade57115669f908e50ea8"
+    },
+    {
+      "path": "lean/Hunter/ProofsMeta6.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsMeta6.lean",
+      "original_sha256": "e5f27e6fb597cf006d60760c019791844619edc2d4595bf93c0ec77b73d0c7ae",
+      "release_sha256": "e5f27e6fb597cf006d60760c019791844619edc2d4595bf93c0ec77b73d0c7ae"
+    },
+    {
+      "path": "lean/Hunter/ProofsMeta7.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsMeta7.lean",
+      "original_sha256": "bd7769e1a640f548870047976bd857dc9329442df1046b023d5c4b181f08d57e",
+      "release_sha256": "bd7769e1a640f548870047976bd857dc9329442df1046b023d5c4b181f08d57e"
+    },
+    {
+      "path": "lean/Hunter/ProofsMeta8.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsMeta8.lean",
+      "original_sha256": "8c34b0945545210303cbc9c7cc0798dccec45fe41b35d9236ea731ec6fa9b5eb",
+      "release_sha256": "8c34b0945545210303cbc9c7cc0798dccec45fe41b35d9236ea731ec6fa9b5eb"
+    },
+    {
+      "path": "lean/Hunter/ProofsSynthesis.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsSynthesis.lean",
+      "original_sha256": "33c545d8f2389d8883ed03a1c31beb06460e711dfd257e8287787d8a7b418c9b",
+      "release_sha256": "33c545d8f2389d8883ed03a1c31beb06460e711dfd257e8287787d8a7b418c9b"
+    },
+    {
+      "path": "lean/Hunter/ProofsLedger.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsLedger.lean",
+      "original_sha256": "0a7e5c026a1d353bbd7e2b2bb722c999cc8ad6654b34e733c30c2ccceeb85330",
+      "release_sha256": "0a7e5c026a1d353bbd7e2b2bb722c999cc8ad6654b34e733c30c2ccceeb85330"
+    },
+    {
+      "path": "lean/Hunter/ProofsChartEq.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsChartEq.lean",
+      "original_sha256": "a75b90aa6a0c4e5f496232d6613ab0bb667a54387ed74ecff23bcb7ee63f45b0",
+      "release_sha256": "a75b90aa6a0c4e5f496232d6613ab0bb667a54387ed74ecff23bcb7ee63f45b0"
+    },
+    {
+      "path": "lean/Hunter/ProofsLedger2.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsLedger2.lean",
+      "original_sha256": "7f1ccd57fe919bddf15f16493a9d82cfc7816edbfc981e8e69b52a19c8eeb4b3",
+      "release_sha256": "7f1ccd57fe919bddf15f16493a9d82cfc7816edbfc981e8e69b52a19c8eeb4b3"
+    },
+    {
+      "path": "lean/Hunter/ProofsRunExtract.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsRunExtract.lean",
+      "original_sha256": "08abfa7e95436d8e8deeacd15b28053bda985c64a835769c67e9f6493a1b6e27",
+      "release_sha256": "08abfa7e95436d8e8deeacd15b28053bda985c64a835769c67e9f6493a1b6e27"
+    },
+    {
+      "path": "lean/Hunter/ProofsMF.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsMF.lean",
+      "original_sha256": "2d034f6856a112e9eaf140c5eb29db4d5423f14cfeffee7e4c08d0fff39a8a56",
+      "release_sha256": "2d034f6856a112e9eaf140c5eb29db4d5423f14cfeffee7e4c08d0fff39a8a56"
+    },
+    {
+      "path": "lean/Hunter/ProofsAssembly.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsAssembly.lean",
+      "original_sha256": "fc2d012fd17e869c2105c4428810079d8567b40ecb4c9a597bc678dc64db14cf",
+      "release_sha256": "fc2d012fd17e869c2105c4428810079d8567b40ecb4c9a597bc678dc64db14cf"
+    },
+    {
+      "path": "lean/Hunter/ProofsRFrame.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsRFrame.lean",
+      "original_sha256": "76a832bbe08f815fd511d180b47baf71379f53f349938ce56518db959b69139e",
+      "release_sha256": "76a832bbe08f815fd511d180b47baf71379f53f349938ce56518db959b69139e"
+    },
+    {
+      "path": "lean/Hunter/ProofsFinal.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsFinal.lean",
+      "original_sha256": "2f804b508aeb152214186b17d521177e3995e4a33fc5fa0d6fc94973ca74bbc1",
+      "release_sha256": "2f804b508aeb152214186b17d521177e3995e4a33fc5fa0d6fc94973ca74bbc1"
+    },
+    {
+      "path": "lean/Hunter/ProofsCascade.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsCascade.lean",
+      "original_sha256": "c31be55fca2f4644c03d86f3964a272675f3aabcee9561673aae1420b0048b55",
+      "release_sha256": "c31be55fca2f4644c03d86f3964a272675f3aabcee9561673aae1420b0048b55"
+    },
+    {
+      "path": "lean/Hunter/ProofsM1.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsM1.lean",
+      "original_sha256": "3d2b2d444232ecedef78b07172d5d0b4186aaabd09b99e6849ded47b19094c84",
+      "release_sha256": "3d2b2d444232ecedef78b07172d5d0b4186aaabd09b99e6849ded47b19094c84"
+    },
+    {
+      "path": "lean/Hunter/ProofsPotential.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsPotential.lean",
+      "original_sha256": "7d8da5fa0774c42601084b2ba46a889768352c2d883981156f3d43b5ff6e3f80",
+      "release_sha256": "7d8da5fa0774c42601084b2ba46a889768352c2d883981156f3d43b5ff6e3f80"
+    },
+    {
+      "path": "lean/Hunter/ProofsLanding.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsLanding.lean",
+      "original_sha256": "c549a9ea2639476bfab1488103a07df5c7994e5d855e31b2384571d004cde4d1",
+      "release_sha256": "c549a9ea2639476bfab1488103a07df5c7994e5d855e31b2384571d004cde4d1"
+    },
+    {
+      "path": "lean/Hunter/ProofsFill.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsFill.lean",
+      "original_sha256": "2dfe0a49079bb058df0ee6ca72c0fec2fb779da9779d88a69b1f623a8806a4bd",
+      "release_sha256": "2dfe0a49079bb058df0ee6ca72c0fec2fb779da9779d88a69b1f623a8806a4bd"
+    },
+    {
+      "path": "lean/Hunter/ProofsFillPath.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsFillPath.lean",
+      "original_sha256": "8c55385f35f8b4ea1e8c8577805631c05ddd857605169c520d76c01ef86beadd",
+      "release_sha256": "8c55385f35f8b4ea1e8c8577805631c05ddd857605169c520d76c01ef86beadd"
+    },
+    {
+      "path": "lean/Hunter/ProofsWalk.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsWalk.lean",
+      "original_sha256": "ae9690d7cc6f5429e9bcd8224a671ca0a45c1cdbe7623835d5c5b1a9475a2d3b",
+      "release_sha256": "ae9690d7cc6f5429e9bcd8224a671ca0a45c1cdbe7623835d5c5b1a9475a2d3b"
+    },
+    {
+      "path": "lean/Hunter/ProofsClose.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsClose.lean",
+      "original_sha256": "d212367d6336ad2db85bab050110e6e1c8abfef614d40a8fec34d87f0cac7ad8",
+      "release_sha256": "d212367d6336ad2db85bab050110e6e1c8abfef614d40a8fec34d87f0cac7ad8"
+    },
+    {
+      "path": "lean/Hunter/ProofsChart.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsChart.lean",
+      "original_sha256": "229270b1a4b4272301d660ee084b52d7f5efd75b559cd2ef5ba81eb7840f4bc1",
+      "release_sha256": "229270b1a4b4272301d660ee084b52d7f5efd75b559cd2ef5ba81eb7840f4bc1"
+    },
+    {
+      "path": "lean/Hunter/ProofsFinale.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsFinale.lean",
+      "original_sha256": "22aab2f804d92f28bd79980a9520b54b4b8ba3410ac47ae198a438aa42e7baf4",
+      "release_sha256": "22aab2f804d92f28bd79980a9520b54b4b8ba3410ac47ae198a438aa42e7baf4"
+    },
+    {
+      "path": "lean/Hunter/ProofsTheorem.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsTheorem.lean",
+      "original_sha256": "cef235832a8305f17c32482386ea58e0c3f753f086daaf0e74d0b61300a6f814",
+      "release_sha256": "cef235832a8305f17c32482386ea58e0c3f753f086daaf0e74d0b61300a6f814"
+    },
+    {
+      "path": "lean/Hunter/ProofsLast.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsLast.lean",
+      "original_sha256": "13f5ec3f4b2e7a81acb0135b4ba3af20b9e6a0194b93508dbebc861b1680190c",
+      "release_sha256": "13f5ec3f4b2e7a81acb0135b4ba3af20b9e6a0194b93508dbebc861b1680190c"
+    },
+    {
+      "path": "lean/Hunter/ProofsTail.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsTail.lean",
+      "original_sha256": "fa98ae8e2d22f6beeff4d60972796abfe9312399cb7f1e2bd4318f043e6be034",
+      "release_sha256": "fa98ae8e2d22f6beeff4d60972796abfe9312399cb7f1e2bd4318f043e6be034"
+    },
+    {
+      "path": "lean/Hunter/ProofsInduction.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsInduction.lean",
+      "original_sha256": "ea6bc6ae88d8b67c2faf12e57910b170eae33c52ab1db49aa256a281382d872a",
+      "release_sha256": "ea6bc6ae88d8b67c2faf12e57910b170eae33c52ab1db49aa256a281382d872a"
+    },
+    {
+      "path": "lean/Hunter/ProofsRigid.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsRigid.lean",
+      "original_sha256": "2d44217ae24f508beda94f34ad0b34d9320f0801ecf298d4c93035674ab822e4",
+      "release_sha256": "2d44217ae24f508beda94f34ad0b34d9320f0801ecf298d4c93035674ab822e4"
+    },
+    {
+      "path": "lean/Hunter/ProofsEndgame.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsEndgame.lean",
+      "original_sha256": "31d183c61aeba507726d46a0f0c67768eb4443ce2c0e178837d4e02110a524c1",
+      "release_sha256": "31d183c61aeba507726d46a0f0c67768eb4443ce2c0e178837d4e02110a524c1"
+    },
+    {
+      "path": "lean/Hunter/ProofsProfile.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsProfile.lean",
+      "original_sha256": "3c2800cda7e42f6037d732714ed5e899386f8ea7007ec7e10029660b973f1d01",
+      "release_sha256": "3c2800cda7e42f6037d732714ed5e899386f8ea7007ec7e10029660b973f1d01"
+    },
+    {
+      "path": "lean/Hunter/ProofsQED.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsQED.lean",
+      "original_sha256": "2d5f23eb6b0e9740d8bbb257b948d2ad58b3e9d54634d0c0a390ee029db89820",
+      "release_sha256": "2d5f23eb6b0e9740d8bbb257b948d2ad58b3e9d54634d0c0a390ee029db89820"
+    },
+    {
+      "path": "lean/Hunter/ProofsLink2.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsLink2.lean",
+      "original_sha256": "2d15e276b57aa3cbf9e86eef1b3058209b3a3df58be05aaaeb7e64198b178e04",
+      "release_sha256": "2d15e276b57aa3cbf9e86eef1b3058209b3a3df58be05aaaeb7e64198b178e04"
+    },
+    {
+      "path": "lean/Hunter/ProofsHeadline.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsHeadline.lean",
+      "original_sha256": "0359fbe996c594aeef15a00d0e1b9dc887343cc227fdeb6b9d0584d3c871e1e3",
+      "release_sha256": "0359fbe996c594aeef15a00d0e1b9dc887343cc227fdeb6b9d0584d3c871e1e3"
+    },
+    {
+      "path": "lean/Hunter/Statements.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Statements.lean",
+      "original_sha256": "bb2eaa8b49be3e4d72de8ed7782cb11d0fad5825cb405a1dcbe023ac1c460827",
+      "release_sha256": "bb2eaa8b49be3e4d72de8ed7782cb11d0fad5825cb405a1dcbe023ac1c460827"
+    },
+    {
+      "path": "lean/Hunter/Pointwise.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Pointwise.lean",
+      "original_sha256": "58421a54d1a11f4042b085f4c0aceb00ebb253c531173379da005cb74f24f8e7",
+      "release_sha256": "58421a54d1a11f4042b085f4c0aceb00ebb253c531173379da005cb74f24f8e7"
+    },
+    {
+      "path": "lean/Hunter/Paper.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Paper.lean",
+      "original_sha256": "94e1744055accfe3bf77212368f60b01d95347ea70ab37123952aeb3329c31db",
+      "release_sha256": "94e1744055accfe3bf77212368f60b01d95347ea70ab37123952aeb3329c31db"
+    },
+    {
+      "path": "lean/ConstAsym/Main.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/asym/ConstAsym/Main.lean",
+      "original_sha256": "b6dcd2e32483a65720282db72672b638a529f7aec195bc1c5b98ea83638b3f7f",
+      "release_sha256": "17229f3ec69f1a91b5295324c5a182d0b68745d0ed47cfc15d7894c88ee97b75"
+    },
+    {
+      "path": "lean/PreimageChain/Parameters.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/Parameters.lean",
+      "original_sha256": "b657d7a5994ff9f470c35852e0602852b26f45b5863a99bc5d32d41831fd1513",
+      "release_sha256": "b657d7a5994ff9f470c35852e0602852b26f45b5863a99bc5d32d41831fd1513"
+    },
+    {
+      "path": "lean/PreimageChain/PortalCapacity.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PortalCapacity.lean",
+      "original_sha256": "3aacb7270d7a9fbba57d5a03f645b5e16534791a5c1be50ab3291e83d3cf4daf",
+      "release_sha256": "3aacb7270d7a9fbba57d5a03f645b5e16534791a5c1be50ab3291e83d3cf4daf"
+    },
+    {
+      "path": "lean/PreimageChain/Layerwise.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/Layerwise.lean",
+      "original_sha256": "d143c8db9d97c75a2d4e4a90d9b7094ad572da0b275d5b4f622aea75ec859f55",
+      "release_sha256": "d143c8db9d97c75a2d4e4a90d9b7094ad572da0b275d5b4f622aea75ec859f55"
+    },
+    {
+      "path": "lean/PreimageChain/Numerics.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/Numerics.lean",
+      "original_sha256": "92e8146004cc944a865ecd45775ad2160f6929911a4517d8baff374232ace257",
+      "release_sha256": "92e8146004cc944a865ecd45775ad2160f6929911a4517d8baff374232ace257"
+    },
+    {
+      "path": "lean/PreimageChain/LayerCorrectionAlgebra.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/LayerCorrectionAlgebra.lean",
+      "original_sha256": "31b3a8472ecbe36b75d20df36e4f4d06e910d024e23badcb7924e616958c5a4f",
+      "release_sha256": "31b3a8472ecbe36b75d20df36e4f4d06e910d024e23badcb7924e616958c5a4f"
+    },
+    {
+      "path": "lean/PreimageChain/PortalPaymentArithmetic.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PortalPaymentArithmetic.lean",
+      "original_sha256": "2a70c7df0ab067a53c0bac48da72884c4810ea78cac169b500b70ecbe48f4ef7",
+      "release_sha256": "2a70c7df0ab067a53c0bac48da72884c4810ea78cac169b500b70ecbe48f4ef7"
+    },
+    {
+      "path": "lean/PreimageChain/PortalCapacityOneCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PortalCapacityOneCore.lean",
+      "original_sha256": "40f4c473d1a3b3c9c95e4071535d31c164f1febd2b9223c8cea29cb027f00c72",
+      "release_sha256": "40f4c473d1a3b3c9c95e4071535d31c164f1febd2b9223c8cea29cb027f00c72"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalCertificateCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalCertificateCore.lean",
+      "original_sha256": "43f43583f376540c9cc7d7941c80285e9ee3431718304ab3dc9ff4febcbdfddf",
+      "release_sha256": "43f43583f376540c9cc7d7941c80285e9ee3431718304ab3dc9ff4febcbdfddf"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePivotDefs.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePivotDefs.lean",
+      "original_sha256": "83ccc1a8e4e53333069e529df3c4f8ca456dd8374853e68a2c5e33dd928ffc7f",
+      "release_sha256": "83ccc1a8e4e53333069e529df3c4f8ca456dd8374853e68a2c5e33dd928ffc7f"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePivotRatioCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePivotRatioCore.lean",
+      "original_sha256": "ba80552051192dbe3ec0a672df8dda98efbe0319872e9d3b651c331fbb76f786",
+      "release_sha256": "ba80552051192dbe3ec0a672df8dda98efbe0319872e9d3b651c331fbb76f786"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseGInnerCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseGInnerCore.lean",
+      "original_sha256": "c93de32265bd7cdb20fd3f7e8215322d005f4922d334d14ec1e7d0eaf3896a16",
+      "release_sha256": "c93de32265bd7cdb20fd3f7e8215322d005f4922d334d14ec1e7d0eaf3896a16"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePivotCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePivotCore.lean",
+      "original_sha256": "2ad1c7b8d983cb6fe1b177ea81ec86bc88905e7384d7babb4fb0f3a2046fa57e",
+      "release_sha256": "2ad1c7b8d983cb6fe1b177ea81ec86bc88905e7384d7babb4fb0f3a2046fa57e"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseActualB2Core.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseActualB2Core.lean",
+      "original_sha256": "00bb08154e117a5476b804fe6b63fe0282507465f96afe23c62c67198971b653",
+      "release_sha256": "00bb08154e117a5476b804fe6b63fe0282507465f96afe23c62c67198971b653"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseBaselineCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseBaselineCore.lean",
+      "original_sha256": "9c1f4b680eeff9168d6c45f2a38701972925116de7b3e227955459617eb8c694",
+      "release_sha256": "9c1f4b680eeff9168d6c45f2a38701972925116de7b3e227955459617eb8c694"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseBaselineArithmetic.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseBaselineArithmetic.lean",
+      "original_sha256": "d0ec273dd2219212a5e495c6d84284d8d92028026fc2662c45171f750322f84b",
+      "release_sha256": "d0ec273dd2219212a5e495c6d84284d8d92028026fc2662c45171f750322f84b"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseBaseline.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseBaseline.lean",
+      "original_sha256": "17e258821a229339172836fbe5d0b1bff8c63a8c58e2ea617fe6b71c675fbcb4",
+      "release_sha256": "17e258821a229339172836fbe5d0b1bff8c63a8c58e2ea617fe6b71c675fbcb4"
+    },
+    {
+      "path": "lean/PreimageChain/WeightTwo.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/WeightTwo.lean",
+      "original_sha256": "a382b967c440049cd7c34f661773f77f2bfc6516fe6c176724717d81c277d86a",
+      "release_sha256": "a382b967c440049cd7c34f661773f77f2bfc6516fe6c176724717d81c277d86a"
+    },
+    {
+      "path": "lean/PreimageChain/PreimageIdentity.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PreimageIdentity.lean",
+      "original_sha256": "457a7b43b2c69dc220d0fc5ee8ab6e45b3b6664fa49e7e191816af90f3452d3a",
+      "release_sha256": "457a7b43b2c69dc220d0fc5ee8ab6e45b3b6664fa49e7e191816af90f3452d3a"
+    },
+    {
+      "path": "lean/PreimageChain/Limitations.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/Limitations.lean",
+      "original_sha256": "ca28eeceeda56edc46f884fcbf093a6267f4e4701b8d16dc5996e395b1bd516d",
+      "release_sha256": "ca28eeceeda56edc46f884fcbf093a6267f4e4701b8d16dc5996e395b1bd516d"
+    },
+    {
+      "path": "lean/PreimageChain/ChainGraph.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ChainGraph.lean",
+      "original_sha256": "02cd2e1d1288fef67f46d00117276d6819f0c0d1bb3118312e227902d9284988",
+      "release_sha256": "1ab2a1e38b4159784d8426b490284d75fbde12bcdb942c80d6efd80e87c0a245"
+    },
+    {
+      "path": "lean/PreimageChain/ChainRoutes.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ChainRoutes.lean",
+      "original_sha256": "dd6b041109f63782c7c5f6a7b7970be4c440086f97c7dda69a697c0b30cec1ea",
+      "release_sha256": "dd6b041109f63782c7c5f6a7b7970be4c440086f97c7dda69a697c0b30cec1ea"
+    },
+    {
+      "path": "lean/PreimageChain/EdgePartition.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/EdgePartition.lean",
+      "original_sha256": "8bdddf4ddd9bd70bc492925c16e09e252dcd02f07e1ce11eccb5d0cad1afc0d7",
+      "release_sha256": "8bdddf4ddd9bd70bc492925c16e09e252dcd02f07e1ce11eccb5d0cad1afc0d7"
+    },
+    {
+      "path": "lean/PreimageChain/ChainRouteCosts.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ChainRouteCosts.lean",
+      "original_sha256": "1564c5ff81c7a3b6aef4321ba4054f4fa32f666e083b144575bce6789713b7a8",
+      "release_sha256": "1564c5ff81c7a3b6aef4321ba4054f4fa32f666e083b144575bce6789713b7a8"
+    },
+    {
+      "path": "lean/PreimageChain/ComponentIdentity.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ComponentIdentity.lean",
+      "original_sha256": "243751121da7808f09361c8e02ca5355245d095a3bf23c09554245d6c3a983fe",
+      "release_sha256": "243751121da7808f09361c8e02ca5355245d095a3bf23c09554245d6c3a983fe"
+    },
+    {
+      "path": "lean/PreimageChain/ComponentMatching.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ComponentMatching.lean",
+      "original_sha256": "7319ae19be560f218daf1b34d31cf26e7d0ac9a91a0def0afe896b0a47137937",
+      "release_sha256": "7319ae19be560f218daf1b34d31cf26e7d0ac9a91a0def0afe896b0a47137937"
+    },
+    {
+      "path": "lean/PreimageChain/ShortestRoutes.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ShortestRoutes.lean",
+      "original_sha256": "8e956752621c921e3926e724c64478ac7b0639145b7fae0dc0c78b907cb4736c",
+      "release_sha256": "8e956752621c921e3926e724c64478ac7b0639145b7fae0dc0c78b907cb4736c"
+    },
+    {
+      "path": "lean/PreimageChain/ShortestRouteBridge.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ShortestRouteBridge.lean",
+      "original_sha256": "01c0aed293503595680365ed258c0bcb749df1a6fc210f0cc455884b47aaedd7",
+      "release_sha256": "01c0aed293503595680365ed258c0bcb749df1a6fc210f0cc455884b47aaedd7"
+    },
+    {
+      "path": "lean/PreimageChain/PiRelaxation.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PiRelaxation.lean",
+      "original_sha256": "60255ab750389d9c53365c86d6b28f9868fc73fd82acd1712747fa1234519be2",
+      "release_sha256": "60255ab750389d9c53365c86d6b28f9868fc73fd82acd1712747fa1234519be2"
+    },
+    {
+      "path": "lean/PreimageChain/PortalAssignment.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PortalAssignment.lean",
+      "original_sha256": "301e3404cf3cfc7cc1d7967ec8762205bb467ba70e4978e7a734e8ee1408d3f4",
+      "release_sha256": "301e3404cf3cfc7cc1d7967ec8762205bb467ba70e4978e7a734e8ee1408d3f4"
+    },
+    {
+      "path": "lean/PreimageChain/ZeroCostRoutes.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ZeroCostRoutes.lean",
+      "original_sha256": "865182e66cc3609d88e86c2f8f1a9eb7ef57c6abf970948e1bb31b4dc3db1d89",
+      "release_sha256": "865182e66cc3609d88e86c2f8f1a9eb7ef57c6abf970948e1bb31b4dc3db1d89"
+    },
+    {
+      "path": "lean/PreimageChain/ComponentPaths.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ComponentPaths.lean",
+      "original_sha256": "e0953dfe0e2bd0bc2719b09089ff8c503b700e87d49f02963f2f34c2c96c4475",
+      "release_sha256": "e0953dfe0e2bd0bc2719b09089ff8c503b700e87d49f02963f2f34c2c96c4475"
+    },
+    {
+      "path": "lean/PreimageChain/TerminalPortal.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/TerminalPortal.lean",
+      "original_sha256": "a66f8e1264e491b2aa50dd70b6368d844828ef68a80ee4e1772bd53214a91b08",
+      "release_sha256": "a66f8e1264e491b2aa50dd70b6368d844828ef68a80ee4e1772bd53214a91b08"
+    },
+    {
+      "path": "lean/PreimageChain/ComponentGeometry.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ComponentGeometry.lean",
+      "original_sha256": "0784821ce1fceb2d6e62efd0b7519edbb55af03df49bfbc325bdbd9ac5860e5b",
+      "release_sha256": "2a249a08d26bbda9d1303570654db1596686076d192a3e441b9ac6ce37f52109"
+    },
+    {
+      "path": "lean/PreimageChain/RootBiasedArgmaxNat.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/RootBiasedArgmaxNat.lean",
+      "original_sha256": "924e5e5983f068e54f41702304d65827bf1d31e068401a1e3cacec082c206f20",
+      "release_sha256": "924e5e5983f068e54f41702304d65827bf1d31e068401a1e3cacec082c206f20"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseDistinguishedCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseDistinguishedCore.lean",
+      "original_sha256": "4dbbd8284232998e04e52918496c784791cfd1efd0f1178a80544f77695a796c",
+      "release_sha256": "4dbbd8284232998e04e52918496c784791cfd1efd0f1178a80544f77695a796c"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseLayerBudgetArithmetic.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseLayerBudgetArithmetic.lean",
+      "original_sha256": "0509e4c7d35bbafa3327d5f45aeb876616a6446b85b4e051889ac280e707897d",
+      "release_sha256": "0509e4c7d35bbafa3327d5f45aeb876616a6446b85b4e051889ac280e707897d"
+    },
+    {
+      "path": "lean/PreimageChain/DistinguishedSumAlgebra.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/DistinguishedSumAlgebra.lean",
+      "original_sha256": "bae58150f99d038f09940dfe6e3a3362addfc8f26185d878c13bc0987744d10d",
+      "release_sha256": "bae58150f99d038f09940dfe6e3a3362addfc8f26185d878c13bc0987744d10d"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseAssemblyCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseAssemblyCore.lean",
+      "original_sha256": "2c78fb704129b787a92b24c23e4175d3626687d89737f16504c37ce43e5e68bb",
+      "release_sha256": "2c78fb704129b787a92b24c23e4175d3626687d89737f16504c37ce43e5e68bb"
+    },
+    {
+      "path": "lean/PreimageChain/PortalGeometry.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PortalGeometry.lean",
+      "original_sha256": "eabdf17a983ad2f49d2a5374cefc5429710a4bd8a0efa42dfea454ec0fe9c07d",
+      "release_sha256": "eabdf17a983ad2f49d2a5374cefc5429710a4bd8a0efa42dfea454ec0fe9c07d"
+    },
+    {
+      "path": "lean/PreimageChain/PortalCoordinates.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PortalCoordinates.lean",
+      "original_sha256": "ea1b981848a5b35012219e98aacf9a06a4ad1f947841ff2796115f1f0c23678f",
+      "release_sha256": "0494480187f18b52fdb1d64db189d80ab849a61a9a1badab1e7d69fc2c79def3"
+    },
+    {
+      "path": "lean/PreimageChain/ComponentPortalChains.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ComponentPortalChains.lean",
+      "original_sha256": "8c8affa490e095a26712c740d13c9de880bf26c1c3617b28236f25cd573c2fa7",
+      "release_sha256": "8c8affa490e095a26712c740d13c9de880bf26c1c3617b28236f25cd573c2fa7"
+    },
+    {
+      "path": "lean/PreimageChain/ChainCapacity.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ChainCapacity.lean",
+      "original_sha256": "2e174dda884d3d0275624d3e7a85498fa1e02ded286369b48a2b4bc9567558e5",
+      "release_sha256": "2e174dda884d3d0275624d3e7a85498fa1e02ded286369b48a2b4bc9567558e5"
+    },
+    {
+      "path": "lean/PreimageChain/GapCapacity.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/GapCapacity.lean",
+      "original_sha256": "46f0b710ae96b1f2893d5074774656f20d27f9f557d1023b50e37667dc26c61d",
+      "release_sha256": "46f0b710ae96b1f2893d5074774656f20d27f9f557d1023b50e37667dc26c61d"
+    },
+    {
+      "path": "lean/PreimageChain/ProfileAssembly.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ProfileAssembly.lean",
+      "original_sha256": "26b0759bff2904cced9a3d81ccfaf7d4c633def3817d903dd49df6fef652bf6c",
+      "release_sha256": "26b0759bff2904cced9a3d81ccfaf7d4c633def3817d903dd49df6fef652bf6c"
+    },
+    {
+      "path": "lean/PreimageChain/PieceGapPartition.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PieceGapPartition.lean",
+      "original_sha256": "f5141cb43546284d4e65317c599fc76e0f9bb793b19068fe30c1195960b15df8",
+      "release_sha256": "f5141cb43546284d4e65317c599fc76e0f9bb793b19068fe30c1195960b15df8"
+    },
+    {
+      "path": "lean/PreimageChain/ActualGapProfile.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ActualGapProfile.lean",
+      "original_sha256": "82323ada17ba217614e7717d00366e15ab9a480353c4d7166e2e7f361f4a7cdc",
+      "release_sha256": "82323ada17ba217614e7717d00366e15ab9a480353c4d7166e2e7f361f4a7cdc"
+    },
+    {
+      "path": "lean/PreimageChain/GapGeometryAssembly.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/GapGeometryAssembly.lean",
+      "original_sha256": "b7b96ae730bb6f55bdb59057ab34c2eade535df4059925ae16a742b59fd66139",
+      "release_sha256": "b7b96ae730bb6f55bdb59057ab34c2eade535df4059925ae16a742b59fd66139"
+    },
+    {
+      "path": "lean/PreimageChain/FullGapRunStable.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/FullGapRunStable.lean",
+      "original_sha256": "72c7eed4be5a2458362b362cb758f5cef814537a841018c4fe7f45a4166aac01",
+      "release_sha256": "72c7eed4be5a2458362b362cb758f5cef814537a841018c4fe7f45a4166aac01"
+    },
+    {
+      "path": "lean/PreimageChain/FullGapRun.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/FullGapRun.lean",
+      "original_sha256": "2875fbf94b5e23c6a8a71040e4d4cea3f265d3f47f59da3c85e320cacf289702",
+      "release_sha256": "2875fbf94b5e23c6a8a71040e4d4cea3f265d3f47f59da3c85e320cacf289702"
+    },
+    {
+      "path": "lean/PreimageChain/GapRunWitnessConstruction.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/GapRunWitnessConstruction.lean",
+      "original_sha256": "7b3f11e5a05fe970179bf346645387694cce86a29033e35a2f07b99274578b31",
+      "release_sha256": "7b3f11e5a05fe970179bf346645387694cce86a29033e35a2f07b99274578b31"
+    },
+    {
+      "path": "lean/PreimageChain/DeficitRuns.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/DeficitRuns.lean",
+      "original_sha256": "28fc00877b6189d09c05e8d9f4158e0f0d2b422d1f745a605de4c21b51de2428",
+      "release_sha256": "28fc00877b6189d09c05e8d9f4158e0f0d2b422d1f745a605de4c21b51de2428"
+    },
+    {
+      "path": "lean/PreimageChain/FullRunExtraction.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/FullRunExtraction.lean",
+      "original_sha256": "f8edb5bd703bdfc16e59790a33102d22a337239b3011af5e9192c309c0090d3b",
+      "release_sha256": "f8edb5bd703bdfc16e59790a33102d22a337239b3011af5e9192c309c0090d3b"
+    },
+    {
+      "path": "lean/PreimageChain/MaximalRunCollision.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/MaximalRunCollision.lean",
+      "original_sha256": "956218ff54671c2268d49fff24f66a21095dcf81ffe3c55ac8bb3b46a7959bfb",
+      "release_sha256": "956218ff54671c2268d49fff24f66a21095dcf81ffe3c55ac8bb3b46a7959bfb"
+    },
+    {
+      "path": "lean/PreimageChain/StandardEndpointBudget.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/StandardEndpointBudget.lean",
+      "original_sha256": "8f216e0aaa873ec968bd38b5344274803ac0a1352636070f5570af73f66f212f",
+      "release_sha256": "8f216e0aaa873ec968bd38b5344274803ac0a1352636070f5570af73f66f212f"
+    },
+    {
+      "path": "lean/PreimageChain/ActualChainCapacity.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ActualChainCapacity.lean",
+      "original_sha256": "298a8a156dd53e70ed2ab90bb940b73889646c60753640f211e3f31e54ece7a7",
+      "release_sha256": "298a8a156dd53e70ed2ab90bb940b73889646c60753640f211e3f31e54ece7a7"
+    },
+    {
+      "path": "lean/PreimageChain/ActualComponentCapacity.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ActualComponentCapacity.lean",
+      "original_sha256": "b4743d32ce0155bc5328fb3faf779eb3447ba06405b3680accd16c0aa8438dcd",
+      "release_sha256": "b4743d32ce0155bc5328fb3faf779eb3447ba06405b3680accd16c0aa8438dcd"
+    },
+    {
+      "path": "lean/PreimageChain/ComponentEndpointRigidity.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ComponentEndpointRigidity.lean",
+      "original_sha256": "35dccc73247c81059b1de4134c85d6ba053b4a19fa85e9b8eea70e2b7d4a05c0",
+      "release_sha256": "35dccc73247c81059b1de4134c85d6ba053b4a19fa85e9b8eea70e2b7d4a05c0"
+    },
+    {
+      "path": "lean/PreimageChain/ActualPrimitiveStability.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ActualPrimitiveStability.lean",
+      "original_sha256": "4bd0c2c599c32bb795ff08e50fc5d3b0edc9db03faacea695850ad33bd69a468",
+      "release_sha256": "4bd0c2c599c32bb795ff08e50fc5d3b0edc9db03faacea695850ad33bd69a468"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseLayerCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseLayerCore.lean",
+      "original_sha256": "c7327e608942afb1d3a42a8406afa0851843509cef1c955d43e15c0d0ea24eb1",
+      "release_sha256": "c7327e608942afb1d3a42a8406afa0851843509cef1c955d43e15c0d0ea24eb1"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalCountArithmetic.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalCountArithmetic.lean",
+      "original_sha256": "4844b40706ce5c89f1506c8d67f04d3ebecb8b8e1d87e0c2e23ccae4d6dab281",
+      "release_sha256": "4844b40706ce5c89f1506c8d67f04d3ebecb8b8e1d87e0c2e23ccae4d6dab281"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalCountCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalCountCore.lean",
+      "original_sha256": "5add591046402715ed5ec9e804ed64e6823c376b6a6da794558b96e2caa83092",
+      "release_sha256": "5add591046402715ed5ec9e804ed64e6823c376b6a6da794558b96e2caa83092"
+    },
+    {
+      "path": "lean/PreimageChain/PortalCoverageAlgebra.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PortalCoverageAlgebra.lean",
+      "original_sha256": "8775fc76fa01359e9ce91fb8673df86528625dd73b46e22e3bf274eb10c9d7bd",
+      "release_sha256": "8775fc76fa01359e9ce91fb8673df86528625dd73b46e22e3bf274eb10c9d7bd"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalSourceCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalSourceCore.lean",
+      "original_sha256": "62f68f6e72482a8bf210243ece13d5eaf9b4910241bd88c7b55a72be4106af82",
+      "release_sha256": "62f68f6e72482a8bf210243ece13d5eaf9b4910241bd88c7b55a72be4106af82"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalSourceRigidityCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalSourceRigidityCore.lean",
+      "original_sha256": "7f55d80bd0589572989460985204e8c09f4aafd9803c2c3a2b245822340ac734",
+      "release_sha256": "7f55d80bd0589572989460985204e8c09f4aafd9803c2c3a2b245822340ac734"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseHighEntryCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseHighEntryCore.lean",
+      "original_sha256": "931805c5b1d3a7c544d3b03a752406713f0ac63dd18032f19f171e69c924ec47",
+      "release_sha256": "931805c5b1d3a7c544d3b03a752406713f0ac63dd18032f19f171e69c924ec47"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePaymentCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePaymentCore.lean",
+      "original_sha256": "8d7e6ab3af566f3acc6088144dcd275877f74f3eb6b30da96fe0df6e060ef5b6",
+      "release_sha256": "8d7e6ab3af566f3acc6088144dcd275877f74f3eb6b30da96fe0df6e060ef5b6"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalTargetsCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalTargetsCore.lean",
+      "original_sha256": "b184c4198779895ccb92ac5c58deba6686446e3f243076377114cd59c8a36f2d",
+      "release_sha256": "b184c4198779895ccb92ac5c58deba6686446e3f243076377114cd59c8a36f2d"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalNoTerminalZeroCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalNoTerminalZeroCore.lean",
+      "original_sha256": "90fc3e2497e47329397b48ddeeca7acb044f4459fca7955ffb9e6f96a3b7daa6",
+      "release_sha256": "90fc3e2497e47329397b48ddeeca7acb044f4459fca7955ffb9e6f96a3b7daa6"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalNoTerminalPaymentCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalNoTerminalPaymentCore.lean",
+      "original_sha256": "276e99a5d45581ca2b9e02f21e4f53f93ccda27b85530ba5cd159df391323a5f",
+      "release_sha256": "276e99a5d45581ca2b9e02f21e4f53f93ccda27b85530ba5cd159df391323a5f"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalTerminalZeroCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalTerminalZeroCore.lean",
+      "original_sha256": "ce47f05046d2dae5a78c247b3a257c5e13a8a2d02bce14329f9976443e0a514f",
+      "release_sha256": "ce47f05046d2dae5a78c247b3a257c5e13a8a2d02bce14329f9976443e0a514f"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalTerminalPaymentCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalTerminalPaymentCore.lean",
+      "original_sha256": "9f082bea2e820a0bae8c4ffa4195568bd69207a27c5fc83df8a5aacdf8729947",
+      "release_sha256": "9f082bea2e820a0bae8c4ffa4195568bd69207a27c5fc83df8a5aacdf8729947"
+    },
+    {
+      "path": "lean/PreimageChain/PathwisePortalCostCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwisePortalCostCore.lean",
+      "original_sha256": "5a0bb54e6640192417ef0b323edc9ebe2526aee3973fb9fe57cd79bea20d1ba8",
+      "release_sha256": "5a0bb54e6640192417ef0b323edc9ebe2526aee3973fb9fe57cd79bea20d1ba8"
+    },
+    {
+      "path": "lean/PreimageChain/RotationProgress.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/RotationProgress.lean",
+      "original_sha256": "565eb68efba72dbdfc07ea3f06de7246533bf9dd28ddc69a18a236b88794ba1a",
+      "release_sha256": "565eb68efba72dbdfc07ea3f06de7246533bf9dd28ddc69a18a236b88794ba1a"
+    },
+    {
+      "path": "lean/PreimageChain/Main.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/Main.lean",
+      "original_sha256": "82c0928798dfaecc2338e025ef209ce7683bcca3c37d3ea17314d565e8acfdcb",
+      "release_sha256": "82c0928798dfaecc2338e025ef209ce7683bcca3c37d3ea17314d565e8acfdcb"
+    },
+    {
+      "path": "lean/PreimageChain/PathwiseFinalCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PathwiseFinalCore.lean",
+      "original_sha256": "2c337e1d1866229144a0e8d2e4b90c92fd85ff263fe7607c048399fa108e661c",
+      "release_sha256": "2c337e1d1866229144a0e8d2e4b90c92fd85ff263fe7607c048399fa108e661c"
+    },
+    {
+      "path": "lean/LowerBounds/TheoremA.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/lower/LowerBounds/TheoremA.lean",
+      "original_sha256": "d121a984e520e61bcc08ed5ee945209d93bf39cf374fea717c622aaafb617bfc",
+      "release_sha256": "d121a984e520e61bcc08ed5ee945209d93bf39cf374fea717c622aaafb617bfc"
+    },
+    {
+      "path": "lean/LowerBounds/ChainCapacityB.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/lower/LowerBounds/ChainCapacityB.lean",
+      "original_sha256": "c4790e3c94a805fed5ed52ccdba4acf0d6c4f7dd6bf915d413659aa162c0515b",
+      "release_sha256": "c4790e3c94a805fed5ed52ccdba4acf0d6c4f7dd6bf915d413659aa162c0515b"
+    },
+    {
+      "path": "lean/LowerBounds/ComponentCapacityB.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/lower/LowerBounds/ComponentCapacityB.lean",
+      "original_sha256": "0d86ee8b66a9bf7520605c81b8b3f2596e1cfb55a8a47872cc768f4198d0f009",
+      "release_sha256": "0d86ee8b66a9bf7520605c81b8b3f2596e1cfb55a8a47872cc768f4198d0f009"
+    },
+    {
+      "path": "lean/LowerBounds/TheoremBCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/lower/LowerBounds/TheoremBCore.lean",
+      "original_sha256": "86c0fee4d739af3117e32203b5a5143cd64bf5010d96d1bfe95e3696f68198a1",
+      "release_sha256": "86c0fee4d739af3117e32203b5a5143cd64bf5010d96d1bfe95e3696f68198a1"
+    },
+    {
+      "path": "lean/LowerBounds/DeficitOne.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/lower/LowerBounds/DeficitOne.lean",
+      "original_sha256": "d9405d255dd42b40be5974a89750bd875e5ff5d504d03bcd34944e1906359271",
+      "release_sha256": "d9405d255dd42b40be5974a89750bd875e5ff5d504d03bcd34944e1906359271"
+    },
+    {
+      "path": "lean/LowerBounds/LemmaZ.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/lower/LowerBounds/LemmaZ.lean",
+      "original_sha256": "741d377348d6851716d43b82bca181dfb284422d5a4fc64c7b89b2647fbcaf06",
+      "release_sha256": "741d377348d6851716d43b82bca181dfb284422d5a4fc64c7b89b2647fbcaf06"
+    },
+    {
+      "path": "lean/LowerBounds/TheoremB.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/lower/LowerBounds/TheoremB.lean",
+      "original_sha256": "11811aae3d92f4625f2c959164328cfac2efd3836dece338f8c2a1761e400dfb",
+      "release_sha256": "11811aae3d92f4625f2c959164328cfac2efd3836dece338f8c2a1761e400dfb"
+    },
+    {
+      "path": "lean/Superperm/BridgeCore.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/words/Superperm/BridgeCore.lean",
+      "original_sha256": "d5a3119d743005a957b61ea84dd5c1ac51782313cecef402d3f07d09ab16bbf5",
+      "release_sha256": "d5a3119d743005a957b61ea84dd5c1ac51782313cecef402d3f07d09ab16bbf5"
+    },
+    {
+      "path": "lean/Superperm/Bridge.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/words/Superperm/Bridge.lean",
+      "original_sha256": "c9d18d852e2f877d3c072d50ba16824b077977396a4c4743433611006c42e909",
+      "release_sha256": "c9d18d852e2f877d3c072d50ba16824b077977396a4c4743433611006c42e909"
+    },
+    {
+      "path": "lean/LowerBounds/TheoremBWords.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/lower/LowerBounds/TheoremBWords.lean",
+      "original_sha256": "96d348214bed5f6f4bedde471cb9ac80a4a45862fd744177b5e41df0d3b4ca6d",
+      "release_sha256": "96d348214bed5f6f4bedde471cb9ac80a4a45862fd744177b5e41df0d3b4ca6d"
+    },
+    {
+      "path": "lean/ConstAsym/Remainder8.lean",
+      "original_source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/asym/ConstAsym/Remainder8.lean",
+      "original_sha256": "c41afb85af784f1d3ae2774c6efe140eca27abe7bb4f166e8066d92a03bd36cb",
+      "release_sha256": "c41afb85af784f1d3ae2774c6efe140eca27abe7bb4f166e8066d92a03bd36cb"
+    }
+  ]
+}

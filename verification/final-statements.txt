@@ -1,0 +1,30 @@
+CoefficientTwoPrecision.SparseFamilyConstruction.supplier : ∀ (r : ℕ),
+  6 ≤ r → CoefficientTwoPrecision.SparseStageIteration.SparseFamilySupplier r
+CoefficientTwoPrecision.finite_covering_word : ∀ (n r : ℕ),
+  6 ≤ r →
+    6 ∣ r →
+      8 * 10 ^ 12 * 352 ^ 4 * r ^ 61 ≤ n →
+        ∃ w,
+          SuperpermutationBounds.Covers w ∧
+            r * w.length ≤ r * SuperpermutationUpperBound.F3 n + (2 * r + 74) * (n - 4).factorial
+CoefficientTwoPrecision.original_finite_bound : CoefficientTwoPrecision.OriginalWordFiniteBound61
+CoefficientTwoPrecision.shortest_length_error : ∀ (n : ℕ),
+  CoefficientTwoPrecision.transferConstant * 6 ^ 61 ≤ n →
+    8 ≤ n →
+      |(↑(ConstAsym.L n) - ↑(SuperpermutationBounds.F3 n)) / ↑(n - 4).factorial - 2| ≤
+        CoefficientTwoPrecision.remainderConstant * ↑n ^ (-1 / 61)
+CoefficientTwoPrecision.shortest_length_asymptotic : (fun n =>
+    ↑(ConstAsym.L n) - ↑(SuperpermutationBounds.F3 n) - 2 * ↑(n - 4).factorial) =O[Filter.atTop]
+  fun n => ↑(n - 4).factorial * ↑n ^ (-1 / 61)
+def SuperpermutationBounds.Covers : {K : ℕ} → List (Fin K) → Prop :=
+fun {K} w => ∀ (p : List (Fin K)), p.length = K → p.Nodup → ∃ u v, w = u ++ p ++ v
+def SuperpermutationUpperBound.F3 : ℕ → ℕ :=
+fun K => K.factorial + (K - 1).factorial + (K - 2).factorial
+def SuperpermutationBounds.F3 : ℕ → ℚ :=
+fun K => ↑K.factorial + ↑(K - 1).factorial + ↑(K - 2).factorial
+def ConstAsym.L : ℕ → ℕ :=
+fun n => sInf {m | ∃ w, SuperpermutationBounds.Covers w ∧ w.length = m}
+def CoefficientTwoPrecision.transferConstant : ℕ :=
+8 * 10 ^ 12 * 352 ^ 4
+'CoefficientTwoPrecision.finite_covering_word' depends on axioms: [propext, Classical.choice, Quot.sound]
+'CoefficientTwoPrecision.shortest_length_asymptotic' depends on axioms: [propext, Classical.choice, Quot.sound]

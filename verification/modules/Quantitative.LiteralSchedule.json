@@ -1,0 +1,72 @@
+{
+  "module": "Quantitative.LiteralSchedule",
+  "started_at": "2026-10-26T03:47:49.395154+00:00",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean/Quantitative/.lean-check-ks6fmzms/LiteralSchedule.olean",
+    "Quantitative/LiteralSchedule.lean"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "7817f67d2a17635acc17d383d34ab0bd5e474d261ec349f5c8dc8bc42127b778",
+  "imports": {
+    "Quantitative.StationarySuccessor": "54be84df329cef5c280975a6f897dba88d9b2ec8f02783293cbf128f38d6f089",
+    "SuperpermutationUpperBound.Transport.Ports": "f9066fee73f18eb8f8108eb3af6f36892d0e07c11d3e43020d5721781da7ff3f"
+  },
+  "manifest_sha256": "4ef0f46c99f8dd278bc7f26cd368420887baa85920fd77c63cd83afc01fc7937",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/Quantitative.LiteralSchedule-20261026T034749.409542Z.log",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 3,
+      "successful_samples": 3,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 67
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 67
+      },
+      "minimum_reported_free_percent": 67,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 365088,
+    "seconds": 2.111,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 69577,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "compilation_performed": true,
+  "axiom_output": [
+    "'CoefficientTwoPrecision.LiteralSchedule.executeCuts_count' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'CoefficientTwoPrecision.LiteralSchedule.executeCuts_closed' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'CoefficientTwoPrecision.LiteralSchedule.positive_update_with_labels' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+    "'CoefficientTwoPrecision.LiteralSchedule.scheduleRows_length' depends on axioms: [propext, Quot.sound]",
+    "'CoefficientTwoPrecision.LiteralSchedule.fullRow_compatible' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'CoefficientTwoPrecision.LiteralSchedule.shortRow_compatible' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "olean_sha256": "4e2091709f0ceff285cf67fe12b81f9483ec0f367927fd5d2556478b1f6f2563"
+}

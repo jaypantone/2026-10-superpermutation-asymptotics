@@ -1,0 +1,102 @@
+{
+  "baseline_records_checked": 297,
+  "adaptations": [
+    {
+      "source": "/Users/jaypantone/Dropbox/Research/AI-work/other-things/check-lean-bound/research-plan-2026-10/lane-astra-half/submission-prep/2026-10-24/local-completion/author/completion_guard.py",
+      "copy": "proof-development/lean/build_guard.py",
+      "source_sha256": "ac60b0d45e377babc93c43f1b4996168651c977d65dcc6c7526a6e51d2d6dd53",
+      "development_sha256": "96265452e634e8523e01aa74657d64df5d014a4a53e8dd16cb5437bbaa80c253"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CircleTransport/PairPaths.lean",
+      "copy": "proof-development/lean/SuperpermutationUpperBound/CircleTransport/PairPaths.lean",
+      "source_sha256": "80b6b80837eff098b0e2a8ce7b5589e6671a1faccf8a9b60b8107fb3720afa82",
+      "development_sha256": "8ad6f524423bf6eb00c122f5b67d1593e0132755515cb8481530641bede6911e"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/CircleTransport/TrackCounts.lean",
+      "copy": "proof-development/lean/SuperpermutationUpperBound/CircleTransport/TrackCounts.lean",
+      "source_sha256": "b0bc9d26e68bc9d7021c577c2c24fcd224d86a33213a0a4f9a0fdab43afece4c",
+      "development_sha256": "f8fb33f1ae53084da0426e97db18a1d180ecb73aa60b5cb00146ccef56712d31"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/constant43586371/SuperpermutationUpperBound43586371/Relabel.lean",
+      "copy": "proof-development/lean/SuperpermutationUpperBound43586371/Relabel.lean",
+      "source_sha256": "b34ec99960b9dc135ee21b573d9ec1bfd5eda91fd2ceca2bddcbb3801a85cbd5",
+      "development_sha256": "f926817b575934394053950e17a72ffe7c1017d626a3dfba3ecc52df0683bbd4"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/UniformChoices.lean",
+      "copy": "proof-development/lean/SuperpermutationUpperBound/BalancedCuts/UniformChoices.lean",
+      "source_sha256": "06aa9c720bfba50a1a036d7d9fc55219d6dd620de96cf864ca5fd99a6f644056",
+      "development_sha256": "70e46532932f42b8933e0d219b3c1110fbdcad4186e896f9ed1b0c03ebb260ba"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/SelectedGraph.lean",
+      "copy": "proof-development/lean/SuperpermutationUpperBound/BalancedCuts/SelectedGraph.lean",
+      "source_sha256": "b78c66d0aecf9528aeed7ade91912ab2ba4f99ebde7b5db8b34c1b866f022353",
+      "development_sha256": "0b3acb4ab3e5284abfdf2c3f6a086ff68cd39fb7b81678f7f30e5eee656baf9f"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/Assembly/GraphTrails.lean",
+      "copy": "proof-development/lean/SuperpermutationUpperBound/Assembly/GraphTrails.lean",
+      "source_sha256": "6e396d4a8d5e28211af21c50c117c30f0f4dc8ad7ba8776342dd1bf09d337979",
+      "development_sha256": "f4fdc16451a372e54e3fcd1555f8b85163f23fb423ad0e6778a2b4499abc8c59"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/pantone/SuperpermutationUpperBound/BalancedCuts/SupportedCutWords.lean",
+      "copy": "proof-development/lean/SuperpermutationUpperBound/BalancedCuts/SupportedCutWords.lean",
+      "source_sha256": "ebdba9845f8709937555afd05eb34582398fd3f3052d081a2acda92e901adbef",
+      "development_sha256": "655e69bfb92ac8c4777e84d8f320940409ff89af50f7bf0288c8f2306e05a42c"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Words.lean",
+      "copy": "proof-development/lean/Hunter/Words.lean",
+      "source_sha256": "61de1465e5ddf06aaaa925daa41d81c7da6a84a8bedf62563cdc8690cafb45bf",
+      "development_sha256": "f605c421df23c752a160f771e57b543df78e173c21b91ac2fa5433caca3cf8d1"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/Bounds.lean",
+      "copy": "proof-development/lean/Hunter/Bounds.lean",
+      "source_sha256": "09e6711f1086e264346b420de6e92e1be5f4b01854ed0b68e9a48c0e2bed0734",
+      "development_sha256": "4d62bf85e352f8e889c0b2c76777fda8570efae87efcc6e0453bec2bfcacd05d"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsGreedy.lean",
+      "copy": "proof-development/lean/Hunter/ProofsGreedy.lean",
+      "source_sha256": "aa75f88b41d1c71783666bb319d517c3ece4a30f6ccacd6654a29b9228c9d3ed",
+      "development_sha256": "96cb58994097842c49fb11853fa10b1face007f242669fbc424d9910fdea98fe"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/hunter/Hunter/ProofsGreedy2.lean",
+      "copy": "proof-development/lean/Hunter/ProofsGreedy2.lean",
+      "source_sha256": "d0388874338a5381e3b311c216713982fda70d226f1ac9779908e71866f19e1b",
+      "development_sha256": "0c19a5efdb53fca582e245a2dd3163cba946fc34f06114fefa60636746c450ac"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/jhalfar-superpermutations/proofs/lean/asym/ConstAsym/Main.lean",
+      "copy": "proof-development/lean/ConstAsym/Main.lean",
+      "source_sha256": "b6dcd2e32483a65720282db72672b638a529f7aec195bc1c5b98ea83638b3f7f",
+      "development_sha256": "17229f3ec69f1a91b5295324c5a182d0b68745d0ed47cfc15d7894c88ee97b75"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ChainGraph.lean",
+      "copy": "proof-development/lean/PreimageChain/ChainGraph.lean",
+      "source_sha256": "02cd2e1d1288fef67f46d00117276d6819f0c0d1bb3118312e227902d9284988",
+      "development_sha256": "1ab2a1e38b4159784d8426b490284d75fbde12bcdb942c80d6efd80e87c0a245"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/ComponentGeometry.lean",
+      "copy": "proof-development/lean/PreimageChain/ComponentGeometry.lean",
+      "source_sha256": "0784821ce1fceb2d6e62efd0b7519edbb55af03df49bfbc325bdbd9ac5860e5b",
+      "development_sha256": "2a249a08d26bbda9d1303570654db1596686076d192a3e441b9ac6ce37f52109"
+    },
+    {
+      "source": "research/external/coefficient-two-handoff/unpacked/superpermutation_lean_handoff/vendor/preimage/PreimageChain/PortalCoordinates.lean",
+      "copy": "proof-development/lean/PreimageChain/PortalCoordinates.lean",
+      "source_sha256": "ea1b981848a5b35012219e98aacf9a06a4ad1f947841ff2796115f1f0c23678f",
+      "development_sha256": "0494480187f18b52fdb1d64db189d80ab849a61a9a1badab1e7d69fc2c79def3"
+    }
+  ],
+  "patch": "compatibility.patch"
+}

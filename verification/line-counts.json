@@ -1,0 +1,21 @@
+{
+  "counted_at": "2026-10-26T11:29:53.352336+00:00",
+  "method": "Physical lines, including comments and blank lines; nonblank counts given separately. Mathlib and other shared dependencies excluded.",
+  "counts": {
+    "new_quantitative_sources": {
+      "files": 214,
+      "physical_lines": 26053,
+      "nonblank_lines": 23144
+    },
+    "checked_local_dependency_closure": {
+      "files": 509,
+      "physical_lines": 93858,
+      "nonblank_lines": 83660
+    },
+    "all_local_sources": {
+      "files": 512,
+      "physical_lines": 94226,
+      "nonblank_lines": 83982
+    }
+  }
+}

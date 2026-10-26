@@ -1,0 +1,557 @@
+\section{From source contours to covering words}
+\label{sec-assembly}
+
+The numerical recurrence used later concerns finite lists of rows and
+circles. We describe those lists and prove that an extension may use any
+positive number of new letters. The one-letter transport lemmas in the
+supplied assembly library apply repeatedly to give this construction.
+
+\subsection{Rows, closed contours, and insertion}
+
+Write $\operatorname{rot}(b,j)$ for the word obtained by rotating a nonempty
+word $b$ to the left through $j$ positions. A \emph{cyclic class} consists
+of all rotations of a word with distinct letters. If $x$ is absent from
+$b$, write $\operatorname{ins}(b,x,j)$ for insertion of $x$ immediately
+before position $j$, where positions start at zero and position $|b|$
+means insertion at the end. Thus
+$\operatorname{ins}(abc,x,1)=axbc$ and
+$\operatorname{ins}(abc,x,3)=abcx$.
+
+A \emph{row} is a triple $(b,s,v)$, where $b$ has distinct letters, the
+letter $s$ does not occur in $b$, and $1\le v\le |b|$. The word $b$ is its
+\emph{base}, the letter $s$ is its \emph{satellite}, and its \emph{charge}
+is $|b|-v$. Its head and tail are the following literal words:
+\[
+ \operatorname{head}(b,s,v)=b[0:|b|-2],\qquad
+ \operatorname{tail}(b,s,v)
+   =\operatorname{rot}(b,v+1)[0:|b|-2].
+\]
+Here $b[i:j]$ means the consecutive letters in positions $i$ through
+$j-1$. A row is \emph{full} if its charge is zero, and \emph{short} if
+its charge is two. Except during the final completion, all rows below are
+full or short. All rows in a given contour have the same satellite and the
+same base alphabet.
+
+Two rows are \emph{compatible} if the first tail equals the second head
+as a word. A \emph{closed contour} is a nonempty finite list of rows in
+which each row is compatible with the next, including the last and first
+rows. Repeated occurrences remain separate entries of the list. For
+example, the full rows with bases $abcd$, $bcad$, and $cabd$, all with one
+fixed satellite outside $\{a,b,c,d\}$, form a closed contour. Their heads
+are $ab,bc,ca$, respectively, and their tails are $bc,ca,ab$.
+
+For a base of length $h+1$, an \emph{insertion port} is an integer in
+$\{0,\ldots,h-1\}$. These are the $h$ insertion positions in a head of
+length $h-1$. Across a full row the port changes from $p$ to $p-1$ modulo
+$h$, and across a short row it changes from $p$ to $p+1$ modulo $h$.
+Consequently the port displacement of a row is its charge minus one.
+If a contour has $N$ rows and total charge $q$, its displacement is
+$\Delta=q-N$.
+
+We recall the literal transport operation from the supplied assembly
+library~\cite{pantone-core}. Let $z$ be a fresh ordinary letter. A full
+row $(b,s,h+1)$ at port zero is replaced by the two full rows with bases
+$\operatorname{ins}(b,z,0)$ and $\operatorname{ins}(b,z,h)$.
+At a port $1\le p<h$ it is replaced by the single full row with base
+$\operatorname{ins}(b,z,p)$. A short row at a port $p<h-1$ is replaced
+by the single short row with base $\operatorname{ins}(b,z,p)$.
+At port $h-1$ it is replaced by two short rows with bases
+$\operatorname{ins}(b,z,h-1)$ and
+$\operatorname{rot}(b,h)z$. The satellite is unchanged in all four cases.
+A transported contour is formed by concatenating these local paths and
+propagating the port between successive source rows.
+
+Each local path starts at the old head with $z$ inserted at the input
+port and ends at the old tail with $z$ inserted at the output port.
+This follows directly from the displayed definitions of head and tail.
+For example, when $b=aUb$ is a full base and the input port is zero,
+the two new bases are $zaUb$ and $aUzb$. Their common interface is the
+literal word $aU$. These endpoint equations explain why compatible
+source rows give compatible transported paths.
+
+Across all $h$ input ports, each source row gives exactly $h+1$ new row
+occurrences. All those occurrences have its charge. Their base cyclic
+classes are precisely the classes obtained by inserting $z$ in all cyclic
+gaps of the source base. The endpoint, inventory, and coverage statements
+are the local transport propositions imported from the supplied
+library~\cite{pantone-core}. The formulas above specify the operation to
+which those propositions apply.
+
+\begin{lemma}\label{lem-assembly-orbits}
+Let a closed contour have bases of length $h+1$, where $h\ge2$, and put
+$g=\gcd(h,|\Delta|)$ and $\ell=h/g$. For each $0\le e<g$, transport
+$\ell$ consecutive copies of the contour from initial port $e$.
+The resulting $g$ contours are closed. Their displacements are divisible
+by $h+1$, and their combined row and charge counts are $(h+1)N$ and
+$(h+1)q$, respectively. Every source-row and source-port pair occurs once
+in their transport.
+\end{lemma}
+
+\begin{proof}
+The ports at the beginnings of the successive source laps in component
+$e$ are $e+t\Delta$ modulo $h$, for $0\le t<\ell$. Consider the map
+\[
+ (e,t)\longmapsto e+t\Delta\pmod h,
+ \qquad 0\le e<g,\quad 0\le t<h/g.
+\]
+Equality of two outputs first gives equality of $e$ modulo $g$, and thus
+equality of $e$ in its specified range. Division of the remaining
+congruence by $g$ then gives
+$(t-t')\Delta/g\equiv0\pmod{h/g}$. The integers $\Delta/g$ and $h/g$
+are coprime, so $t=t'$ in the specified range. The domain and codomain
+both have $h$ elements, so the map is a bijection. If $\Delta=0$, this
+argument reduces to $g=h$, $\ell=1$, and the identity enumeration of
+the ports.
+
+After $\ell$ laps the source port returns to $e$, since $h$ divides
+$\ell\Delta$. The literal endpoint equations therefore close the
+transported path. The winding proposition for transport gives displacement
+$(h+1)\Delta/g$ for that path, which is divisible by $h+1$. This is the
+repeated-contour case of the imported winding theorem; its divisibility
+hypothesis is exactly $h\mid\ell\Delta$.
+
+At any fixed source-row occurrence, the prefix port change is a translation
+of the set of lap-start ports. The bijection above therefore shows that
+all its input ports occur once across the $g$ components. The local
+inventory now gives $h+1$ output rows, each with the source charge, for
+every source-row occurrence. Summing proves both count formulas.
+\end{proof}
+
+\subsection{Explicit circles meeting every completion port}
+
+We reserve a second fresh letter $f$ for final completion. For precision,
+we describe the completion operation used in the imported joining theorem.
+For a row $(b,s,v)$, its lift at position $j$ has base
+$\operatorname{ins}(b,f,j)$, satellite $s$, and visible count
+$v+\boldsymbol{1}_{j<v}$. Its repair row at position $j$ has base
+$\operatorname{rot}(b,j)s$, satellite $f$, and visible count $|b|+1$.
+For a full row the completion path is its full transport path with new
+letter $f$. For a short row at port $p<h-1$ the path is its one lift at
+$p$. At port $h-1$ the path is, in order, the lift at $h-1$, the repair
+rows at $h-1$ and $h$, and the lift at $h$. As before, concatenate paths
+and propagate the source port. This defines the \emph{completed contour}
+from each tagged initial port.
+
+A \emph{circle} is a word of distinct letters, considered together with
+all its rotations. Its displayed representative and its position in a
+list of circles are retained for counting. For a contour with bases of
+length $h+1$, the auxiliary circles have length $h$. We say that a circle
+\emph{safely meets} a tagged completion port if either it contains $f$
+and one of its rotations is the head of a row in the completed contour,
+or the source contour is the full chart of a rotation of that circle.
+The \emph{full chart} of a word $d$ and a letter $a$ outside $d$ consists
+of the full rows with bases $\operatorname{rot}(d,j)a$, one for each
+$0\le j<|d|$. This definition includes the circle $d$ used when a pending
+class is closed. A list of circles is \emph{safe} for a contour if every
+tagged initial completion port is safely met by at least one circle in
+the list.
+
+One useful sufficient witness for the first kind of meeting consists of
+an actual source-row occurrence, the completion port propagated to that
+occurrence, and a rotation identity
+\[
+ \operatorname{rot}(C,t)
+ =\operatorname{ins}(\operatorname{head}(b,s,v),f,p).
+\]
+The first row of the local completion path has this head. Thus the
+identity witnesses an actual vertex of the completed contour. Both the
+occurrence and the propagated port matter; an equality of unlabeled
+cyclic gaps is insufficient.
+
+\begin{lemma}\label{lem-assembly-prefix}
+Suppose a source path of port modulus $h$ starts at port $e$, where
+$0\le e<h$. If its displacement is $S$, the displacement of its
+transported path is
+\[
+ S+\left\lfloor\frac{e+S}{h}\right\rfloor.
+\]
+Immediately before the second transported row at a full source row whose
+input port is zero, the transported prefix displacement is congruent to
+$-e-1$ modulo $h+1$.
+\end{lemma}
+
+\begin{proof}
+The formula is zero for the empty path. A full step subtracts one from
+$S$. The floor decreases by one precisely when the old residue of $e+S$
+is zero. Thus the claimed expression decreases by two at port zero and
+by one at every other port. These are exactly the numbers of full rows
+in the two possible full transport paths. A short step adds one to $S$.
+The floor increases by one precisely at port $h-1$, so the expression
+increases by two there and by one elsewhere. These are exactly the
+displacements of the short transport paths. Induction proves the formula.
+The floor is the Euclidean floor, also when $e+S$ is negative.
+
+At a full port-zero occurrence, write $e+S=ht$. The first of its two
+transported rows is full. Just before the second row, the displacement
+is therefore $S+t-1=(h+1)t-e-1$, which gives the congruence.
+\end{proof}
+
+\begin{lemma}\label{lem-assembly-connectors}
+In the setting of Lemma~\ref{lem-assembly-orbits}, suppose the source
+contour has a consecutive run of $R$ full rows with bases
+\[
+ \operatorname{rot}(H,j)a,\qquad 0\le j<R,
+\]
+where $|H|=h$, $a$ is absent from $H$, and $R\le h$.
+If $2g\lfloor R/g\rfloor\ge h$, the transported contours admit a safe
+list of at most $2g^2$ circles. Each circle is supported on the source
+alphabet together with $f$ and omits the satellite.
+\end{lemma}
+
+\begin{proof}
+Put $L=\lfloor R/g\rfloor$, and let $S_0$ be the displacement before
+the run begins. Fix a component with initial source port $e<g$, and
+let $a_e$ be the residue of $e+S_0$ in $\{0,\ldots,g-1\}$.
+The full source rows at phases
+\[
+ j=a_e+gu,\qquad 0\le u<L,
+\]
+all lie in the run. Indeed, $a_e+g(L-1)\le gL-1<R$.
+Each is reached at port zero in exactly one of the $\ell$ laps. To
+see this, its input port in lap $t$ is
+$e+t\Delta+S_0-j$ modulo $h$. The congruence modulo $g$ holds by the
+choice of $a_e$, and after division by $g$ the remaining congruence has
+one solution for $t$ modulo $\ell$.
+
+Write $H_e=\operatorname{rot}(H,a_e)$. For each $0\le t<g$, use the
+two circles
+\[
+ C^-_t=\operatorname{ins}(H_e,f,g(L-1)+t),\qquad
+ C^+_t=\operatorname{ins}(H_e,f,h-g+t).
+\]
+Their insertion positions lie between zero and $h-1$, because
+$gL\le R\le h$. Both circles have length $h+1$, contain $f$, and
+have distinct letters. At the second transported row of phase $a_e+gu$,
+the head is $\operatorname{rot}(H_e,gu)$. In particular the transport
+letter $z$ is absent from this head.
+
+For $0\le j\le b<h$, splitting a word at positions $j$ and $b$ gives
+\begin{align*}
+ \operatorname{rot}(\operatorname{ins}(H_e,f,b),j)
+   &=\operatorname{ins}(\operatorname{rot}(H_e,j),f,b-j),\\
+ \operatorname{rot}(\operatorname{ins}(H_e,f,b),b+1)
+   &=\operatorname{ins}(\operatorname{rot}(H_e,b),f,h).
+\end{align*}
+The second identity is a separate endpoint identity. It is needed because
+the literal ports zero and $h$ of the advanced contour are distinct.
+
+Given a port $gv+t$ with $0\le v<L$ and $0\le t<g$, choose
+$u=L-1-v$ in the first identity for $C^-_t$. Thus the low circles meet
+local ports $0,\ldots,gL-1$. The high circles, with $u$ varying through
+$0,\ldots,L-1$, meet local ports $h-gL,\ldots,h-1$. For $C^-_0$ at
+$u=L-1$, the second identity additionally meets port $h$.
+The hypothesis $2gL\ge h$ says that the first two intervals cover
+$0,\ldots,h-1$.
+
+Finally fix a tagged initial completion port $J$ of this advanced
+component. Lemma~\ref{lem-assembly-prefix} shows that its local port at
+every selected second row is $J-e-1$ modulo $h+1$. Choose the local port
+representative in $\{0,\ldots,h\}$ and use the corresponding circle
+and occurrence above. The resulting literal identity proves safe
+incidence from $J$. There are $2g$ circles for each of $g$ components,
+so the total is $2g^2$. Coincident circles may remain as separate list
+occurrences. Every circle uses only $H_e$ and $f$, which proves the
+support statement.
+\end{proof}
+
+The literal hypothesis on the full run is necessary. Compatibility alone
+allows a different full successor. For example, the three full bases
+$012,120,201$ form a compatible contour, but their first two-letter
+prefixes are not rotations of one fixed two-letter word. The positive-slot
+construction must supply a run from an untouched normal batch, where
+successive bases have precisely the form required in
+Lemma~\ref{lem-assembly-connectors}.
+
+\subsection{The finite universe above an old cyclic class}
+
+Fix a word $d$ on $m\ge2$ distinct old letters and distinct new letters
+$v_0,\ldots,v_{W-1}$. A cyclic class on these letters is \emph{above}
+$d$ if deletion of all the $v_i$ leaves the cyclic class of $d$.
+Define lists $U_i(d)$ recursively. Start with $U_0(d)=[d]$. For each
+$b$ in $U_i(d)$, place
+\[
+ \operatorname{rot}(b,j)v_i,\qquad 0\le j<m+i,
+\]
+in $U_{i+1}(d)$, retaining the order of the parent list and the indicated
+order of $j$. For example, from $d=ab$ and one new letter $x$ this gives
+$U_1(d)=[abx,bax]$.
+
+\begin{lemma}\label{lem-assembly-universe}
+The list $U_W(d)$ contains exactly one representative of each cyclic
+class above $d$. Its length is
+\[
+ D_{m,W}=\prod_{i=0}^{W-1}(m+i).
+\]
+If $B$ source-row occurrences have pairwise distinct base cyclic classes
+above $d$, their complement in $U_W(d)$ is an actual list of length
+$D_{m,W}-B$.
+\end{lemma}
+
+\begin{proof}
+We prove the first assertion by induction on $i$. It holds for $i=0$.
+Given a class above $d$ on the first $i+1$ new letters, delete $v_i$.
+The remaining class has a unique representative $b$ in $U_i(d)$ by
+induction. Rotate the larger word so that its unique occurrence of $v_i$
+is last. The preceding word is a rotation of $b$, which gives existence
+of a representative in the displayed list.
+
+For uniqueness, equality of two larger cyclic classes implies equality
+of their deleted parent classes. Thus their parent representatives agree.
+Because $v_i$ occurs once and is last in both displayed representatives,
+cyclic equivalence forces equality of those representatives as literal
+words. A word of $m+i$ distinct letters has $m+i$ different rotations,
+so the two rotation indices agree as well. Each parent therefore
+contributes exactly $m+i$ new representatives. Multiplication over the
+steps gives the formula for $D_{m,W}$.
+
+Each selected source occurrence has a unique representative in $U_W(d)$.
+The distinctness assumption makes these representatives distinct. Delete
+these $B$ entries from the finite list. The resulting complement has
+length $D_{m,W}-B$, as asserted. This counting operation does not change
+the literal bases in the source contours.
+\end{proof}
+
+\subsection{Extension by an arbitrary number of letters}
+
+We now specify the intermediate objects. Reserve distinct letters $s$ and
+$f$ for the satellite and final completion. A \emph{stage of old size}
+$m$ consists of an old alphabet $A_0$ of size $m$, a distinguished
+ordinary letter $z$ outside $A_0$, a list of contours on $z\cup A_0$,
+a list of auxiliary circles of length $m$, and a list of pending cyclic
+classes on $A_0$. The alphabets omit $s$ and $f$. Each contour has
+displacement divisible by $m$. Every circle has distinct letters and is
+supported on $\{f,z\}\cup A_0$, and the circle list is safe for every
+contour. Finally every cyclic class on $z\cup A_0$ either occurs as a
+row base or is obtained by inserting $z$ into a pending cyclic class.
+Write $R,Q,c,P$ for the row count, total charge, circle count, and pending
+count. Counts refer to list occurrences.
+
+We use the following existing transport facts. Transporting every
+component from every port through a fresh ordinary letter preserves
+closure, displacement divisibility and coverage. It multiplies row and
+charge counts by $m+1$. Extending each circle through all its $m$ cyclic
+insertion positions gives $mc$ circles, preserves distinct letters and
+support, and safely meets every transported component. These statements
+are the general one-letter level and circle transport results in the
+supplied assembly library~\cite{halfar-assembly}. They apply to arbitrary
+stages satisfying the preceding conditions.
+
+\begin{lemma}\label{lem-assembly-width}
+Let a stage have old size $m\ge2$, counts $(R,Q,c,P)$, old alphabet
+$A_0$, and distinguished letter $v_0$. Let $W\ge1$, and choose distinct
+fresh ordinary letters $v_1,\ldots,v_{W-1},z'$. Suppose that, above
+every pending old class $d$, there is a family of closed source contours
+on $A_0\cup\{v_0,\ldots,v_{W-1}\}$ with $B$ pairwise distinct source
+classes above $d$ and total charge $q$. Suppose its transport through
+$z'$ has displacement divisible by $m+W$ and admits a safe supported
+list of $c_{\mathrm{adv}}$ circles of length $m+W$.
+Then there is a stage of old size $m+W$ and distinguished letter $z'$
+with counts
+\begin{align*}
+ R'&=A_{m,W}R+(m+W)PB,\\
+ Q'&=A_{m,W}Q+(m+W)Pq,\\
+ c'&=D_{m,W}c+Pc_{\mathrm{adv}},\\
+ P'&=P(D_{m,W}-B),
+\end{align*}
+where $A_{m,W}=\prod_{i=1}^{W}(m+i)$ and $D_{m,W}$ is as in
+Lemma~\ref{lem-assembly-universe}. The transport of the source family
+is required to include every source-row and source-port pair once.
+\end{lemma}
+
+\begin{proof}
+Set $A'_0=A_0\cup\{v_0,\ldots,v_{W-1}\}$. First transport the
+existing contours successively through
+$v_1,\ldots,v_{W-1},z'$, and extend their circles through the same
+sequence. There are exactly $W$ transports: the old distinguished letter
+$v_0$ already belongs to every existing component. At each step the
+letter being added is absent from the current ordinary alphabet and from
+both reserved roles. The one-letter results therefore apply inductively.
+They give closed contours on $z'\cup A'_0$, displacement divisible by
+$m+W$, valid supported circles, and safety from every completion port.
+They multiply the existing row and charge counts by
+$(m+1)\cdots(m+W)=A_{m,W}$ and the circle count by
+$m\cdots(m+W-1)=D_{m,W}$.
+
+For every old pending occurrence $d$, append its transported source
+contours and its supplied circles. Their structural hypotheses put them
+on the same alphabet with the same port modulus as the transported old
+components. Taking the union preserves closure and displacement
+divisibility component by component. It also preserves circle validity
+and support. A circle which met a component before taking the union is
+still in the union, so safety is preserved. Replace $d$ in the pending
+list by the actual complement list from
+Lemma~\ref{lem-assembly-universe}. Every new pending representative is
+a permutation of $A'_0$.
+
+It remains to prove the coverage condition. Let $y$ be an arbitrary
+cyclic class on $z'\cup A'_0$. Delete the new letters in the reverse
+order $z',v_{W-1},\ldots,v_1$. This produces a cyclic class $x$ on
+$v_0\cup A_0$. Apply the old coverage condition to $x$.
+
+If $x$ is the class of an existing row, reinsert
+$v_1,\ldots,v_{W-1},z'$ in the gaps determined by $y$. The one-letter
+coverage proposition at each transport gives a final transported row
+in class $y$.
+
+Otherwise $x$ is above an old pending class $d$. Delete $z'$ from $y$
+and call the resulting source class $t$. Deleting all $W$ source
+controls from $t$ gives $d$, so $t$ has one representative in $U_W(d)$.
+If that representative was selected, the source family has a row with
+base class $t$. The exhaustive transport inventory and the local
+insertion coverage supply a transported row in the class $y$. If it was
+not selected, its representative lies in the new pending complement,
+and $y$ is obtained from that representative by inserting $z'$. These
+two alternatives establish the new coverage condition.
+
+Each pending old occurrence contributes $(m+W)B$ advanced rows and
+charge $(m+W)q$, by the source-row and source-port inventory. It
+contributes exactly $c_{\mathrm{adv}}$ circles and $D_{m,W}-B$ pending
+classes. Adding these contributions to the transported old objects gives
+all four displayed counts.
+\end{proof}
+
+For the source family of Proposition~\ref{prop-global-counts}, each
+surviving candidate contributes the closed contour obtained by its
+specified modifications. Order the finite set of surviving candidates
+and list these contours in that order. The local distinctness theorem
+and the exclusion of collisions between candidates show that all their
+source-row cyclic classes are distinct. Their row and charge counts are
+the sums of the counts of those same contours. In particular, selecting
+this list requires no additional choice of rows or cyclic classes.
+
+Each contour has an untouched normal batch and thus a full run of the
+form required in Lemma~\ref{lem-assembly-connectors}. The verification
+in Proposition~\ref{prop-global-counts} gives the inequality for its
+length. Lemmas~\ref{lem-assembly-orbits}
+and~\ref{lem-assembly-connectors} consequently provide the transported
+contours, their complete source-port inventory, and their safe circle
+lists. Thus the family satisfies every source hypothesis of
+Lemma~\ref{lem-assembly-width}.
+
+A family constructed on one fixed old order can be used above another
+old order by a single bijection of the full finite alphabet. Apply this
+bijection to the old letters, all source controls, the satellite, the
+transport letter, and the completion letter together. Rotation,
+insertion, prefixes, and equality of words commute with this relabeling.
+It therefore preserves literal compatibility and every incidence
+witness, as well as the counts. Relabeling only part of a frame would
+not justify those equalities.
+
+\subsection{An imported family for the final extensions}
+
+For the last part of the schedule, we use an existing family with three
+source controls. We state both its geometric properties and the numerical
+bounds that will be used. Put
+\[
+ \mathcal G_a=\{g\in\mathbb Z:0\le g<a,\quad
+   g\equiv1\pmod3,\quad 2g+5\le a\},
+ \qquad
+ \nu_a=
+ \begin{cases}2,&a\text{ odd},\\8,&a\text{ even}.\end{cases}
+\]
+
+\begin{proposition}\label{prop-assembly-dense}
+For every old cyclic order on $a\ge7$ letters, three distinct source
+controls, a fresh transport letter, and two further distinct reserved
+letters, there is a source family satisfying the hypotheses of
+Lemma~\ref{lem-assembly-width} with width three. Its counts are
+\[
+ B_a=2|\mathcal G_a|a(a+12),\qquad
+ q_a=16|\mathcal G_a|a,\qquad
+ c_{\mathrm{adv},a}=(a+2)\nu_a.
+\]
+Writing $D_{a,3}=a(a+1)(a+2)$, these counts satisfy
+$B_a\le D_{a,3}$ and $\nu_a\le8$. For $a\ge49$, they also satisfy
+\[
+ D_{a,3}\le4B_a,\qquad
+ a(q_a+c_{\mathrm{adv},a})\le8B_a.
+\]
+\end{proposition}
+
+This is the family \texttt{UniR.rFam} in the supplied assembly
+library~\cite{halfar-assembly}. Its construction is valid for an
+arbitrary full frame of distinct letters satisfying the two reserved-letter
+exclusions. The declarations \texttt{rData\_ok} and
+\texttt{rData\_safe} give literal source validity, distinct source classes,
+and safe incidence from every required port. The constructor
+\texttt{Uniform.famS} supplies the transported components, their
+displacement divisibility, and their finite complement. Thus this
+proposition gives actual families and circle lists for
+Lemma~\ref{lem-assembly-width}.
+
+The count formulas and the bounds $B_a\le D_{a,3}$, $\nu_a\le8$, and
+$D_{a,3}\le4B_a$ are respectively \texttt{rowsR\_eq}, \texttt{chargeR\_eq},
+\texttt{rowsR\_le}, \texttt{ncycR\_le}, and
+\texttt{rows\_quarter} in \texttt{UniR/RRate.lean}.
+The cost inequality is \texttt{cost\_le8} in
+\texttt{UniR/RRate8.lean}. The count of advanced circles is
+$(a+2)\nu_a$, since each of the original $\nu_a$ circles has $a+2$
+extensions at transport. Whole-frame relabeling as described above
+transfers these statements to the chosen old cyclic order and ordinary
+letters. No parity restriction remains, and the family can extend an
+already existing stage. It need not start a new construction.
+
+\subsection{Initialization, padding, and the final word}
+
+At old size $m$, choose no contours and no circles, and take every cyclic
+class on the old alphabet to be pending. There are $(m-1)!$ such classes:
+fix one old letter first and permute the remaining $m-1$ letters. Every
+class on the old alphabet together with the distinguished letter lies
+above one of them, by deletion of that letter. Thus this is a stage
+with counts $(0,0,0,(m-1)!)$.
+
+The identity
+\[
+ (m+W)D_{m,W}=mA_{m,W}
+\]
+and Lemma~\ref{lem-assembly-width} show that
+\[
+ R'+(m+W)P'=A_{m,W}(R+mP).
+\]
+Consequently every stage constructed from this initialization satisfies
+$R+mP=m!$. Taking $W=1$ and an empty selected family gives a valid
+one-letter extension with
+\[
+ (R',Q',c',P')=((m+1)R,(m+1)Q,mc,mP).
+\]
+Such extensions permit adjustment of the final alphabet size without a
+congruence restriction.
+
+At a final old size $h$, replace each pending representative $d$ by its
+full chart with the current distinguished letter, and add the circle
+$d$. The chart is closed, has $h$ rows, has zero charge, and has
+displacement $-h$. It covers every class above $d$ and is safely met by
+its own circle according to the definition. Thus the resulting closed
+level has $h!$ rows, charge $Q$, and $c+P$ circles, and covers every base
+cyclic class.
+
+We use the following precise consequence of the imported word assembly
+theorem~\cite{halfar-assembly}. Suppose $h\ge8$. A closed level on an ordinary alphabet
+of size $h+1$, with $h!$ rows, charge $Q$, and a valid supported safe
+list of $C$ circles, gives a covering word on $n=h+3$ letters of length
+at most
+\[
+ F_3(n)+Q+hC+(a-2)C
+ +(h+1-a)\min\{C,(n-1)^{\underline{h+1-a}}\},
+ \qquad 2\le a\le h+1.
+\]
+The notation $x^{\underline{k}}$ means $x(x-1)\cdots(x-k+1)$.
+The completed alphabet, consisting of the ordinary letters, satellite,
+and completion letter, is relabeled bijectively to $\{0,\ldots,n-1\}$,
+with the satellite labeled $9$ and the completion letter labeled $10$.
+These labels are available because $n=h+3\ge11$. All other labels can
+be assigned bijectively to the ordinary letters. The relabeling preserves
+contiguous occurrences and meets the alphabet hypothesis of the imported
+declaration \texttt{Closed.word}. The theorem supplies
+an actual word containing every permutation, rather than an estimate
+for an abstract count.
+
+Taking $a=2$, $C=c+P$, and bounding the minimum by $C$ gives
+\begin{equation}
+ |w|\le F_3(n)+Q+(2h-1)(c+P).
+ \label{eq-assembly-word}
+\end{equation}
+This is the completion estimate used in the finite transfer argument.
+The source families of Proposition~\ref{prop-global-counts}, followed by
+the families of Proposition~\ref{prop-assembly-dense}, maintain all of
+these hypotheses through the extensions above.

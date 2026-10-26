@@ -1,0 +1,198 @@
+{
+  "module": "Quantitative.MainTheorems",
+  "targets": [
+    "CoefficientTwoPrecision.finite_covering_word",
+    "CoefficientTwoPrecision.shortest_length_error",
+    "CoefficientTwoPrecision.shortest_length_asymptotic"
+  ],
+  "scope": "Final target proof terms and their transitive declaration dependencies, including imported proofs",
+  "compiler": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "module_olean_sha256": "c4b17dc0450df41b350a91824861b05cd06e2c6412ddeffa886a93268ebb8220",
+  "exporter": "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanexport",
+  "exporter_sha256": "01327b83d6a69dbc84fa04fd671c61068b2f074e51d1bf607bf6a6b9aed5339e",
+  "checker": "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/nanoda_bin",
+  "checker_sha256": "b5a75a50d07b06a25b3ddb9519144ebdeed8e0f3489222c88ba4049dfe8ce627",
+  "checker_version": "nanoda_bin 0.4.19 (installed binary --help)",
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "workspace": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/nanoda/20261026T113051.730276Z",
+  "export": {
+    "command": [
+      "/usr/bin/nice",
+      "-n",
+      "10",
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/jaypantone/Dropbox/Research/AI-work/other-things/check-lean-bound/research-plan-2026-10/lane-astra-half/submission-prep/2026-10-24/release-context/independent/proof-development/lean/nanoda.py",
+      "--export-worker",
+      "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/nanoda/20261026T112912.156292Z/proof.ndjson.partial"
+    ],
+    "exporter_command": [
+      "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanexport",
+      "Quantitative.MainTheorems",
+      "--",
+      "CoefficientTwoPrecision.finite_covering_word",
+      "CoefficientTwoPrecision.shortest_length_error",
+      "CoefficientTwoPrecision.shortest_length_asymptotic"
+    ],
+    "exit_code": 0,
+    "resource_report": {
+      "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+      "launched": true,
+      "rss_limit_kib": 6291456,
+      "recommended_lean_memory_mib": 4096,
+      "timeout_limit_seconds": 120,
+      "poll_sleep_seconds": 1,
+      "host_probe_timeout_seconds": 2,
+      "required_host_pressure_level": 1,
+      "minimum_host_reported_free_percent": 25,
+      "host_memory": {
+        "attempted_samples": 29,
+        "successful_samples": 29,
+        "initial": {
+          "pressure_level": 1,
+          "reported_free_percent": 69
+        },
+        "last": {
+          "pressure_level": 1,
+          "reported_free_percent": 66
+        },
+        "minimum_reported_free_percent": 65,
+        "maximum_pressure_level_observed": 1
+      },
+      "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+      "peak_sampled_rss_kib": 3568240,
+      "seconds": 29.059,
+      "stop_reason": null,
+      "cleanup": [
+        {
+          "pgid": 11910,
+          "method": "already-inactive",
+          "signaled_pids": [],
+          "result": "no-live-members"
+        }
+      ]
+    },
+    "path": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/nanoda/20261026T112912.156292Z/proof.ndjson",
+    "bytes": 284148854,
+    "sha256": "ea388ab1813d47ff3ec607f7e088c72b89338df3d9d1a47039296887f8d75336",
+    "metadata": {
+      "exporter": {
+        "name": "lean4export",
+        "version": "3.1.0"
+      },
+      "format": {
+        "version": "3.1.0"
+      },
+      "lean": {
+        "githash": "eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+        "version": "4.35.0"
+      }
+    },
+    "declaration_counts": {
+      "inductive": 726,
+      "def": 7910,
+      "thm": 25864,
+      "axiom": 3,
+      "quot": 4,
+      "opaque": 20
+    },
+    "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "targets_with_proof_terms": {
+      "CoefficientTwoPrecision.finite_covering_word": {
+        "kind": "thm",
+        "type": 3934105,
+        "value": 3934119
+      },
+      "CoefficientTwoPrecision.shortest_length_error": {
+        "kind": "thm",
+        "type": 5158006,
+        "value": 5160924
+      },
+      "CoefficientTwoPrecision.shortest_length_asymptotic": {
+        "kind": "thm",
+        "type": 5162566,
+        "value": 5162647
+      }
+    }
+  },
+  "reused_export_receipt": "/Users/jaypantone/Dropbox/Research/AI-work/other-things/check-lean-bound/research-plan-2026-10/lane-astra-half/submission-prep/2026-10-24/release-context/independent/proof-development/verification/nanoda/20261026T112912.156292Z.json",
+  "config": {
+    "export_file_path": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/nanoda/20261026T112912.156292Z/proof.ndjson",
+    "use_stdin": false,
+    "permitted_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "unpermitted_axiom_hard_error": true,
+    "unsafe_permit_all_axioms": false,
+    "nat_extension": true,
+    "string_extension": true,
+    "num_threads": 1,
+    "pp_declars": [
+      "CoefficientTwoPrecision.finite_covering_word",
+      "CoefficientTwoPrecision.shortest_length_error",
+      "CoefficientTwoPrecision.shortest_length_asymptotic"
+    ],
+    "pp_to_stdout": false,
+    "pp_output_path": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/nanoda/20261026T113051.730276Z/target-statements.txt",
+    "print_success_message": true
+  },
+  "check": {
+    "command": [
+      "/usr/bin/nice",
+      "-n",
+      "10",
+      "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/nanoda_bin",
+      "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/nanoda/20261026T113051.730276Z/nanoda-config.json"
+    ],
+    "exit_code": 0,
+    "resource_report": {
+      "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+      "launched": true,
+      "rss_limit_kib": 6291456,
+      "recommended_lean_memory_mib": 4096,
+      "timeout_limit_seconds": 120,
+      "poll_sleep_seconds": 1,
+      "host_probe_timeout_seconds": 2,
+      "required_host_pressure_level": 1,
+      "minimum_host_reported_free_percent": 25,
+      "host_memory": {
+        "attempted_samples": 25,
+        "successful_samples": 25,
+        "initial": {
+          "pressure_level": 1,
+          "reported_free_percent": 66
+        },
+        "last": {
+          "pressure_level": 1,
+          "reported_free_percent": 66
+        },
+        "minimum_reported_free_percent": 66,
+        "maximum_pressure_level_observed": 1
+      },
+      "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+      "peak_sampled_rss_kib": 695840,
+      "seconds": 24.924,
+      "stop_reason": null,
+      "cleanup": [
+        {
+          "pgid": 12154,
+          "method": "already-inactive",
+          "signaled_pids": [],
+          "result": "no-live-members"
+        }
+      ]
+    },
+    "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/nanoda/20261026T113051.730276Z/nanoda.log",
+    "output": "Checked 36079 declarations with no errors\n"
+  },
+  "completed_at": "2026-10-26T11:31:16.796332+00:00"
+}

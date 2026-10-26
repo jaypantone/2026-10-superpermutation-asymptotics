@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage{booktabs,longtable}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\id}{id}
+\title{A polynomial error estimate for superpermutation length}
+\author{}
+\date{26 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+A superpermutation on $n$ letters is a word containing every permutation
+of those letters as a contiguous substring. Let $L(n)$ be its least possible
+length. We prove
+\[
+ L(n)=n!+(n-1)!+(n-2)!+2(n-4)!
+       +O\bigl((n-4)!n^{-1/61}\bigr).
+\]
+The quantitative step uses a finite collection of joint label and cut
+states and a rational transfer argument. The latter gives the explicit
+coefficient $2+74/r$ once $n\ge 8\cdot10^{12}\cdot352^4r^{61}$, for
+$r\ge6$ divisible by six. The accompanying Lean 4.35.0 formalization proves
+the finite covering-word bound and the two-sided asymptotic statement,
+including the construction of the source families and their assembly.
+\end{abstract}
+
+\section{Words and the quantitative target}
+
+A \emph{word} is a finite sequence of letters. A word on an alphabet of
+size $n$ is a \emph{superpermutation} if every permutation of the alphabet
+occurs in consecutive positions. For example, $121$ is a superpermutation
+on two letters. Concatenating all permutations shows that a superpermutation
+exists for every positive $n$, so its minimum length $L(n)$ is defined.
+Put
+\[
+ F_3(n)=n!+(n-1)!+(n-2)!.
+\]
+All factorials in this manuscript have nonnegative arguments.
+
+The main finite bound uses the absolute integer
+$C=8\cdot10^{12}\cdot352^4$.
+
+\begin{theorem}\label{thm-main-finite}
+For every integer $r\ge6$ divisible by six and every integer
+$n\ge Cr^{61}$, there is a superpermutation $w$ on $n$ letters such that
+\begin{equation}\label{eq-main-finite}
+ r|w|\le rF_3(n)+(2r+74)(n-4)!.
+\end{equation}
+\end{theorem}
+
+We prove the theorem by constructing finite families of compatible rows
+and then assembling them into a word. The source families, their unused
+cyclic classes, and the auxiliary circles for assembly are all part of
+the construction. The final estimate is obtained by normalizing their
+exact integer counts.
+
+\begin{corollary}\label{cor-main-asymptotic}
+As $n$ tends to infinity through the positive integers,
+\[
+ L(n)=F_3(n)+2(n-4)!+
+ O\!\left((n-4)!n^{-1/61}\right).
+\]
+\end{corollary}
+
+The matching lower estimate supplied by the formal development of
+\cite{halfar-asym} is
+\begin{equation}\label{eq-main-lower}
+ L(n)\ge F_3(n)+2(n-4)!-2(n-5)!\qquad(n\ge7).
+\end{equation}
+The precise imported declarations are \texttt{ConstAsym.lower2\_L} and
+\texttt{ConstAsym.lower2\_ratio}. The complete dependency chain of these
+results has been rebuilt under Lean 4.35.0.
+We use \eqref{eq-main-lower} only for the final two-sided consequence.
+Theorem~\ref{thm-main-finite} is established in
+Corollary~\ref{cor-transfer-polynomial-threshold}. Selecting the largest
+admissible multiple of six then proves
+Corollary~\ref{cor-main-asymptotic}, as detailed in
+Corollary~\ref{cor-transfer-asymptotic}.
+
+We first describe the literal local moves and the restricted collection
+of states that contains every permitted modification. Counting and
+separating those states gives many mutually disjoint local constructions.
+The next step combines constructions on overlapping sets of letters and
+removes their possible collisions. The assembly section describes the
+transport, the additional circles used for joining, and the extension by
+an arbitrary number of letters. Finally, a rational estimate converts the
+exact counts into \eqref{eq-main-finite}, and an integer choice of $r$
+gives the exponent $1/61$.
+
+\input{geometry}
+\input{global}
+\input{assembly}
+\input{transfer}
+
+\section{Formal verification and scope}
+
+The accompanying formalization proves Theorem~\ref{thm-main-finite} and
+Corollary~\ref{cor-main-asymptotic}. It constructs the literal source rows,
+their repairs and safe connector circles, and the globally distinct source
+families. The exact counts of these objects supply the estimates used by
+the arbitrary-width extension. The rational transfer and the original
+word-assembly theorem then produce an actual covering word. Combining its
+length bound with the rebuilt lower-bound proof gives the two-sided result.
+
+The final declarations are \texttt{finite\_covering\_word} and
+\texttt{shortest\_length\_asymptotic} in the namespace
+\texttt{CoefficientTwoPrecision}.
+They use the original coverage predicate and minimum-length definition.
+Neither theorem assumes a source family, a numerical recurrence, or the
+existence of a word with the stated bound. The accompanying proof map
+matches the mathematical steps to their Lean declarations.
+
+The formalization uses Lean 4.35.0. Its pinned Mathlib revision is
+\begin{center}
+\texttt{56a005855ea17e0b0958f73ec801ae140b0a1679}.
+\end{center}
+Build receipts record the checked source hashes, dependency versions,
+compiler results, and axiom reports. The final theorems depend only on
+Lean's \texttt{propext}, \texttt{Classical.choice}, and \texttt{Quot.sound}.
+The formal proof contains no admitted step or additional mathematical
+axiom. The manuscript and its component arguments have also received
+independent AI review; human mathematical review remains pending.
+
+\begingroup
+\raggedright
+\bibliographystyle{plain}
+\bibliography{references}
+\endgroup
+\end{document}

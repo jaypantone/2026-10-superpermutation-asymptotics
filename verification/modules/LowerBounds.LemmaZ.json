@@ -1,0 +1,69 @@
+{
+  "module": "LowerBounds.LemmaZ",
+  "started_at": "2026-10-26T04:40:58.536408+00:00",
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "10",
+    "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+    "-M4096",
+    "-j1",
+    "-o",
+    "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean/LowerBounds/.lean-check-7hu_7w_h/LemmaZ.olean",
+    "LowerBounds/LemmaZ.lean"
+  ],
+  "cwd": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6",
+  "version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "source_sha256": "741d377348d6851716d43b82bca181dfb284422d5a4fc64c7b89b2647fbcaf06",
+  "imports": {
+    "PreimageChain.ComponentEndpointRigidity": "46fcfdfeca5ced78a745bc4d731d493b4932bcc4376b1f3029474ba0c586f0f8"
+  },
+  "manifest_sha256": "4ef0f46c99f8dd278bc7f26cd368420887baa85920fd77c63cd83afc01fc7937",
+  "exit_code": 0,
+  "log": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/logs/LowerBounds.LemmaZ-20261026T044444.683091Z.log",
+  "resource_report": {
+    "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+    "launched": true,
+    "rss_limit_kib": 6291456,
+    "recommended_lean_memory_mib": 4096,
+    "timeout_limit_seconds": 120,
+    "poll_sleep_seconds": 1,
+    "host_probe_timeout_seconds": 2,
+    "required_host_pressure_level": 1,
+    "minimum_host_reported_free_percent": 25,
+    "host_memory": {
+      "attempted_samples": 6,
+      "successful_samples": 6,
+      "initial": {
+        "pressure_level": 1,
+        "reported_free_percent": 66
+      },
+      "last": {
+        "pressure_level": 1,
+        "reported_free_percent": 66
+      },
+      "minimum_reported_free_percent": 66,
+      "maximum_pressure_level_observed": 1
+    },
+    "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+    "peak_sampled_rss_kib": 3022048,
+    "seconds": 5.227,
+    "stop_reason": null,
+    "cleanup": [
+      {
+        "pgid": 78959,
+        "method": "already-inactive",
+        "signaled_pids": [],
+        "result": "no-live-members"
+      }
+    ]
+  },
+  "compilation_performed": true,
+  "axiom_output": [
+    "'SuperpermLowerBounds.psi_of_run_head' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'SuperpermLowerBounds.Z_core' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'SuperpermLowerBounds.Z_pieces' depends on axioms: [propext, Classical.choice, Quot.sound]",
+    "'SuperpermLowerBounds.lemma_Z' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "olean_sha256": "674d238b1cbb3913e3bb33e1f3f895a2aac9e76b307cc263e66081d154700bad"
+}
