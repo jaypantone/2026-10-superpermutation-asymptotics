@@ -1,0 +1,10 @@
+theorem AlmanacSubmission.asymptotic_upper_four : Almanac.AsymptoticUpperAt (OfNat.ofNat 4) (OfNat.ofNat 2) := _
+
+theorem AlmanacSubmission.explicit_error : AlmanacAdapter.ExplicitError := _
+
+axiom propext {a b : Prop} : Iff a b → Eq a b
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Prop} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+

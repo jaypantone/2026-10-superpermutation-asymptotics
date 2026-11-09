@@ -1,0 +1,405 @@
+{
+  "started_at": "20261109T212143.488205Z",
+  "compiler": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "workspace": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/almanac/20261109T212143.488205Z",
+  "released_objects": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/20ac19e7ce5ac332cacf1eb97b947fa08d14ba7f4e50cb6b05776da4db6e23b6/.lake/build/lib/lean",
+  "released_modules_verified": 506,
+  "external_imports": 3337,
+  "targets": [
+    "AlmanacSubmission.asymptotic_upper_four",
+    "AlmanacSubmission.explicit_error"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "modules": [
+    {
+      "module": "AlmanacDefs",
+      "source_sha256": "646a275b577134b5484b3f71b3b0e7c69d5322faabd8766cfe7a79d1e5495cab",
+      "command": [
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "-M4096",
+        "-j1",
+        "-o",
+        "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/almanac/20261109T212143.488205Z/lib/AlmanacDefs.olean",
+        "AlmanacDefs.lean"
+      ],
+      "exit_code": 0,
+      "resource_report": {
+        "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+        "launched": true,
+        "rss_limit_kib": 6291456,
+        "recommended_lean_memory_mib": 4096,
+        "timeout_limit_seconds": 120,
+        "poll_sleep_seconds": 1,
+        "host_probe_timeout_seconds": 2,
+        "required_host_pressure_level": 1,
+        "minimum_host_reported_free_percent": 25,
+        "host_memory": {
+          "attempted_samples": 3,
+          "successful_samples": 3,
+          "initial": {
+            "pressure_level": 1,
+            "reported_free_percent": 69
+          },
+          "last": {
+            "pressure_level": 1,
+            "reported_free_percent": 69
+          },
+          "minimum_reported_free_percent": 69,
+          "maximum_pressure_level_observed": 1
+        },
+        "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+        "peak_sampled_rss_kib": 191424,
+        "seconds": 2.155,
+        "stop_reason": null,
+        "cleanup": [
+          {
+            "pgid": 90253,
+            "method": "already-inactive",
+            "signaled_pids": [],
+            "result": "no-live-members"
+          }
+        ]
+      },
+      "output": "",
+      "olean_sha256": "fbc6b131108dca12a93d837c218427328cdc3c71a16254525a9d4cd2bd1a1d93"
+    },
+    {
+      "module": "AlmanacAdapter",
+      "source_sha256": "1f8bac638ebe9a5c7f3e95d6e1c0275308a5def154ea87bff7cfe3cfbac95f86",
+      "command": [
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "-M4096",
+        "-j1",
+        "-o",
+        "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/almanac/20261109T212143.488205Z/lib/AlmanacAdapter.olean",
+        "AlmanacAdapter.lean"
+      ],
+      "exit_code": 0,
+      "resource_report": {
+        "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+        "launched": true,
+        "rss_limit_kib": 6291456,
+        "recommended_lean_memory_mib": 4096,
+        "timeout_limit_seconds": 120,
+        "poll_sleep_seconds": 1,
+        "host_probe_timeout_seconds": 2,
+        "required_host_pressure_level": 1,
+        "minimum_host_reported_free_percent": 25,
+        "host_memory": {
+          "attempted_samples": 23,
+          "successful_samples": 23,
+          "initial": {
+            "pressure_level": 1,
+            "reported_free_percent": 69
+          },
+          "last": {
+            "pressure_level": 1,
+            "reported_free_percent": 69
+          },
+          "minimum_reported_free_percent": 67,
+          "maximum_pressure_level_observed": 1
+        },
+        "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+        "peak_sampled_rss_kib": 3165728,
+        "seconds": 23.251,
+        "stop_reason": null,
+        "cleanup": [
+          {
+            "pgid": 90265,
+            "method": "already-inactive",
+            "signaled_pids": [],
+            "result": "no-live-members"
+          }
+        ]
+      },
+      "output": "",
+      "olean_sha256": "848d8f421f18b274022a9a90e682770d0e0c7f09cb84d8f9cafa5dddbc8005e2"
+    },
+    {
+      "module": "AlmanacSolution",
+      "source_sha256": "94afccbc7c231762ec3f799dfa9577014db4e2f1e4a58afa45b1997b7d2c0f74",
+      "command": [
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "-M4096",
+        "-j1",
+        "-o",
+        "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/almanac/20261109T212143.488205Z/lib/AlmanacSolution.olean",
+        "AlmanacSolution.lean"
+      ],
+      "exit_code": 0,
+      "resource_report": {
+        "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+        "launched": true,
+        "rss_limit_kib": 6291456,
+        "recommended_lean_memory_mib": 4096,
+        "timeout_limit_seconds": 120,
+        "poll_sleep_seconds": 1,
+        "host_probe_timeout_seconds": 2,
+        "required_host_pressure_level": 1,
+        "minimum_host_reported_free_percent": 25,
+        "host_memory": {
+          "attempted_samples": 6,
+          "successful_samples": 6,
+          "initial": {
+            "pressure_level": 1,
+            "reported_free_percent": 69
+          },
+          "last": {
+            "pressure_level": 1,
+            "reported_free_percent": 69
+          },
+          "minimum_reported_free_percent": 67,
+          "maximum_pressure_level_observed": 1
+        },
+        "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+        "peak_sampled_rss_kib": 3065424,
+        "seconds": 5.276,
+        "stop_reason": null,
+        "cleanup": [
+          {
+            "pgid": 90374,
+            "method": "already-inactive",
+            "signaled_pids": [],
+            "result": "no-live-members"
+          }
+        ]
+      },
+      "output": "",
+      "olean_sha256": "76cd56f31a30a2c181d3c385f30848f6d44d8f19a62952debdc82329e45e6a29"
+    },
+    {
+      "module": "AlmanacAxioms",
+      "source_sha256": "b586d19af6cb21130d792ace24a9871f3abbf92be706c43316ddbc196ca19724",
+      "command": [
+        "/usr/bin/nice",
+        "-n",
+        "10",
+        "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/lean",
+        "-M4096",
+        "-j1",
+        "AlmanacAxioms.lean"
+      ],
+      "exit_code": 0,
+      "resource_report": {
+        "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+        "launched": true,
+        "rss_limit_kib": 6291456,
+        "recommended_lean_memory_mib": 4096,
+        "timeout_limit_seconds": 120,
+        "poll_sleep_seconds": 1,
+        "host_probe_timeout_seconds": 2,
+        "required_host_pressure_level": 1,
+        "minimum_host_reported_free_percent": 25,
+        "host_memory": {
+          "attempted_samples": 6,
+          "successful_samples": 6,
+          "initial": {
+            "pressure_level": 1,
+            "reported_free_percent": 69
+          },
+          "last": {
+            "pressure_level": 1,
+            "reported_free_percent": 70
+          },
+          "minimum_reported_free_percent": 69,
+          "maximum_pressure_level_observed": 1
+        },
+        "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+        "peak_sampled_rss_kib": 3136464,
+        "seconds": 5.224,
+        "stop_reason": null,
+        "cleanup": [
+          {
+            "pgid": 90400,
+            "method": "already-inactive",
+            "signaled_pids": [],
+            "result": "no-live-members"
+          }
+        ]
+      },
+      "output": "'AlmanacSubmission.asymptotic_upper_four' depends on axioms: [propext, Classical.choice, Quot.sound]\n'AlmanacSubmission.explicit_error' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    }
+  ],
+  "export": {
+    "command": [
+      "/usr/bin/nice",
+      "-n",
+      "10",
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/private/tmp/claude-502/-Users-jaypantone-Dropbox-Research-AI-work-2026-10-superpermutation-asymptotics/8e35c909-958d-4f0a-9d20-60db1317c0f4/scratchpad/almanac-submission/lean/almanac.py",
+      "--export-worker",
+      "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/almanac/20261109T212143.488205Z/proof.ndjson.partial"
+    ],
+    "exporter_command": [
+      "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/leanexport",
+      "AlmanacSolution",
+      "--",
+      "AlmanacSubmission.asymptotic_upper_four",
+      "AlmanacSubmission.explicit_error"
+    ],
+    "exit_code": 0,
+    "resource_report": {
+      "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+      "launched": true,
+      "rss_limit_kib": 6291456,
+      "recommended_lean_memory_mib": 4096,
+      "timeout_limit_seconds": 120,
+      "poll_sleep_seconds": 1,
+      "host_probe_timeout_seconds": 2,
+      "required_host_pressure_level": 1,
+      "minimum_host_reported_free_percent": 25,
+      "host_memory": {
+        "attempted_samples": 16,
+        "successful_samples": 16,
+        "initial": {
+          "pressure_level": 1,
+          "reported_free_percent": 70
+        },
+        "last": {
+          "pressure_level": 1,
+          "reported_free_percent": 71
+        },
+        "minimum_reported_free_percent": 70,
+        "maximum_pressure_level_observed": 1
+      },
+      "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+      "peak_sampled_rss_kib": 3564976,
+      "seconds": 15.583,
+      "stop_reason": null,
+      "cleanup": [
+        {
+          "pgid": 90422,
+          "method": "already-inactive",
+          "signaled_pids": [],
+          "result": "no-live-members"
+        }
+      ]
+    },
+    "path": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/almanac/20261109T212143.488205Z/proof.ndjson",
+    "bytes": 284695090,
+    "sha256": "a1a4560a1c6855a9556c892dc75da879c420b67d123f73dc14f01624129a185c",
+    "metadata": {
+      "exporter": {
+        "name": "lean4export",
+        "version": "3.1.0"
+      },
+      "format": {
+        "version": "3.1.0"
+      },
+      "lean": {
+        "githash": "eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+        "version": "4.35.0"
+      }
+    },
+    "declaration_counts": {
+      "inductive": 726,
+      "def": 7914,
+      "thm": 25875,
+      "axiom": 3,
+      "quot": 4,
+      "opaque": 18
+    },
+    "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "targets_with_proof_terms": {
+      "AlmanacSubmission.asymptotic_upper_four": {
+        "kind": "thm",
+        "type": 3934830,
+        "value": 3938377
+      },
+      "AlmanacSubmission.explicit_error": {
+        "kind": "thm",
+        "type": 5166506,
+        "value": 5171528
+      }
+    }
+  },
+  "nanoda": {
+    "checker": "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/nanoda_bin",
+    "checker_sha256": "b5a75a50d07b06a25b3ddb9519144ebdeed8e0f3489222c88ba4049dfe8ce627",
+    "config": {
+      "export_file_path": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/almanac/20261109T212143.488205Z/proof.ndjson",
+      "use_stdin": false,
+      "permitted_axioms": [
+        "propext",
+        "Classical.choice",
+        "Quot.sound"
+      ],
+      "unpermitted_axiom_hard_error": true,
+      "unsafe_permit_all_axioms": false,
+      "nat_extension": true,
+      "string_extension": true,
+      "num_threads": 1,
+      "pp_declars": [
+        "AlmanacSubmission.asymptotic_upper_four",
+        "AlmanacSubmission.explicit_error"
+      ],
+      "pp_to_stdout": false,
+      "pp_output_path": "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/almanac/20261109T212143.488205Z/target-statements.txt",
+      "print_success_message": true
+    },
+    "command": [
+      "/usr/bin/nice",
+      "-n",
+      "10",
+      "/Users/jaypantone/.elan/toolchains/leanprover--lean4---v4.35.0/bin/nanoda_bin",
+      "/Users/jaypantone/Library/Caches/LeanShared/workspaces/4cbaad71855bc4cb/almanac/20261109T212143.488205Z/nanoda-config.json"
+    ],
+    "exit_code": 0,
+    "resource_report": {
+      "policy": "completion-owned-group-aggregate-6GiB-sampled-RSS-host-normal-free25pct-120s",
+      "launched": true,
+      "rss_limit_kib": 6291456,
+      "recommended_lean_memory_mib": 4096,
+      "timeout_limit_seconds": 120,
+      "poll_sleep_seconds": 1,
+      "host_probe_timeout_seconds": 2,
+      "required_host_pressure_level": 1,
+      "minimum_host_reported_free_percent": 25,
+      "host_memory": {
+        "attempted_samples": 28,
+        "successful_samples": 28,
+        "initial": {
+          "pressure_level": 1,
+          "reported_free_percent": 72
+        },
+        "last": {
+          "pressure_level": 1,
+          "reported_free_percent": 75
+        },
+        "minimum_reported_free_percent": 72,
+        "maximum_pressure_level_observed": 1
+      },
+      "limitations": "Sampled process RSS and host signals; not an OS hard memory cap or control of other jobs.",
+      "peak_sampled_rss_kib": 530928,
+      "seconds": 28.057,
+      "stop_reason": null,
+      "cleanup": [
+        {
+          "pgid": 90490,
+          "method": "already-inactive",
+          "signaled_pids": [],
+          "result": "no-live-members"
+        }
+      ]
+    },
+    "output": "Checked 36092 declarations with no errors\n"
+  },
+  "completed_at": "2026-11-09T21:23:12.899575+00:00"
+}

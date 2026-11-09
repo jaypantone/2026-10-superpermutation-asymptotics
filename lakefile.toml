@@ -1,0 +1,40 @@
+# The root Lake project of a Superpermutation Almanac batch submission.
+# The released proof is unchanged in lean/. AlmanacAdapter links its final
+# theorems to the Almanac's definitions, and AlmanacSolution states the results.
+name = "superpermutation_asymptotics"
+version = "0.1.0"
+defaultTargets = ["AlmanacSolution"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"
+
+# The released proof modules, read from lean/.
+[[lean_lib]]
+name = "CoefficientTwoPrecision"
+srcDir = "lean"
+roots = []
+globs = [
+  "Challenge", "IntegerControlGrid", "Lean435Compatibility", "PositiveParking",
+  "Precision", "ConstAsym.+", "Hunter.+", "LowerBounds.+", "PreimageChain.+",
+  "Quantitative.+", "Superperm.+", "SuperpermutationUpperBound.+",
+  "SuperpermutationUpperBound43586371.+"
+]
+
+[[lean_lib]]
+name = "AlmanacAdapter"
+
+# The four reserved Almanac libraries. The judge writes its own AlmanacDefs,
+# AlmanacStatement and AlmanacChallenge over the copies here.
+[[lean_lib]]
+name = "AlmanacDefs"
+
+[[lean_lib]]
+name = "AlmanacStatement"
+
+[[lean_lib]]
+name = "AlmanacChallenge"
+
+[[lean_lib]]
+name = "AlmanacSolution"
